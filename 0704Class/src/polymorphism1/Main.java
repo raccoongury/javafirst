@@ -8,10 +8,10 @@ public class Main {
 		//Terran t = new Terran();
 		star.attack();//t.attack();
 
-		Starcraft star = new Zerg();
+		star = new Zerg();
 		star.attack();
 
-		Starcraft star = new Protoss();
+		star = new Protoss();
 		star.attack();
 
 	}
