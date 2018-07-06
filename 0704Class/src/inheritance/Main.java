@@ -3,12 +3,12 @@ package inheritance;
 public class Main {
 
 	public static void main(String[] args) {
-		Employee emp1 = new Employee();
+		Employee emp1 = new Employee(1);
 		//객체의 내용을 확인하고자 하면 System.out.println 메소드에
 		//객체의 이름만 대입
 		System.out.println(emp1);
 		
-		Employee emp2 = new Employee();
+		Employee emp2 = new Employee(2);
 		System.out.println(emp2);
 		
 		Manager man1 = new Manager();
