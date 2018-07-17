@@ -12,19 +12,19 @@ public class Main {
 		// 인스턴스 변수를 호출해서 데이터 저장
 		System.out.println("이메일:");
 		String email = sc.nextLine();//출력스캐너2단계
-		member1.setEmail("raccoongury@gmail.com");// member1.email="raccoongury@gmail.com";
+		member1.setEmail(email);// member1.email="raccoongury@gmail.com";
 		
 		System.out.println("비밀번호:");
 		String password = sc.nextLine();
-		member1.setPassword("1234");
+		member1.setPassword(password);
 
 		System.out.println("별명:");
 		String nickname = sc.nextLine();
-		member1.setNickname("순한맛너구리");
+		member1.setNickname(nickname);
 		
 		System.out.println("나이:");
 		int age = sc.nextInt();//출력스캐너2-나이는 정수이므로int nextInt
-		member1.setAge(15);
+		member1.setAge(age);
 		sc.close();
 
 		member1.display(); // 아래와 다르게 member클래스에 저장하고 불러올때
