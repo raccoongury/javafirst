@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>리스트 스타일</title>
+<style>
+
+
+
+
+/*목록모양 만들기 */ 
+ol{
+list-style-type:katakana;
+}
+ul{
+list-style-image:url(btc.png);
+}
+
+
+
+
+/*배경 색상 만들기 */
+	h3{background-color:skyblue;
+	border-width:5px;
+	border-style:solid;
+	border-top-color:blue;
+	border-left-color:blue;
+	border-right-color:red;
+	border-bottom-color:red;}
+	
+	h3:active{
+	border-width:5px;
+	border-style:solid;
+	border-top-color:red;
+	border-left-color:red;
+	border-right-color:blue;
+	border-bottom-color:blue;
+	margin:2px
+	}
+	
+
+
+/*배경 이미지 만들기
+body{
+background:
+
+url(lion.jpg) left top repeat-y,
+url(lion.jpg) right top repeat-y,
+url(lion.jpg) right top repeat-x
+*/
+
+/*그라데이션 들어간 배경 넣기
+background: rgb(252,234,187); 
+background: -moz-linear-gradient(-45deg, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 50%, rgba(248,181,0,1) 50%, rgba(251,223,147,1) 100%); 
+background: -webkit-linear-gradient(-45deg, rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 50%,rgba(248,181,0,1) 50%,rgba(251,223,147,1) 100%); 
+background: linear-gradient(135deg, rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 50%,rgba(248,181,0,1) 50%,rgba(251,223,147,1) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=1 );
+*/
+
+#radius{
+		width:100px;
+		height:100px;
+		background-color:skyblue;
+		border-radius:200px
+	}
+		div{
+		float:left
+	}
+
+</style>
+</head>
+<body>
+	<h3>Full Stack</h3>
+	<ol>
+	<li id="radius">Java</li>
+		<li>Java</li>
+		<li>자료구조</li>
+		<li>알고리즘</li>
+		<li>데이터베이스</li>
+		<li>Front End</li>
+		<li>Java Web Programming</li>
+		<li>Android</li>
+		<li>iOS</li>
+	</ol>
+	<h3>코인종류</h3>
+	<ul>
+		<li>비트코인</li>
+		<li>이더리움&amp;클래식</li>
+		<li>이더리움</li>
+		<li>리플</li>
+		<li>이오스</li>
+		<li>스텔라</li>
+		<li>에이다</li>
+		<li>아이오</li>
+		<li>트론</li>
+		<li>네오</li>
+	</ul>
+</body>
+</html>
