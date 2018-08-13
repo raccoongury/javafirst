@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS</title>
+<style>
+	#pid{
+		width:200px;
+		background:#fdd;
+		border: 2px solid #123456;
+		outline: 2px solid #ffaa00;
+		outline-offset:3px;
+		resize:both;
+		overflow:auto;
+	}
+	
+	div{
+	background-color:papayawhip;
+	width:300px;
+	height:100px;
+
+	
+	-webkit-transform:rotate(30deg);
+	-moz-transform:rotate(30deg);
+	-ms-transform:rotate(30deg);
+	}
+	
+	a{
+	/* 주위에 아무것도 배치되지 않도록 블록 요소로 변경*/
+display:block;
+width:300px;
+height:30px;
+background:#123456;
+
+-webkit-transition:all 3.0s
+	}
+	a:hover{
+	width:1000px;
+	height:500px;
+	background-color:red;
+	opacity:0.0;
+	}
+</style>
+</head>
+<body>
+	<h2>CSS - resize 와 outline</h2>
+	<p class="content" id="pid">
+	이번주 금요일~ 금요일에 시간 어때요~
+	그날 까진 기다리기 힘들어 시간아 달려라
+	시간을 더 보채고 싶지만~mind control~
+	</p>
+	<div></div>
+	
+	<a href="#">애니메이션 메뉴</a>
+	
+</body>
+</html>
