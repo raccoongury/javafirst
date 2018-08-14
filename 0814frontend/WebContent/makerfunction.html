@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+
+<script>
+	var name = prompt("이름을 입력하세요!!!", "이름입력")
+	document.writeln("이름:" + name)
+
+	var url = "https://www.daum.net?name=관리자"
+	document.writeln("<br/>" + url)
+	document.writeln("<br/>encodeURLComponent;" + encodeURIComponent(url)) //endcodeURIComponent 함수: 알파벳과 숫자를 제외한 모든 부분을 인코딩
+	document.writeln("<br/>escape:" + escape(url)) //Escape: 알파벳과 숫자 및 일부 특수 문자를 제외하고 인코딩
+	document.writeln("<br/>encodeURI:" + encodeURI(url)) //encodeURI: 알파벳과 숫자 및 일부 특수문자와 URL을 표현할 때 사용하는 문자열을 제외하고 인코딩 합니다.
+	
+</script>
+</html>
