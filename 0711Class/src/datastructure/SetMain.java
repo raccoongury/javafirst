@@ -8,12 +8,12 @@ public class SetMain {
 
 	public static void main(String[] args) {
 
-		//HashSet<String> song = new HashSet<>();//¸¾´ë·Î
-		//TreeSet<String> song = new TreeSet<>();//»çÀÌÁî
-		LinkedHashSet<String> song = new LinkedHashSet<>();//ÀúÀå¼ø
+		//HashSet<String> song = new HashSet<>();//ë§˜ëŒ€ë¡œ
+		//TreeSet<String> song = new TreeSet<>();//ì‚¬ì´ì¦ˆ
+		LinkedHashSet<String> song = new LinkedHashSet<>();//ì €ì¥ìˆœ
 		song.add("BAAM");
-		song.add("Àå¸¶");
-		song.add("»¡°£ ¸À");
+		song.add("ì¥ë§ˆ");
+		song.add("ë¹¨ê°„ ë§›");
 		song.add("11:11");
 		song.add("BAAM");
 		song.add("GEE");

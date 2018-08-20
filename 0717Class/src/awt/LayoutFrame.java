@@ -10,25 +10,25 @@ import java.awt.Panel;
 import java.util.Random;
 
 public class LayoutFrame extends Frame {
-	// »ı¼ºÀÚ - ÀÎ½ºÅÏ½º¸¦ »ı¼º ÇÒ ¶§ È£ÃâÇÏ´Â ¸Ş¼Òµå
+	// ìƒì„±ì - ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„± í•  ë•Œ í˜¸ì¶œí•˜ëŠ” ë©”ì†Œë“œ
 	public LayoutFrame() {
-		// À§Ä¡¿Í Å©±â¸¦ ¼³Á¤
+		// ìœ„ì¹˜ì™€ í¬ê¸°ë¥¼ ì„¤ì •
 		setBounds(200, 200, 600, 600);
-		// Á¦¸ñ¼³Á¤
-		setTitle("·¹ÀÌ¾Æ¿ô¿¬½À");
+		// ì œëª©ì„¤ì •
+		setTitle("ë ˆì´ì•„ì›ƒì—°ìŠµ");
 		
 		Panel panel = new Panel ();
 		
-		//panelÀÇ ·¹ÀÌ¾Æ¿ôÀ» ¼³Á¤
+		//panelì˜ ë ˆì´ì•„ì›ƒì„ ì„¤ì •
 		panel.setLayout(new FlowLayout());
 		
 		//Button btn = null;
-		//ÄÄÆ÷³ÍÆ® ¹èÄ¡
+		//ì»´í¬ë„ŒíŠ¸ ë°°ì¹˜
 		
 		//1.FlowLayout
 		/*
 		 * for(int i= 0; i<10; i=i+1) {
-			Button btn = new Button("¹öÆ°" + i);
+			Button btn = new Button("ë²„íŠ¼" + i);
 			panel.add(btn);
 		}
 		*/
@@ -38,11 +38,11 @@ public class LayoutFrame extends Frame {
 		/*
 		panel.setLayout(new BorderLayout());
 		
-		Button btnWest = new Button("¼­ÂÊ");
+		Button btnWest = new Button("ì„œìª½");
 		panel.add("West", btnWest);
-		Button btnEast = new Button("µ¿ÂÊ");
+		Button btnEast = new Button("ë™ìª½");
 		panel.add("East", btnEast);
-		Button btnCenter = new Button("Áß¾Ó");
+		Button btnCenter = new Button("ì¤‘ì•™");
 		panel.add("Center", btnCenter);
 		 */
 
@@ -50,30 +50,30 @@ public class LayoutFrame extends Frame {
 		/*
 		panel.setLayout(new GridLayout(2,3,10,10));
 		for(int i = 0; i < 20; i=i+1) {
-			Button btn = new Button("¹öÆ°" + i);
+			Button btn = new Button("ë²„íŠ¼" + i);
 			panel.add(btn);
 		}
 		*/
 		
 		//4.null
-		//ÄÄÆ÷³ÍÆ®ÀÇ Å©±â¿Í À§Ä¡¸¦ ¸¶À½´ë·Î º¯°æÇÒ ¼ö ÀÖ½À´Ï´Ù.
+		//ì»´í¬ë„ŒíŠ¸ì˜ í¬ê¸°ì™€ ìœ„ì¹˜ë¥¼ ë§ˆìŒëŒ€ë¡œ ë³€ê²½í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
 		panel.setLayout(null);
 		Label label = new Label("@");
 		label.setBounds(10, 50, 30, 50);
 		add(label);
 		
 		add(panel);
-		//È­¸é Å©±â Á¶ÀıÀ» ¸øÇÏµµ·Ï ¼³Á¤
+		//í™”ë©´ í¬ê¸° ì¡°ì ˆì„ ëª»í•˜ë„ë¡ ì„¤ì •
 		setResizable(false);
-		//È­¸é Ãâ·Â
+		//í™”ë©´ ì¶œë ¥
 		setVisible(true);
 		
 		Thread th = new Thread() {
 			
 			public void run() {
-				//¹«ÇÑ ¹İº¹
+				//ë¬´í•œ ë°˜ë³µ
 				while(true) {
-					//ÇöÀç ·¹ÀÌºíÀÇ À§Ä¡¸¦ °¡Á®¿À±â
+					//í˜„ì¬ ë ˆì´ë¸”ì˜ ìœ„ì¹˜ë¥¼ ê°€ì ¸ì˜¤ê¸°
 					int x = label.getLocation().x;
 					int y = label.getLocation().y;
 					//label.setLocation(x+10, y);

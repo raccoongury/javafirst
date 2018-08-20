@@ -1,15 +1,15 @@
 package innerclass;
 
 public class Outer {
-	//ÀÏ¹İ inner class : Å¬·¡½º ¾È¿¡ Á¸ÀçÇÏ´Â Å¬·¡½º
+	//ì¼ë°˜ inner class : í´ë˜ìŠ¤ ì•ˆì— ì¡´ì¬í•˜ëŠ” í´ë˜ìŠ¤
 	/*
 	class Inner{
 		
 	}
 	*/
-	//static inner class : ³»ºÎ Å¬·¡½º ¾È¿¡ static ¸â¹ö°¡ ÀÖÀ¸¸é
-	//ÀÏ¹İ inner class´Â ¿¡·¯¸¦ ¹ß»ı½ÃÅµ´Ï´Ù.
-	//ÀÌ ¶§´Â class ¾Õ¿¡ staticÀ» ºÙ¿© ÁÖ¾î¾ß ÇÕ´Ï´Ù.
+	//static inner class : ë‚´ë¶€ í´ë˜ìŠ¤ ì•ˆì— static ë©¤ë²„ê°€ ìˆìœ¼ë©´
+	//ì¼ë°˜ inner classëŠ” ì—ëŸ¬ë¥¼ ë°œìƒì‹œí‚µë‹ˆë‹¤.
+	//ì´ ë•ŒëŠ” class ì•ì— staticì„ ë¶™ì—¬ ì£¼ì–´ì•¼ í•©ë‹ˆë‹¤.
 	static class Inner {
 		static int n;
 	}

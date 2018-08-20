@@ -8,22 +8,22 @@ public class MapMain1 {
 
 	public static void main(String[] args) {
 
-		//ÀÌ¸§°ú ³ªÀÌ ¹× ¼Ò¼Ó È¸»ç¸¦ ÀúÀåÇÏ´Â MapÀ» »ı¼º
+		//ì´ë¦„ê³¼ ë‚˜ì´ ë° ì†Œì† íšŒì‚¬ë¥¼ ì €ì¥í•˜ëŠ” Mapì„ ìƒì„±
 		
-		//HashMapÀº keyÀÇ ¼ø¼­¸¦ ¾Ë¼ö ¾øÀ½
+		//HashMapì€ keyì˜ ìˆœì„œë¥¼ ì•Œìˆ˜ ì—†ìŒ
 		//HashMap<String, Object> map = new HashMap<>();
 		
-		//ÀÔ·ÂÇÑ ¼ø¼­´ë·Î key¸¦ ÀúÀåÇÕ´Ï´Ù. 
+		//ì…ë ¥í•œ ìˆœì„œëŒ€ë¡œ keyë¥¼ ì €ì¥í•©ë‹ˆë‹¤. 
 		//LinkedHashMap<String, Object> map = new LinkedHashMap<>();
 		
 		TreeMap<String, Object> map = new TreeMap<>();
-			map.put("name", "¾ÆÀÌ¸°");
+			map.put("name", "ì•„ì´ë¦°");
 			map.put("age",  28);
 			map.put("company", "SM");
 			
-		//ÀüÃ¼¸¦ ÇÑ²¨¹ø¿¡ Ãâ·Â
+		//ì „ì²´ë¥¼ í•œêº¼ë²ˆì— ì¶œë ¥
 			System.out.println(map);
-		//¼ø¼­¿¡ »ó°ü ¾øÀÌ Ç×¸ñº°·Î Ãâ·Â
+		//ìˆœì„œì— ìƒê´€ ì—†ì´ í•­ëª©ë³„ë¡œ ì¶œë ¥
 			System.out.println("====================");
 			Set<String> keys = map.keySet();
 			for(String key : keys) {

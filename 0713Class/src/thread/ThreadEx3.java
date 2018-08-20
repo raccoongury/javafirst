@@ -1,12 +1,12 @@
 package thread;
 
-//Runnable ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ Å¬·¡½º
+//Runnable ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ í´ë˜ìŠ¤
 public class ThreadEx3 implements Runnable {
 
 	@Override
 	public void run() {
-		String msg = "¸Ş°¡½ºÅÍµğ";
-		//1ÃÊ¸¶´Ù ¹«ÇÑ¹İº¹
+		String msg = "ë©”ê°€ìŠ¤í„°ë””";
+		//1ì´ˆë§ˆë‹¤ ë¬´í•œë°˜ë³µ
 		int idx = 0;
 		while(true) {
 			String str = "";

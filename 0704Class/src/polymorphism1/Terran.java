@@ -1,9 +1,9 @@
 package polymorphism1;
 
 public class Terran extends Starcraft{
-	// °ø°İÇÏ´Â ¸Ş¼Òµå
+	// ê³µê²©í•˜ëŠ” ë©”ì†Œë“œ
 	public void attack() {
-		System.out.println("Å×¶õÀÇ °ø°İ");
+		System.out.println("í…Œë€ì˜ ê³µê²©");
 	}
 
 }

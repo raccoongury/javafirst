@@ -2,16 +2,16 @@ package interfacetest;
 
 import java.io.Serializable;
 
-//MemberService ÀÎÅÍÆäÀÌ½º¸¦ implements ÇÑ Å¬·¡½º¸¦ »ı¼º
-//ÇÏ³ªÀÇ ÀÎÅÍÆäÀÌ½º¸¦ implements ÇÑ Å¬·¡½ºÀÇ ÀÌ¸§Àº ÀÎÅÍÆäÀÌ½º ÀÌ¸§ µÚ¿¡
-//ImplÀ» ºÙÀÌ´Â °ÍÀÌ °ü·ÊÀÔ´Ï´Ù.
+//MemberService ì¸í„°í˜ì´ìŠ¤ë¥¼ implements í•œ í´ë˜ìŠ¤ë¥¼ ìƒì„±
+//í•˜ë‚˜ì˜ ì¸í„°í˜ì´ìŠ¤ë¥¼ implements í•œ í´ë˜ìŠ¤ì˜ ì´ë¦„ì€ ì¸í„°í˜ì´ìŠ¤ ì´ë¦„ ë’¤ì—
+//Implì„ ë¶™ì´ëŠ” ê²ƒì´ ê´€ë¡€ì…ë‹ˆë‹¤.
 public class MemberServiceImpl implements MemberService, Serializable {
 
 	@Override
 	public boolean idCheck(String id) {
 		boolean result = false;
 		
-		//id°¡ root°¡ ¾Æ´Ï¶ó¸é true
+		//idê°€ rootê°€ ì•„ë‹ˆë¼ë©´ true
 		if(id.equals("root") == false) {
 			result = true;
 		}
@@ -20,9 +20,9 @@ public class MemberServiceImpl implements MemberService, Serializable {
 
 	@Override
 	public int login(String id, String password) {
-		//id°¡ rootÀÌ°í password°¡ 1234 ÀÌ¸é ·Î±×ÀÎ ¼º°ø - 0
-		//id°¡ rootÀÌ°í password°¡ 1234°¡ ¾Æ´Ï¸é ºñ¹Ğ¹øÈ£°¡ Æ²¸² - 1
-		//id°¡ root°¡ ¾Æ´Ï¸é ¾ø´Â id - 2
+		//idê°€ rootì´ê³  passwordê°€ 1234 ì´ë©´ ë¡œê·¸ì¸ ì„±ê³µ - 0
+		//idê°€ rootì´ê³  passwordê°€ 1234ê°€ ì•„ë‹ˆë©´ ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë¦¼ - 1
+		//idê°€ rootê°€ ì•„ë‹ˆë©´ ì—†ëŠ” id - 2
 		int result = 2;
 		if(id.equals("root")) {
 			if(password.equals("1234")) {

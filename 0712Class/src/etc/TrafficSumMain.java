@@ -7,27 +7,27 @@ import java.util.Scanner;
 public class TrafficSumMain {
 
 	public static void main(String[] args) {
-		//ÀĞ¾î³¾ ÆÄÀÏ ÀÎ½ºÅÏ½º ¸¸µé±â
+		//ì½ì–´ë‚¼ íŒŒì¼ ì¸ìŠ¤í„´ìŠ¤ ë§Œë“¤ê¸°
 		File f = new File("C:\\Java\\java\\log.txt");
 		try {
-			//ÆÄÀÏÀÇ ³»¿ëÀ» ÀĞÀ» Scanner ÀÎ½ºÅÏ½º »ı¼º
+			//íŒŒì¼ì˜ ë‚´ìš©ì„ ì½ì„ Scanner ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 			Scanner sc = new Scanner(f);
-			//ÇÕ°è¸¦ ÀúÀåÇÒ º¯¼ö¸¦ »ı¼º
+			//í•©ê³„ë¥¼ ì €ì¥í•  ë³€ìˆ˜ë¥¼ ìƒì„±
 			int sum = 0;
-			//ÀĞÀ» ´ÙÀ½ ÁÙÀÌ ÀÖÀ» ¶§ ±îÁö ¼öÇà
+			//ì½ì„ ë‹¤ìŒ ì¤„ì´ ìˆì„ ë•Œ ê¹Œì§€ ìˆ˜í–‰
 			while(sc.hasNextLine()) {
-				//ÇÑ ÁÙ ÀĞ±â
+				//í•œ ì¤„ ì½ê¸°
 				String temp = sc.nextLine();
-				//°ø¹éÀ¸·Î ºĞÇÒÇÏ±â
+				//ê³µë°±ìœ¼ë¡œ ë¶„í• í•˜ê¸°
 				String [] ar = temp.split(" ");
 				
-				//10¹øÂ° µ¥ÀÌÅÍ È®ÀÎ
+				//10ë²ˆì§¸ ë°ì´í„° í™•ì¸
 				//System.out.println(ar[9]);
 				
-				//10¹øÂ° ¹®ÀÚ¿­À» Á¤¼ö·Î º¯È¯ÇØ¼­ sum¿¡ ´õÇÏ±â
+				//10ë²ˆì§¸ ë¬¸ìì—´ì„ ì •ìˆ˜ë¡œ ë³€í™˜í•´ì„œ sumì— ë”í•˜ê¸°
 				sum = sum + Integer.parseInt(ar[9]);
 			}
-			System.out.println("Æ®·¡ÇÈ ÇÕ°è:" + sum);
+			System.out.println("íŠ¸ë˜í”½ í•©ê³„:" + sum);
 			sc.close();
 		}catch(Exception e) {
 			System.out.println(e.getMessage());

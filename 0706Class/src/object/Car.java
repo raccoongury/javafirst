@@ -1,12 +1,12 @@
 package object;
 
 public class Car {
-		//¸ğµ¨¸í, ¹è±â·®, °¡°İÀ» ÀúÀåÇÒ º¯¼ö
+		//ëª¨ë¸ëª…, ë°°ê¸°ëŸ‰, ê°€ê²©ì„ ì €ì¥í•  ë³€ìˆ˜
 	private String modelName;
 	private int displacement;
 	private int price;
 	
-	//ÀÎ½ºÅÏ½º º¯¼ö¸¦ »ç¿ëÇÏ±â À§ÇÑ Á¢±ÙÀÚ ¸Ş¼Òµå -getters & setters
+	//ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•œ ì ‘ê·¼ì ë©”ì†Œë“œ -getters & setters
 	public String getModelName() {
 		return modelName;
 	}
@@ -25,16 +25,16 @@ public class Car {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	//³»ºÎµ¥ÀÌÅÍÀÇ °ªÀ» ºü¸£°Ô È®ÀÎÇÏ±â À§ÇÑ ¿ëµµ·Î »ç¿ë
+	//ë‚´ë¶€ë°ì´í„°ì˜ ê°’ì„ ë¹ ë¥´ê²Œ í™•ì¸í•˜ê¸° ìœ„í•œ ìš©ë„ë¡œ ì‚¬ìš©
 	@Override
 	public String toString() {
 		return "Car [modelName=" + modelName + ", displacement=" + displacement + ", price=" + price + "]";
 	}
-	//2°³ÀÇ ³»¿ëÀÌ °°ÀºÁö ºñ±³ÇÏ´Â ¸Ş¼Òµå
+	//2ê°œì˜ ë‚´ìš©ì´ ê°™ì€ì§€ ë¹„êµí•˜ëŠ” ë©”ì†Œë“œ
 	public boolean equals(Car other) {
 		boolean result = false;
-		//È£ÃâÇÏ´Â ÀÎ½ºÅÏ½ºÀÇ modelName °ú ¸Å°³º¯¼öÀÇ modelNameÀÌ °°À¸¸é
-		//true¸¦ ¸®ÅÏÇÏ°í ±×·¸Áö ¾ÊÀ¸¸é false¸¦ ¸®ÅÏ
+		//í˜¸ì¶œí•˜ëŠ” ì¸ìŠ¤í„´ìŠ¤ì˜ modelName ê³¼ ë§¤ê°œë³€ìˆ˜ì˜ modelNameì´ ê°™ìœ¼ë©´
+		//trueë¥¼ ë¦¬í„´í•˜ê³  ê·¸ë ‡ì§€ ì•Šìœ¼ë©´ falseë¥¼ ë¦¬í„´
 				if(modelName.equals(other.modelName)) {
 					result = true;
 				}

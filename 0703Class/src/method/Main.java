@@ -2,38 +2,38 @@ package method;
 
 import java.util.Scanner;
 
-//½ÇÇà Å¬·¡½º - main ¸Ş¼Òµå¸¦ ¼ÒÀ¯ÇÑ Å¬·¡½º
+//ì‹¤í–‰ í´ë˜ìŠ¤ - main ë©”ì†Œë“œë¥¼ ì†Œìœ í•œ í´ë˜ìŠ¤
 public class Main {
 
 	public static void main(String[] args) {
-		// Member Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸¦ »ı¼º
+		// Member í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±
 		Member member1 = new Member();
-		Scanner sc = new Scanner(System.in);//Ãâ·Â½ºÄ³³Ê1´Ü°è
-		// ÀÎ½ºÅÏ½º º¯¼ö¸¦ È£ÃâÇØ¼­ µ¥ÀÌÅÍ ÀúÀå
-		System.out.println("ÀÌ¸ŞÀÏ:");
-		String email = sc.nextLine();//Ãâ·Â½ºÄ³³Ê2´Ü°è
+		Scanner sc = new Scanner(System.in);//ì¶œë ¥ìŠ¤ìºë„ˆ1ë‹¨ê³„
+		// ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ë¥¼ í˜¸ì¶œí•´ì„œ ë°ì´í„° ì €ì¥
+		System.out.println("ì´ë©”ì¼:");
+		String email = sc.nextLine();//ì¶œë ¥ìŠ¤ìºë„ˆ2ë‹¨ê³„
 		member1.setEmail(email);// member1.email="raccoongury@gmail.com";
 		
-		System.out.println("ºñ¹Ğ¹øÈ£:");
+		System.out.println("ë¹„ë°€ë²ˆí˜¸:");
 		String password = sc.nextLine();
 		member1.setPassword(password);
 
-		System.out.println("º°¸í:");
+		System.out.println("ë³„ëª…:");
 		String nickname = sc.nextLine();
 		member1.setNickname(nickname);
 		
-		System.out.println("³ªÀÌ:");
-		int age = sc.nextInt();//Ãâ·Â½ºÄ³³Ê2-³ªÀÌ´Â Á¤¼öÀÌ¹Ç·Îint nextInt
+		System.out.println("ë‚˜ì´:");
+		int age = sc.nextInt();//ì¶œë ¥ìŠ¤ìºë„ˆ2-ë‚˜ì´ëŠ” ì •ìˆ˜ì´ë¯€ë¡œint nextInt
 		member1.setAge(age);
 		sc.close();
 
-		member1.display(); // ¾Æ·¡¿Í ´Ù¸£°Ô memberÅ¬·¡½º¿¡ ÀúÀåÇÏ°í ºÒ·¯¿Ã¶§
+		member1.display(); // ì•„ë˜ì™€ ë‹¤ë¥´ê²Œ memberí´ë˜ìŠ¤ì— ì €ì¥í•˜ê³  ë¶ˆëŸ¬ì˜¬ë•Œ
 		/*
-		 * System.out.println("ÀÌ¸ŞÀÏ:" + member1.email + "\t" + "ºñ¹Ğ¹øÈ£:" member1.password +
-		 * "\t" + "´Ğ³×ÀÓ:" + member1.nickname + "\t" + "³ªÀÌ:" + member1.age);
+		 * System.out.println("ì´ë©”ì¼:" + member1.email + "\t" + "ë¹„ë°€ë²ˆí˜¸:" member1.password +
+		 * "\t" + "ë‹‰ë„¤ì„:" + member1.nickname + "\t" + "ë‚˜ì´:" + member1.age);
 		 */
 
-		//1 member1.diplay(); µğ½ºÇÃ·¹ÀÌ ¹æ½Ä¸»°í tostroingÀ¸·Î ºÒ·¯¿À±â
+		//1 member1.diplay(); ë””ìŠ¤í”Œë ˆì´ ë°©ì‹ë§ê³  tostroingìœ¼ë¡œ ë¶ˆëŸ¬ì˜¤ê¸°
 		System.out.println(member1);
 		
 		System.out.println(Member.sum(10,30));

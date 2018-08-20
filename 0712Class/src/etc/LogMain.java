@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class LogMain {
 
 	public static void main(String[] args) {
-		//·Î±× ÆÄÀÏÀÇ ³»¿ëÀ» ÀĞÀ» ¼ö ÀÖ´Â Scanner ¸¸µé±â
+		//ë¡œê·¸ íŒŒì¼ì˜ ë‚´ìš©ì„ ì½ì„ ìˆ˜ ìˆëŠ” Scanner ë§Œë“¤ê¸°
 		File f = new File("C:\\log.txt");
 		HashSet<String> set = new HashSet<String>();
 		try {
@@ -15,9 +15,9 @@ public class LogMain {
 		
 			while(sc.hasNextLine()) {
 				//System.out.println(sc.nextLine());
-				//ÇÑ ÁÙ ÀĞ±â
+				//í•œ ì¤„ ì½ê¸°
 				String temp = sc.nextLine();
-				//°ø¹éÀ¸·Î ºĞÇÒÇÏ±â
+				//ê³µë°±ìœ¼ë¡œ ë¶„í• í•˜ê¸°
 				String [] ar = temp.split(" ");
 				set.add(ar[0]);
 			}

@@ -9,7 +9,7 @@ public class MutexMain1 {
 		Thread th2 = new Thread(mutex);
 		th2.start();
 		
-		//25ÃÊ ÈÄ¿¡ mutexÀÇ result °ª È®ÀÎ
+		//25ì´ˆ í›„ì— mutexì˜ result ê°’ í™•ì¸
 		try {
 			Thread.sleep(25000);
 			System.out.println(mutex.getResult());

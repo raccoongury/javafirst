@@ -6,21 +6,21 @@ import java.util.LinkedList;
 public class ListMain1 {
 
 	public static void main(String[] args) {
-		// ¹®ÀÚ¿­À» ÀúÀåÇÒ ¼ö ÀÖ´Â ArrayList »ı¼º
+		// ë¬¸ìì—´ì„ ì €ì¥í•  ìˆ˜ ìˆëŠ” ArrayList ìƒì„±
 		LinkedList<String> arrayList = new LinkedList<>();
-		// µ¥ÀÌÅÍ¸¦ »ğÀÔ
-		arrayList.add("¾ÆÀÌ¸°");
-		arrayList.add("³ª¶ó");
-		arrayList.add("¼³Çö");
-		arrayList.add("¼öÁö");
-		arrayList.add("À¯¸®");
-		// µ¥ÀÌÅÍ °³¼ö
-		System.out.println("µ¥ÀÌÅÍ °³¼ö:" + arrayList.size());
-		// ÀüÃ¼ µ¥ÀÌÅÍ Ãâ·Â
+		// ë°ì´í„°ë¥¼ ì‚½ì…
+		arrayList.add("ì•„ì´ë¦°");
+		arrayList.add("ë‚˜ë¼");
+		arrayList.add("ì„¤í˜„");
+		arrayList.add("ìˆ˜ì§€");
+		arrayList.add("ìœ ë¦¬");
+		// ë°ì´í„° ê°œìˆ˜
+		System.out.println("ë°ì´í„° ê°œìˆ˜:" + arrayList.size());
+		// ì „ì²´ ë°ì´í„° ì¶œë ¥
 		for (String temp : arrayList) {
 			System.out.println(temp);
 		}
-		// 3¹øÂ° µ¥ÀÌÅÍ Ãâ·ÂÇÏ±â
+		// 3ë²ˆì§¸ ë°ì´í„° ì¶œë ¥í•˜ê¸°
 		System.out.println("==========================");
 		System.out.println(arrayList.get(2));
 

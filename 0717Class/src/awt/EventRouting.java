@@ -9,14 +9,14 @@ import java.awt.event.ActionListener;
 
 public class EventRouting extends Frame {
 	public EventRouting() {
-		// À©µµ¿ìÀÇ ½ÃÀÛ ÁÂÇ¥ ¿Í Å©±â¸¦ ¼³Á¤
+		// ìœˆë„ìš°ì˜ ì‹œì‘ ì¢Œí‘œ ì™€ í¬ê¸°ë¥¼ ì„¤ì •
 		setBounds(200, 200, 200, 200);
-		// À©µµ¿ìÀÇ Á¦¸ñÀ» ¼³Á¤
-		setTitle("ÀÌº¥Æ® ¶ó¿ìÆÃ");
+		// ìœˆë„ìš°ì˜ ì œëª©ì„ ì„¤ì •
+		setTitle("ì´ë²¤íŠ¸ ë¼ìš°íŒ…");
 
-		Button btn1 = new Button("ÇÑ±¹¾î");
-		Button btn2 = new Button("¿µ¾î");
-		Button btn3 = new Button("Á¾·á");
+		Button btn1 = new Button("í•œêµ­ì–´");
+		Button btn2 = new Button("ì˜ì–´");
+		Button btn3 = new Button("ì¢…ë£Œ");
 
 		Label label = new Label();
 
@@ -29,15 +29,15 @@ public class EventRouting extends Frame {
 		add("South", label);
 
 		/*
-		// ActionEvent¸¦ Ã³¸®ÇÒ ¼ö ÀÖ´Â
-		// ÀÎ½ºÅÏ½º ¸¸µé±â
+		// ActionEventë¥¼ ì²˜ë¦¬í•  ìˆ˜ ìˆëŠ”
+		// ì¸ìŠ¤í„´ìŠ¤ ë§Œë“¤ê¸°
 		ActionListener listener1 = new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				label.setText("¾È³çÇÏ¼¼¿ä");
+				label.setText("ì•ˆë…•í•˜ì„¸ìš”");
 			}
 		};
-		// ÄÄÆ÷³ÍÆ®¿Í ÀÌº¥Æ®¸¦ Ã³¸®ÇÒ ¼ö ÀÖ´Â ¸®½º³Ê¸¦ ¿¬°á
+		// ì»´í¬ë„ŒíŠ¸ì™€ ì´ë²¤íŠ¸ë¥¼ ì²˜ë¦¬í•  ìˆ˜ ìˆëŠ” ë¦¬ìŠ¤ë„ˆë¥¼ ì—°ê²°
 		btn1.addActionListener(listener1);
 
 		ActionListener listener2 = new ActionListener() {
@@ -46,7 +46,7 @@ public class EventRouting extends Frame {
 				label.setText("Hello");
 			}
 		};
-		// ÄÄÆ÷³ÍÆ®¿Í ÀÌº¥Æ®¸¦ Ã³¸®ÇÒ ¼ö ÀÖ´Â ¸®½º³Ê¸¦ ¿¬°á
+		// ì»´í¬ë„ŒíŠ¸ì™€ ì´ë²¤íŠ¸ë¥¼ ì²˜ë¦¬í•  ìˆ˜ ìˆëŠ” ë¦¬ìŠ¤ë„ˆë¥¼ ì—°ê²°
 		btn2.addActionListener(listener2);
 		
 		ActionListener listener3 = new ActionListener() {
@@ -55,38 +55,38 @@ public class EventRouting extends Frame {
 				System.exit(0);
 			}
 		};
-		// ÄÄÆ÷³ÍÆ®¿Í ÀÌº¥Æ®¸¦ Ã³¸®ÇÒ ¼ö ÀÖ´Â ¸®½º³Ê¸¦ ¿¬°á
+		// ì»´í¬ë„ŒíŠ¸ì™€ ì´ë²¤íŠ¸ë¥¼ ì²˜ë¦¬í•  ìˆ˜ ìˆëŠ” ë¦¬ìŠ¤ë„ˆë¥¼ ì—°ê²°
 		btn3.addActionListener(listener3);
 		*/
 		
-		//ÀÌº¥Æ® ¶ó¿ìÆÃ - ÇÏ³ªÀÇ ¸®½º³Ê°¡ ¿©·¯ ÄÄÆ÷³ÍÆ®ÀÇ
-		//ÀÌº¥Æ®¸¦ Ã³¸®ÇÏ´Â °Í
+		//ì´ë²¤íŠ¸ ë¼ìš°íŒ… - í•˜ë‚˜ì˜ ë¦¬ìŠ¤ë„ˆê°€ ì—¬ëŸ¬ ì»´í¬ë„ŒíŠ¸ì˜
+		//ì´ë²¤íŠ¸ë¥¼ ì²˜ë¦¬í•˜ëŠ” ê²ƒ
 		ActionListener listener = 
 			new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					//ÀÌº¥Æ®°¡ ¹ß»ıÇÑ ÄÄÆ÷³ÍÆ®ÀÇ ¹®ÀÚ¿­À» °¡Áö°í
-					//ºĞ±â
+					//ì´ë²¤íŠ¸ê°€ ë°œìƒí•œ ì»´í¬ë„ŒíŠ¸ì˜ ë¬¸ìì—´ì„ ê°€ì§€ê³ 
+					//ë¶„ê¸°
 					switch(e.getActionCommand()) {
-					case "ÇÑ±¹¾î":
-						label.setText("¾È³çÇÏ¼¼¿ä");
+					case "í•œêµ­ì–´":
+						label.setText("ì•ˆë…•í•˜ì„¸ìš”");
 						break;
-					case "¿µ¾î":
+					case "ì˜ì–´":
 						label.setText("HELLO");
 						break;
-					case "Á¾·á":
+					case "ì¢…ë£Œ":
 						System.exit(0);
 						break;
 					}
 					
 				}
 		};
-		//3°³ ¹öÆ°ÀÇ ¾×¼Ç ÀÌº¥Æ®¸¦ listener°¡ ¸ğµÎ Ã³¸®
+		//3ê°œ ë²„íŠ¼ì˜ ì•¡ì…˜ ì´ë²¤íŠ¸ë¥¼ listenerê°€ ëª¨ë‘ ì²˜ë¦¬
 		btn1.addActionListener(listener);
 		btn2.addActionListener(listener);
 		btn3.addActionListener(listener);
 		
-		// À©µµ¿ì¸¦ È­¸é¿¡ Ãâ·Â
+		// ìœˆë„ìš°ë¥¼ í™”ë©´ì— ì¶œë ¥
 		setVisible(true);
 	}
 }

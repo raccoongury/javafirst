@@ -3,7 +3,7 @@ package polymorphism1;
 public class Main {
 
 	public static void main(String[] args) {
-		// 3°³ Å¬·¡½ºÀÇ °ø°İÇÏ´Â ¸Ş¼Òµå¸¦ È£ÃâÇØº¸±â
+		// 3ê°œ í´ë˜ìŠ¤ì˜ ê³µê²©í•˜ëŠ” ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•´ë³´ê¸°
 		Starcraft star = new Terran();
 		//Terran t = new Terran();
 		star.attack();//t.attack();

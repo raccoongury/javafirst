@@ -3,17 +3,17 @@ package object;
 public class Main {
 
 	public static void main(String[] args) {
-			//Car Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇØ¼­ µ¥ÀÌÅÍ¸¦ ÀúÀå
+			//Car í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•´ì„œ ë°ì´í„°ë¥¼ ì €ì¥
 			Car car1 = new Car ();
-			car1.setModelName("±×·£Àú");
+			car1.setModelName("ê·¸ëœì €");
 			car1.setDisplacement(2400);
 			car1.setPrice(2200);
-			//toStringÀ» È£ÃâÇØ¼­ Ãâ·Â
+			//toStringì„ í˜¸ì¶œí•´ì„œ ì¶œë ¥
 			//System.out.println(car1.toString());
 			//System.out.println(car1);
 			
 			Car car2 = new Car();
-			car2.setModelName("±×·£Àú");
+			car2.setModelName("ê·¸ëœì €");
 			car2.setDisplacement(3000);
 			car2.setPrice(2900);
 			

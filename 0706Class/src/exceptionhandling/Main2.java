@@ -3,35 +3,35 @@ package exceptionhandling;
 public class Main2 {
 
 	public static void main(String[] args) {
-		//¹®ÀÚ¿­ ¹è¿­À» »ı¼º
+		//ë¬¸ìì—´ ë°°ì—´ì„ ìƒì„±
 		String [] ar = {"Moring", "Afternoon", "Evening"};
 		
 		try {
-		//¹è¿­ÀÇ µ¥ÀÌÅÍ¸¦ ¼øÈ­ÇÏ¸é¼­ Ãâ·Â
+		//ë°°ì—´ì˜ ë°ì´í„°ë¥¼ ìˆœí™”í•˜ë©´ì„œ ì¶œë ¥
 		int size = ar.length;
-		//size±îÁö ÁøÇàÇØ¼­ ¿¹¿Ü°¡ ¹ß»ı
+		//sizeê¹Œì§€ ì§„í–‰í•´ì„œ ì˜ˆì™¸ê°€ ë°œìƒ
 		for(int i=0; i<=size; i=i+1) {
 			System.out.println(ar[i]);
 			if(i>1) {
-				throw new NumberFormatException("°­Á¦·Î ¿¹¿Ü  ¹ß»ı");
+				throw new NumberFormatException("ê°•ì œë¡œ ì˜ˆì™¸  ë°œìƒ");
 				
 			}
 			//System.out.println(Integer.parseInt(ar[i]));
 		}
 		}
 		catch(ArrayIndexOutOfBoundsException e) {
-			//¿¹¿Ü ³»¿ë Ãâ·Â
+			//ì˜ˆì™¸ ë‚´ìš© ì¶œë ¥
 			System.out.println(e.getMessage());
-			//¿¹¿Ü ³»¿ëÀ» ÃßÀû
+			//ì˜ˆì™¸ ë‚´ìš©ì„ ì¶”ì 
 			e.printStackTrace();
 		}
 		catch (Exception e) {
-			//¿¹¿Ü ³»¿ë Ãâ·Â
+			//ì˜ˆì™¸ ë‚´ìš© ì¶œë ¥
 			System.out.println(e.getMessage());
-			//¿¹¿Ü ³»¿ëÀ» ÃßÀû
+			//ì˜ˆì™¸ ë‚´ìš©ì„ ì¶”ì 
 			e.printStackTrace();
 			}finally {
-				System.out.println("¿¹¿Ü ¹ß»ı ¿©ºÎ¿¡ »ó°ü¾øÀÌ ¼öÇà");
+				System.out.println("ì˜ˆì™¸ ë°œìƒ ì—¬ë¶€ì— ìƒê´€ì—†ì´ ìˆ˜í–‰");
 			}
 	}
 

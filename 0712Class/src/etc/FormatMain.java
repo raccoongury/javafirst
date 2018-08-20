@@ -9,8 +9,8 @@ public class FormatMain {
 	public static void main(String[] args) {
 		Date date = new Date();
 		int money = 6570000;
-		//0000³â 00¿ù 00ÀÏ ¿äÀÏ 00½Ã 00ºĞ 00ÃÊ Çü½ÄÀ¸·Î Ãâ·Â
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy³â MM¿ù ddÀÏ EEE hh½Ã mmºĞ ssÃÊ");
+		//0000ë…„ 00ì›” 00ì¼ ìš”ì¼ 00ì‹œ 00ë¶„ 00ì´ˆ í˜•ì‹ìœ¼ë¡œ ì¶œë ¥
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyë…„ MMì›” ddì¼ EEE hhì‹œ mmë¶„ ssì´ˆ");
 		
 		String msg = sdf.format(date);
 		System.out.println(msg);

@@ -1,7 +1,7 @@
 package innerclass;
-//Thread¸¦ »ó¼Ó¹ŞÀº Å¬·¡½º
+//Threadë¥¼ ìƒì†ë°›ì€ í´ë˜ìŠ¤
 public class ThreadEx extends Thread {
-	//¿À¹ö¶óÀÌµù ÇÑ ¸Ş¼Òµå¶ó´Â °ÍÀ» ³ªÅ¸³»´Â ¾î³ëÅ×ÀÌ¼Ç
+	//ì˜¤ë²„ë¼ì´ë”© í•œ ë©”ì†Œë“œë¼ëŠ” ê²ƒì„ ë‚˜íƒ€ë‚´ëŠ” ì–´ë…¸í…Œì´ì…˜
 	@Override
 	public void run() {
 			try {

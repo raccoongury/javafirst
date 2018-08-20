@@ -9,7 +9,7 @@ public class User {
 	public int getNum() {
 		return num;
 	}
-	//ÀÎ½ºÅÏ½º º¯¼ö¸¦ »ç¿ëÇÏ±â À§ÇÑ Á¢±ÙÀÚ ¸Ş¼Òµå
+	//ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•œ ì ‘ê·¼ì ë©”ì†Œë“œ
 	public void setNum(int num) {
 		this.num = num;
 	}
@@ -25,19 +25,19 @@ public class User {
 	public void setHobbies(String[] hobbies) {
 		this.hobbies = hobbies;
 	}
-	//ÀÎ½ºÅÏ½º º¯¼öÀÇ °ªÀ» ºü¸£°Ô È®ÀÎÇÏ±â À§ÇÑ(µğ¹ö±ë) ¸Ş¼Òµå
+	//ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ì˜ ê°’ì„ ë¹ ë¥´ê²Œ í™•ì¸í•˜ê¸° ìœ„í•œ(ë””ë²„ê¹…) ë©”ì†Œë“œ
 	@Override
 	public String toString() {
 		return "User [num=" + num + ", name=" + name + ", hobbies=" + Arrays.toString(hobbies) + "]";
 	}
 	
-	//ÇöÀç ÀÎ½ºÅÏ½º¸¦ ÀÌ¿ëÇØ¼­ »õ·Î¿î ÀÎ½ºÅÏ½º¸¦ ¸¸µé¾îÁÖ´Â ¸Ş¼Òµå
+	//í˜„ì¬ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ì´ìš©í•´ì„œ ìƒˆë¡œìš´ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ë§Œë“¤ì–´ì£¼ëŠ” ë©”ì†Œë“œ
 	public User clone( ) {
 		User user = new User ( );
 		user.num = this.num;
 		user.name = this.name;
 		//User.hobbies = this.hobbies;
-		//ÂüÁ¶ÇüÀº ´Ù½Ã º¹Á¦¸¦ ÇØ ÁÖ¾î¾ß ÇÕ´Ï´Ù.
+		//ì°¸ì¡°í˜•ì€ ë‹¤ì‹œ ë³µì œë¥¼ í•´ ì£¼ì–´ì•¼ í•©ë‹ˆë‹¤.
 		user.hobbies = new String[this.hobbies.length];
 		for(int i = 0; i<this.hobbies.length; i=i+1) {
 			user.hobbies[i] = this.hobbies[i];

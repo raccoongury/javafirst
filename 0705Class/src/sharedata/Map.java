@@ -4,19 +4,19 @@ public class Map {
 	private double latitude;
 	private double longitude;
 	
-	//¸Å°³º¯¼ö°¡ ¾ø´Â »ı¼ºÀÚ - default constructor
+	//ë§¤ê°œë³€ìˆ˜ê°€ ì—†ëŠ” ìƒì„±ì - default constructor
 	public Map() {
 		super();
 	}
 	
-	//¸Å°³º¯¼ö°¡ ÀÖ´Â »ı¼ºÀÚ
+	//ë§¤ê°œë³€ìˆ˜ê°€ ìˆëŠ” ìƒì„±ì
 	public Map(double latitude, double longitude) {
 		super();
 		this.latitude = latitude;
 		this.longitude = longitude;
 	}
 
-//Á¢±ÙÀÚ ¸Ş¼Òµå - getter & setter
+//ì ‘ê·¼ì ë©”ì†Œë“œ - getter & setter
 	public double getLatitude() {
 		return latitude;
 	}
@@ -33,9 +33,9 @@ public class Map {
 		this.longitude = longitude;
 	}
 
-	//Áöµµ¸¦ Ãâ·ÂÇÏ´Â ¸Ş¼Òµå
+	//ì§€ë„ë¥¼ ì¶œë ¥í•˜ëŠ” ë©”ì†Œë“œ
 	public void showMap() {
-		System.out.println("À§µµ:" + latitude + " °æµµ:" + longitude
-				+ "À§Ä¡ÀÇ Áöµµ¸¦ Ãâ·ÂÇÕ´Ï´Ù.");
+		System.out.println("ìœ„ë„:" + latitude + " ê²½ë„:" + longitude
+				+ "ìœ„ì¹˜ì˜ ì§€ë„ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.");
 	}
 }

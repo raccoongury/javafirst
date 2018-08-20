@@ -5,15 +5,15 @@ import java.util.ArrayList;
 public class Producer extends Thread {
 	private ShareData shareData;
 	
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	public Producer(ShareData shareData) {
 		this.shareData = shareData;
 	}
 	
-	//½º·¹µå·Î µ¿ÀÛÇÒ ¸Ş¼Òµå
+	//ìŠ¤ë ˆë“œë¡œ ë™ì‘í•  ë©”ì†Œë“œ
 	public void run() {
 		for(int i=0; i<26; i=i+1) {
-			//65¿¡ i¸¦ ´õÇØ¼­ ¹®ÀÚ·Î º¯°æÇÑÈÄ save ¸Ş¼Òµå¿¡°Ô Àü´Ş
+			//65ì— ië¥¼ ë”í•´ì„œ ë¬¸ìë¡œ ë³€ê²½í•œí›„ save ë©”ì†Œë“œì—ê²Œ ì „ë‹¬
 			shareData.save((char)(65+i));
 		}
 	}

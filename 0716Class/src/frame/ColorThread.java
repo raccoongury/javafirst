@@ -11,7 +11,7 @@ public class ColorThread extends Thread {
 	}
 	
 	public void run() {
-		//»ö»ó ¹è¿­À» »ı¼º
+		//ìƒ‰ìƒ ë°°ì—´ì„ ìƒì„±
 		Color [] colors = {
 				Color.red, Color.blue,
 				Color.green
@@ -20,7 +20,7 @@ public class ColorThread extends Thread {
 		int idx = 0;
 		while(true) {
 			try {
-				//colors ¹è¿­ ¾ÈÀÇ °ª¸¸ ¼±ÅÃÇÏ±â
+				//colors ë°°ì—´ ì•ˆì˜ ê°’ë§Œ ì„ íƒí•˜ê¸°
 				idx = idx + 1;
 				button.setBackground(
 					colors[idx % colors.length]);

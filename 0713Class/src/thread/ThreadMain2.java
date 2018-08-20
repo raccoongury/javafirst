@@ -3,9 +3,9 @@ package thread;
 public class ThreadMain2 {
 
 	public static void main(String[] args) {
-		//½º·¹µå¸¦ »ı¼º
+		//ìŠ¤ë ˆë“œë¥¼ ìƒì„±
 		ThreadEx2 th = new ThreadEx2();
-		//½º·¹µå·Î ½ÇÇà
+		//ìŠ¤ë ˆë“œë¡œ ì‹¤í–‰
 		th.start();
 		
 		System.out.println();

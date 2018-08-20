@@ -4,13 +4,13 @@ public class Mutex implements Runnable {
 	private int result;
 	private int idx;
 
-	// synchronize°¡ ºÙÀº ¸Ş¼Òµå´Â
-	// ¿©·¯ °³ÀÇ ½º·¹µå°¡ µ¿½Ã¿¡ È£ÃâÇÏ´õ¶óµµ ÇÏ³ªÀÇ ¼öÇàÀÌ ¼öÇàÀÌ Á¾·áµÈ ÈÄ¿¡
-	// ¸Ş¼Òµå°¡ È£ÃâµË´Ï´Ù.
+	// synchronizeê°€ ë¶™ì€ ë©”ì†Œë“œëŠ”
+	// ì—¬ëŸ¬ ê°œì˜ ìŠ¤ë ˆë“œê°€ ë™ì‹œì— í˜¸ì¶œí•˜ë”ë¼ë„ í•˜ë‚˜ì˜ ìˆ˜í–‰ì´ ìˆ˜í–‰ì´ ì¢…ë£Œëœ í›„ì—
+	// ë©”ì†Œë“œê°€ í˜¸ì¶œë©ë‹ˆë‹¤.
 	private synchronized  void sum() {
 		for (int i = 0; i < 10000; i = i + 1) {
-			//ÀÚ½ÅÀÌ °¡Áö°í ÀÖ´Â ÀÚ¿øÀ» »ç¿ë ÇÒ ¶§´Â
-			//ÀÌ ÄÚµå ¿µ¿ªÀº µ¿±âÀûÀ¸·Î µ¿ÀÛÇÏµµ·Ï ÇØÁÖ´Â ¼³Á¤
+			//ìì‹ ì´ ê°€ì§€ê³  ìˆëŠ” ìì›ì„ ì‚¬ìš© í•  ë•ŒëŠ”
+			//ì´ ì½”ë“œ ì˜ì—­ì€ ë™ê¸°ì ìœ¼ë¡œ ë™ì‘í•˜ë„ë¡ í•´ì£¼ëŠ” ì„¤ì •
 			synchronized (this) {
 				idx = idx + 1;
 				//System.out.println("idx:" + idx);
@@ -30,7 +30,7 @@ public class Mutex implements Runnable {
 		sum();
 	}
 
-	// result °ªÀ» ¸®ÅÏÇØÁÖ´Â ¸Ş¼Òµå
+	// result ê°’ì„ ë¦¬í„´í•´ì£¼ëŠ” ë©”ì†Œë“œ
 	public int getResult() {
 		return result;
 	}

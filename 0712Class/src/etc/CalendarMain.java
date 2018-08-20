@@ -5,7 +5,7 @@ import java.util.Calendar;
 public class CalendarMain {
 
 	public static void main(String[] args) {
-		// 1986³â 5¿ù 5ÀÏÀ» Calendar °´Ã¼·Î ¸¸µé±â
+		// 1986ë…„ 5ì›” 5ì¼ì„ Calendar ê°ì²´ë¡œ ë§Œë“¤ê¸°
 		Calendar birth = Calendar.getInstance();
 		birth.set(Calendar.YEAR, 1987);
 		birth.set(Calendar.MONTH, 5);
@@ -17,7 +17,7 @@ public class CalendarMain {
 		Calendar toDay = Calendar.getInstance();
 		long gap =
 				toDay.getTimeInMillis() - birth.getTimeInMillis();
-		System.out.println("ÅÂ¾î³­Áö" + (gap/24/60/60/1000) + "ÀÏÂ° µÇ´Â ³¯ ÀÔ´Ï´Ù.");
+		System.out.println("íƒœì–´ë‚œì§€" + (gap/24/60/60/1000) + "ì¼ì§¸ ë˜ëŠ” ë‚  ì…ë‹ˆë‹¤.");
 		
 
 	}

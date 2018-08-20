@@ -3,30 +3,30 @@ package datastructure;
 public class MapMain2 {
 
 	public static void main(String[] args) {
-		//ÇÁ·Î¾ß±¸ ÆÀ º° ¼±¼ö ¸í´ÜÀ» ¹è¿­·Î ¸¸µé±â
-		String [] kia = {"À±¼®¹Î", "¾ÈÄ¡È«", "±è¼±ºó"};
-		String [] hanhwa = {"±ÇÇõ", "Á¤±Ù¿ì"};
-		String [] lotte = {"·¹ÀÏ", "ÀÌ´ëÈ£"};
-		String [] nc = {"¹Ú¼®¹Î", "ÀÌÀçÇĞ"};
-			//String ¹è¿­ÀÇ ¹è¿­·Î ¹­±â
+		//í”„ë¡œì•¼êµ¬ íŒ€ ë³„ ì„ ìˆ˜ ëª…ë‹¨ì„ ë°°ì—´ë¡œ ë§Œë“¤ê¸°
+		String [] kia = {"ìœ¤ì„ë¯¼", "ì•ˆì¹˜í™", "ê¹€ì„ ë¹ˆ"};
+		String [] hanhwa = {"ê¶Œí˜", "ì •ê·¼ìš°"};
+		String [] lotte = {"ë ˆì¼", "ì´ëŒ€í˜¸"};
+		String [] nc = {"ë°•ì„ë¯¼", "ì´ì¬í•™"};
+			//String ë°°ì—´ì˜ ë°°ì—´ë¡œ ë¬¶ê¸°
 		String [][] players = {kia, hanhwa, lotte, nc};
 		
-		//ÀÌÂ÷¿ø ¹è¿­ÀÇ µ¥ÀÌÅÍ Ãâ·Â
-		//Å« ¹è¿­¿¡ Æ÷ÇÔµÈ ÀÛÀº ¹è¿­ÀÇ µ¥ÀÌÅÍ °³¼ö¸¸Å­ ¹İº¹
+		//ì´ì°¨ì› ë°°ì—´ì˜ ë°ì´í„° ì¶œë ¥
+		//í° ë°°ì—´ì— í¬í•¨ëœ ì‘ì€ ë°°ì—´ì˜ ë°ì´í„° ê°œìˆ˜ë§Œí¼ ë°˜ë³µ
 		for(int i = 0; i<players.length; i=i+1) {
 			if(i==0) {
 				System.out.print("KIA:" + "\t");
 			}else if(i==1) {
-				System.out.print("ÇÑÈ­:" + "\t");
+				System.out.print("í•œí™”:" + "\t");
 			}else if(i==2) {
-				System.out.print("·Ôµ¥:" + "\t");
+				System.out.print("ë¡¯ë°:" + "\t");
 			}else if(i==3) {
 				System.out.print("NC:" + "\t");
 			}
 			
-			//ÀÛÀº ¹è¿­À» ¼ø¼­´ë·Î °¡Á®¿À±â
+			//ì‘ì€ ë°°ì—´ì„ ìˆœì„œëŒ€ë¡œ ê°€ì ¸ì˜¤ê¸°
 			String [] imsi = players[i];
-			//ÀÛÀº ¹è¿­ÀÇ µ¥ÀÌÅÍ °³¼ö¸¸Å­ ¹İº¹
+			//ì‘ì€ ë°°ì—´ì˜ ë°ì´í„° ê°œìˆ˜ë§Œí¼ ë°˜ë³µ
 			for(int j = 0; j<imsi.length; j=j+1 ) {
 				System.out.print(imsi[j] + "\t");
 			}

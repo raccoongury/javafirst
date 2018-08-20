@@ -4,8 +4,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		Employee emp1 = new Employee(1);
-		//°´Ã¼ÀÇ ³»¿ëÀ» È®ÀÎÇÏ°íÀÚ ÇÏ¸é System.out.println ¸Ş¼Òµå¿¡
-		//°´Ã¼ÀÇ ÀÌ¸§¸¸ ´ëÀÔ
+		//ê°ì²´ì˜ ë‚´ìš©ì„ í™•ì¸í•˜ê³ ì í•˜ë©´ System.out.println ë©”ì†Œë“œì—
+		//ê°ì²´ì˜ ì´ë¦„ë§Œ ëŒ€ì…
 		System.out.println(emp1);
 		
 		Employee emp2 = new Employee(2);

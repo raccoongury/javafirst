@@ -2,10 +2,10 @@ package polymorphism;
 
 public class Super {
 	public void display() {
-		System.out.println("¾È³çÇÏ¼¼¿ä ¹İ°©½À´Ï´Ù.");
+		System.out.println("ì•ˆë…•í•˜ì„¸ìš” ë°˜ê°‘ìŠµë‹ˆë‹¤.");
 	
 	}
 	public void call() {
-		System.out.println("¿À¹ö¶óÀÌµùÀ» ÇÏÁö ¾ÊÀ» ¸Ş¼Òµå");
+		System.out.println("ì˜¤ë²„ë¼ì´ë”©ì„ í•˜ì§€ ì•Šì„ ë©”ì†Œë“œ");
 	}
 }

@@ -12,11 +12,11 @@ public class ListMain5 {
 		stack.push("C++");
 		stack.push("Python");
 		stack.push("Java");
-		//µ¥ÀÌÅÍ°¡ ¿ª¼øÀ¸·Î ¸®ÅÏµË´Ï´Ù. - Á¦°ÅµÇ¸é¼­ ¸®ÅÏ
+		//ë°ì´í„°ê°€ ì—­ìˆœìœ¼ë¡œ ë¦¬í„´ë©ë‹ˆë‹¤. - ì œê±°ë˜ë©´ì„œ ë¦¬í„´
 		System.out.println(stack.pop());
 		System.out.println(stack.pop());
 		
-		//¿ì¼± ¼øÀ§ Å¥ ¸¸µé±â
+		//ìš°ì„  ìˆœìœ„ í ë§Œë“¤ê¸°
 		PriorityQueue <String> queue = 
 			new PriorityQueue<>();
 		queue.add("Oracle");
@@ -24,7 +24,7 @@ public class ListMain5 {
 		queue.add("mSSQL");
 		queue.add("Mongo DB");
 		queue.add("Casandra");
-		//Å©±â°¡ ÀÛÀº °ÍºÎÅÍ ¸®ÅÏ - Cassandra, MSSQL¼øÀ¸·Î Ãâ·Â
+		//í¬ê¸°ê°€ ì‘ì€ ê²ƒë¶€í„° ë¦¬í„´ - Cassandra, MSSQLìˆœìœ¼ë¡œ ì¶œë ¥
 		System.out.println(queue.poll());
 		System.out.println(queue.poll());
 

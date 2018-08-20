@@ -3,10 +3,10 @@ package constructor;
 public class Main {
 
 	public static void main(String[] args) {
-		//Practice Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º »ı¼º
+		//Practice í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		Practice practice1 = new Practice();
-		//practice1.setName("noname");//»ı¼ºÀÚ ¹ÌÀû¿ë½Ã
-		System.out.println(practice1.getName());//»ı¼ºÀÚ Àû¿ë½Ã
+		//practice1.setName("noname");//ìƒì„±ì ë¯¸ì ìš©ì‹œ
+		System.out.println(practice1.getName());//ìƒì„±ì ì ìš©ì‹œ
 		
 		Practice practice2 = new Practice();
 		//practice1.setName("noname");

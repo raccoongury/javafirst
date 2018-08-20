@@ -3,22 +3,22 @@ package thread;
 public class ThreadMain1 {
 
 	public static void main(String[] args) {
-		// Å¬·¡½ºÀÇ run ¸Ş¼Òµå »ç¿ë
+		// í´ë˜ìŠ¤ì˜ run ë©”ì†Œë“œ ì‚¬ìš©
 		ThreadEx1 th1 = new ThreadEx1();
-		//µ¥¸ó ½º·¹µå·Î ¼³Á¤
-		//´Ù¸¥ ½º·¹µå°¡ ÀÛ¾÷ ÁßÀÌ ¾Æ´Ï¸é ÀÚµ¿ Á¾·á
+		//ë°ëª¬ ìŠ¤ë ˆë“œë¡œ ì„¤ì •
+		//ë‹¤ë¥¸ ìŠ¤ë ˆë“œê°€ ì‘ì—… ì¤‘ì´ ì•„ë‹ˆë©´ ìë™ ì¢…ë£Œ
 		th1.setDaemon(true);
-		// ½º·¹µå ½ÃÀÛ
+		// ìŠ¤ë ˆë“œ ì‹œì‘
 		th1.start();
 		
 		try {
 			Thread.sleep(2000);
-			//InterruptedExceptionÀ» ¹ß»ı½ÃÅµ´Ï´Ù.
+			//InterruptedExceptionì„ ë°œìƒì‹œí‚µë‹ˆë‹¤.
 			th1.interrupt();
 			
 			Thread.sleep(3000);
-			System.out.println("¸ŞÀÎ Á¾·á");
-			//ÇÁ·Î±×·¥ Á¾·á
+			System.out.println("ë©”ì¸ ì¢…ë£Œ");
+			//í”„ë¡œê·¸ë¨ ì¢…ë£Œ
 			//System.exit(0);
 		} catch (InterruptedException e) {
 			e.printStackTrace();

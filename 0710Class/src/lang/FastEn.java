@@ -3,7 +3,7 @@ package lang;
 public class FastEn {
 
 	public static void main(String[] args) {
-		String [ ] station = {"±¤È­¹®", "Á¾·Î3°¡", "À»Áö·Î4°¡"};
+		String [ ] station = {"ê´‘í™”ë¬¸", "ì¢…ë¡œ3ê°€", "ì„ì§€ë¡œ4ê°€"};
 		for(int i =0; i<station.length;i=i+1) {
 			System.out.println(station[i]);
 		}

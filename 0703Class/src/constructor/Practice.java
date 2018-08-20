@@ -3,26 +3,26 @@ package constructor;
 public class Practice {
 	
 	static {
-		System.out.println("¸Ç Ã³À½ ÇÑ¹ø¸¸ ¼öÇàµÇ´Â ³»¿ë");
+		System.out.println("ë§¨ ì²˜ìŒ í•œë²ˆë§Œ ìˆ˜í–‰ë˜ëŠ” ë‚´ìš©");
 	}
 	{
-		System.out.println("ÀÎ½ºÅÏ½º(new)¸¦ ¸¸µé ¶§ ¸¶´Ù ¼öÇàµÇ´Â ³»¿ë");
+		System.out.println("ì¸ìŠ¤í„´ìŠ¤(new)ë¥¼ ë§Œë“¤ ë•Œ ë§ˆë‹¤ ìˆ˜í–‰ë˜ëŠ” ë‚´ìš©");
 	}
 	
-	//»ı¼ºÀÚ//2»ı¼ºÀÚ È£Ãâ
+	//ìƒì„±ì//2ìƒì„±ì í˜¸ì¶œ
 	public Practice(){
 		name = "noname";
 	}
-	//»ı¼ºÀÚ ¿À¹ö·Îµù(À§¿Í µ¿ÀÏÇÑ ÀÌ¸§ÀÇ ¸Ş¼Òµå°¡ 2°³ ÀÌ»ó ÀÖ´Â °æ¿ì)
+	//ìƒì„±ì ì˜¤ë²„ë¡œë”©(ìœ„ì™€ ë™ì¼í•œ ì´ë¦„ì˜ ë©”ì†Œë“œê°€ 2ê°œ ì´ìƒ ìˆëŠ” ê²½ìš°)
 	public Practice(String arg) {
 		name = arg;
 		
 	}
 	
-	//ÀÌ¸§À» ÀúÀåÇÏ±â À§ÇÑ ÀÎ½ºÅÏ½º º¯¼ö¸¦ ¼±¾ğ
- private String name;//º¯¼ö ¸¸µé¾î ³õ°í 
+	//ì´ë¦„ì„ ì €ì¥í•˜ê¸° ìœ„í•œ ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ë¥¼ ì„ ì–¸
+ private String name;//ë³€ìˆ˜ ë§Œë“¤ì–´ ë†“ê³  
  
-//nameÀÇ Á¢±ÙÀÚ ¸Ş¼Òµå ½ÃÀÛ//source - generate¿¡¼­ »ı¼º
+//nameì˜ ì ‘ê·¼ì ë©”ì†Œë“œ ì‹œì‘//source - generateì—ì„œ ìƒì„±
 public String getName() {
 	return name;
 }
@@ -30,10 +30,10 @@ public String getName() {
 public void setName(String name) {
 	this.name = name;
 }
-////nameÀÇ Á¢±ÙÀÚ ¸Ş¼Òµå ³¡
+////nameì˜ ì ‘ê·¼ì ë©”ì†Œë“œ ë
 		public void display() {
-			String name = "Áö¿ªº¯¼ö name";
-			//this.À» ºÙÀÌ¸é Áö¿ªº¯¼ö¿¡¼­´Â Ã£Áö ¾Ê°í ÀÎ½ºÅÏ½º º¯¼ö¿¡¼­ Ã£¾Æ¿É´Ï´Ù
+			String name = "ì§€ì—­ë³€ìˆ˜ name";
+			//this.ì„ ë¶™ì´ë©´ ì§€ì—­ë³€ìˆ˜ì—ì„œëŠ” ì°¾ì§€ ì•Šê³  ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ì—ì„œ ì°¾ì•„ì˜µë‹ˆë‹¤
 			System.out.println(this.name);
 	}
 }

@@ -9,14 +9,14 @@ public class Main3 {
 		Scanner sc = new Scanner(System.in);
 		
 		while ( true) {
-			System.out.println("Á¤¼ö ÀÔ·Â:");
+			System.out.println("ì •ìˆ˜ ìž…ë ¥:");
 			String temp = sc.nextLine();
 			try {
 			x=Integer.parseInt(temp);
 			break;
 			}
 		catch(Exception e) {
-			System.out.println("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+			System.out.println("ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”");
 		}
 		System.out.println(x);
 		sc.close( );

@@ -5,13 +5,13 @@ public class Main2 {
 	public static void main(String[] args) {
 		User user1 = new User( );
 		user1.setNum(1);
-		user1.setName("¾ÆÀÌ¸°");
-		String [ ] hobbies = {"³ë·¡", "Ãã"};
+		user1.setName("ì•„ì´ë¦°");
+		String [ ] hobbies = {"ë…¸ë˜", "ì¶¤"};
 		user1.setHobbies(hobbies);
-		//toStringÀ» È£ÃâÇØ¼­ ³»ºÎ ³»¿ë È®ÀÎ
+		//toStringì„ í˜¸ì¶œí•´ì„œ ë‚´ë¶€ ë‚´ìš© í™•ì¸
 		//System.out.println(user1);
 		
-		//user1ÀÇ µ¥ÀÌÅÍ°¡ ÀúÀåµÈ °÷ÀÇ ÁÖ¼Ò¸¦ user¿¡ º¹»ç
+		//user1ì˜ ë°ì´í„°ê°€ ì €ì¥ëœ ê³³ì˜ ì£¼ì†Œë¥¼ userì— ë³µì‚¬
 		User user2 = user1;
 		user2.setNum(2);
 		System.out.println(user1);
@@ -19,8 +19,8 @@ public class Main2 {
 		//
 		User user3 = user1.clone( );
 		user3.setNum(3);
-		user3.setName("¼öÁö");
-		user3.getHobbies( )[0] = "¿¬±â";
+		user3.setName("ìˆ˜ì§€");
+		user3.getHobbies( )[0] = "ì—°ê¸°";
 		System.out.println(user1);
 		System.out.println(user3);
 	}

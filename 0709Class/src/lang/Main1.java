@@ -5,34 +5,34 @@ import java.util.Scanner;
 public class Main1 {
 
 	public static void main(String[] args) {
-			//value Çü º¯¼ö Çü¼º
+			//value í˜• ë³€ìˆ˜ í˜•ì„±
 		int n = 10;
-			//value ÇüÀÇ µ¥ÀÌÅÍ¸¦ ´ëÀÔ
+			//value í˜•ì˜ ë°ì´í„°ë¥¼ ëŒ€ìž…
 		int x = n;
 		
 		x = 20;
 		
 		System.out.println(n);
 		
-		//ÂüÁ¶Çü µ¥ÀÌÅÍÀÇ º¹»ç - ÁÖ¼Ò°¡ º¹»ç
+		//ì°¸ì¡°í˜• ë°ì´í„°ì˜ ë³µì‚¬ - ì£¼ì†Œê°€ ë³µì‚¬
 		int [ ] ar = { 10, 29, 30 };
-		//10, 20, 30ÀÌ ÀúÀåµÈ °÷ÀÇ ÁÖ¼Ò¸¦ º¹»ç
+		//10, 20, 30ì´ ì €ìž¥ëœ ê³³ì˜ ì£¼ì†Œë¥¼ ë³µì‚¬
 		int [ ] br = ar;
-		//º¹»çµÈ ÁÖ¼ÒÀÇ Ã¹¹øÂ° µ¥ÀÌÅÍ¸¦ 1000À¸·Î º¯°æ
+		//ë³µì‚¬ëœ ì£¼ì†Œì˜ ì²«ë²ˆì§¸ ë°ì´í„°ë¥¼ 1000ìœ¼ë¡œ ë³€ê²½
 		br [ 0 ] = 1000;
 		System.out.println(ar[0]);
 		
-		//ÂüÁ¶ÇüÀ» º¹»çÇØ ÁÙ ¶§ ½ÇÁ¦ µ¥ÀÌÅÍ¸¦ º¹»çÇØÁÖ±â
-		//¹è¿­À» º¹»çÇÏ±â À§ÇØ¼­ »õ·Î¿î °ø°£À» »ý¼º
+		//ì°¸ì¡°í˜•ì„ ë³µì‚¬í•´ ì¤„ ë•Œ ì‹¤ì œ ë°ì´í„°ë¥¼ ë³µì‚¬í•´ì£¼ê¸°
+		//ë°°ì—´ì„ ë³µì‚¬í•˜ê¸° ìœ„í•´ì„œ ìƒˆë¡œìš´ ê³µê°„ì„ ìƒì„±
 		int [ ] cr = new int [ ar.length ];
-		//³»ºÎ µ¥ÀÌÅÍ¸¦ º¹»ç
+		//ë‚´ë¶€ ë°ì´í„°ë¥¼ ë³µì‚¬
 		for ( int i = 0; i < ar.length; i = i +1) {
 			cr[i] = ar[i];
 			
 		}
 		
 	cr[0] = 500;
-	//ÀÌ¹ø¿¡´Â µ¥ÀÌÅÍ¸¦ º¹»çÇØ¼­ ÁÖ¾ú±â ¶§¹®¿¡ ¿µÇâÀ» ¹ÞÁö ¾Ê½À´Ï´Ù.
+	//ì´ë²ˆì—ëŠ” ë°ì´í„°ë¥¼ ë³µì‚¬í•´ì„œ ì£¼ì—ˆê¸° ë•Œë¬¸ì— ì˜í–¥ì„ ë°›ì§€ ì•ŠìŠµë‹ˆë‹¤.
 	System.out.println(ar[0]);
 
 	}

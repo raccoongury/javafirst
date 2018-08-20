@@ -2,15 +2,15 @@ package mutex;
 
 import java.util.ArrayList;
 
-//°øÀ¯ ÀÚ¿øÀ» °¡Áø Å¬·¡½º
+//ê³µìœ  ìì›ì„ ê°€ì§„ í´ë˜ìŠ¤
 		public class ShareData {
-			//ÀúÀå °ø°£À» »ı¼º
+			//ì €ì¥ ê³µê°„ì„ ìƒì„±
 			public static ArrayList<Character> list = 
 					new ArrayList<>();
 			
-			//µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ´Â ¸Ş¼Òµå
+			//ë°ì´í„°ë¥¼ ì €ì¥í•˜ëŠ” ë©”ì†Œë“œ
 			public synchronized void save(char ch) {
-				if(list.size()>1) {// ==1ÀúÀå ¼Òºñ¹İº¹
+				if(list.size()>1) {// ==1ì €ì¥ ì†Œë¹„ë°˜ë³µ
 					try {
 						wait();
 					} catch (InterruptedException e) {
@@ -19,8 +19,8 @@ import java.util.ArrayList;
 					}
 				}
 				list.add(ch);
-				System.out.println(ch + "¸¦ ÀúÀåÇß½À´Ï´Ù.");
-				//wait ÁßÀÎ ½º·¹µå ±ú¿ì±â
+				System.out.println(ch + "ë¥¼ ì €ì¥í–ˆìŠµë‹ˆë‹¤.");
+				//wait ì¤‘ì¸ ìŠ¤ë ˆë“œ ê¹¨ìš°ê¸°
 				notifyAll();
 				try {
 					Thread.sleep(1000);
@@ -29,7 +29,7 @@ import java.util.ArrayList;
 					e.printStackTrace();
 				}
 			}
-			//¸®½ºÆ®¿¡¼­ ÇÏ³ª¸¦ ²¨³»¼­ Ãâ·ÂÇÏ´Â ¸Ş¼Òµå
+			//ë¦¬ìŠ¤íŠ¸ì—ì„œ í•˜ë‚˜ë¥¼ êº¼ë‚´ì„œ ì¶œë ¥í•˜ëŠ” ë©”ì†Œë“œ
 			public synchronized void get() {
 				if(list.size() == 0) {
 					try {
@@ -40,7 +40,7 @@ import java.util.ArrayList;
 					}
 				}
 				char ch = list.remove(0);
-				System.out.println(ch + "¸¦ ¼ÒºñÇß½À´Ï´Ù.");
+				System.out.println(ch + "ë¥¼ ì†Œë¹„í–ˆìŠµë‹ˆë‹¤.");
 				notifyAll();
 			}
 		}

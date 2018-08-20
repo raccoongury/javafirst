@@ -3,8 +3,8 @@ package thread;
 public class ThreadEx1 extends Thread {
 	@Override
 	public void run() {
-		//½º·¹µå·Î ¼öÇàÇÒ ³»¿ë
-		//1ÃÊ¾¿ ½¬¸é¼­ 0-9±îÁö¸¦ ¼ø¼­´ë·Î Ãâ·Â
+		//ìŠ¤ë ˆë“œë¡œ ìˆ˜í–‰í•  ë‚´ìš©
+		//1ì´ˆì”© ì‰¬ë©´ì„œ 0-9ê¹Œì§€ë¥¼ ìˆœì„œëŒ€ë¡œ ì¶œë ¥
 		for (int i = 0; i < 10; i = i +1) {
 			System.out.println(i);
 			try {

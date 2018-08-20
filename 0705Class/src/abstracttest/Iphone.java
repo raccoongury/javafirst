@@ -3,7 +3,7 @@ package abstracttest;
 public class Iphone extends SmartPhone {
 	public void call() {
 		double x = 10.7;
-		// ½Ç¼ö¸¦ Á¤¼ö·Î °­Á¦ Çü º¯È¯: ¼Ò¼ö°¡ ¹ö·ÁÁý´Ï´Ù.
+		// ì‹¤ìˆ˜ë¥¼ ì •ìˆ˜ë¡œ ê°•ì œ í˜• ë³€í™˜: ì†Œìˆ˜ê°€ ë²„ë ¤ì§‘ë‹ˆë‹¤.
 		System.out.println("x:" + (int) x);
 
 	}

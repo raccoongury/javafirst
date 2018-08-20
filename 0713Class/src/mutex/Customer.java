@@ -8,7 +8,7 @@ public class Customer extends Thread {
 				this.shareData = shareData;
 			}
 			
-			//½º·¹µå·Î ¼öÇàÇÒ ³»¿ëÀ» °¡Áö´Â ¸Ş¼Òµå
+			//ìŠ¤ë ˆë“œë¡œ ìˆ˜í–‰í•  ë‚´ìš©ì„ ê°€ì§€ëŠ” ë©”ì†Œë“œ
 			public void run() {
 				for(int i = 0; i<26; i=i+1) {
 					shareData.get ();

@@ -6,8 +6,8 @@ import java.util.LinkedList;
 public class ListMain2 {
 
 	public static void main(String[] args) {
-		//Á¤¼ö¸¦ ÀúÀåÇÏ´Â ArrayList¿Í LinkedList¸¦ ¸¸µé°í
-		//Áß°£¿¡ µ¥ÀÌÅÍ 10¸¸°³¸¦ »ğÀÔÇÏ´Âµ¥ °É¸®´Â ½Ã°£À» ÃøÁ¤
+		//ì •ìˆ˜ë¥¼ ì €ì¥í•˜ëŠ” ArrayListì™€ LinkedListë¥¼ ë§Œë“¤ê³ 
+		//ì¤‘ê°„ì— ë°ì´í„° 10ë§Œê°œë¥¼ ì‚½ì…í•˜ëŠ”ë° ê±¸ë¦¬ëŠ” ì‹œê°„ì„ ì¸¡ì •
 		ArrayList<Integer>al = new ArrayList<>();
 		LinkedList<Integer>li = new LinkedList<>();
 		
@@ -19,28 +19,28 @@ public class ListMain2 {
 		li.add(3);
 		li.add(4);
 
-		//al¿¡ 10¸¸°³¸¦ Áß°£¿¡ ³Ö°í ½Ã°£ ÃøÁ¤
+		//alì— 10ë§Œê°œë¥¼ ì¤‘ê°„ì— ë„£ê³  ì‹œê°„ ì¸¡ì •
 		long start = System.currentTimeMillis();
 		for(int i=0; i<100000; i=i+1) {
-			//1¹øÂ° ÀÚ¸®¿¡ 2¸¦ Ãß°¡
+			//1ë²ˆì§¸ ìë¦¬ì— 2ë¥¼ ì¶”ê°€
 			al.add(1, 2);
 		}
 		long end = System.currentTimeMillis();
 		System.out.println("al:" + (end-start));
 		
-		//li¿¡ 10¸¸°³¸¦ Áß°£¿¡ »ğÀÔÇÏ°í ½Ã°£ ÃøÁ¤
+		//liì— 10ë§Œê°œë¥¼ ì¤‘ê°„ì— ì‚½ì…í•˜ê³  ì‹œê°„ ì¸¡ì •
 		 start = System.currentTimeMillis();
 		for(int i=0; i<100000; i=i+1) {
-			//1¹øÂ° ÀÚ¸®¿¡ 2¸¦ Ãß°¡
+			//1ë²ˆì§¸ ìë¦¬ì— 2ë¥¼ ì¶”ê°€
 			li.add(1, 2);
 		}
 		end = System.currentTimeMillis();
 		System.out.println("li:" + (end-start));
 		
-		//ÀĞ´Â ½Ã°£
+		//ì½ëŠ” ì‹œê°„
 		 start = System.currentTimeMillis();
 			for(int i=0; i<100000; i=i+1) {
-				//1¹øÂ° ÀÚ¸®¿¡ 2¸¦ Ãß°¡
+				//1ë²ˆì§¸ ìë¦¬ì— 2ë¥¼ ì¶”ê°€
 				al.get(i);
 			}
 			end = System.currentTimeMillis();
@@ -48,7 +48,7 @@ public class ListMain2 {
 		
 		 start = System.currentTimeMillis();
 			for(int i=0; i<100000; i=i+1) {
-				//1¹øÂ° ÀÚ¸®¿¡ 2¸¦ Ãß°¡
+				//1ë²ˆì§¸ ìë¦¬ì— 2ë¥¼ ì¶”ê°€
 				li.get(i);
 			}
 			end = System.currentTimeMillis();

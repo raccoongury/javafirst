@@ -1,13 +1,13 @@
 package arrays;
 
 public class Book implements Comparable{
-	//ÀúÀåÇÏ°íÀÚ ÇÏ´Â Ç×¸ñ
+	//ì €ì¥í•˜ê³ ì í•˜ëŠ” í•­ëª©
 	private String title;
 	private String author;
 	private String pubdate;
 	private int price;
 	
-	//Á¢±ÙÀÚ ¸Ş¼Òµå
+	//ì ‘ê·¼ì ë©”ì†Œë“œ
 	public String getTitle() {
 		return title;
 	}
@@ -33,12 +33,12 @@ public class Book implements Comparable{
 		this.price = price;
 	}
 	
-	//µğ¹ö±ëÀ» À§ÇÑ ¸Ş¼Òµå
+	//ë””ë²„ê¹…ì„ ìœ„í•œ ë©”ì†Œë“œ
 	@Override
 	public String toString() {
 		return "Book [title=" + title + ", author=" + author + ", pubdate=" + pubdate + ", price=" + price + "]";
 	}
-	//Å©±âºñ±³¸¦ ÇÏ´Â ¸Ş¼Òµå
+	//í¬ê¸°ë¹„êµë¥¼ í•˜ëŠ” ë©”ì†Œë“œ
 	@Override
 	public int compareTo(Object o) {
 		Book other = (Book)o;

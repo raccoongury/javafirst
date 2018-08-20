@@ -3,7 +3,7 @@ package thread;
 public class ThreadMain3 {
 
 	public static void main(String[] args) {
-		//Runnable ÀÎÅÍÆäÀÌ½º¸¦ implements ÇÑ Å¬·¡½º¸¦ ÀÌ¿ëÇØ¼­ ½º·¹µå½ÃÀÛ
+		//Runnable ì¸í„°í˜ì´ìŠ¤ë¥¼ implements í•œ í´ë˜ìŠ¤ë¥¼ ì´ìš©í•´ì„œ ìŠ¤ë ˆë“œì‹œì‘
 		ThreadEx3 obj = new ThreadEx3();
 		Thread th = new Thread(obj);
 		th.start();

@@ -5,12 +5,12 @@ import java.util.Arrays;
 public class Main1 {
 
 	public static void main(String[] args) {
-		//¹®ÀÚ¿­ ¹è¿­ »ı¼º
+		//ë¬¸ìì—´ ë°°ì—´ ìƒì„±
 		String [ ] subject = {"Java", "Oracle", "Web Front End", "Web Back End - Java","Android", "iOS"
 		};
-		//subject Á¤·Ä
+		//subject ì •ë ¬
 		Arrays.sort(subject);
-		//¹è¿­ÀÇ µ¥ÀÌÅÍ ÀüºÎ Ãâ·Â
+		//ë°°ì—´ì˜ ë°ì´í„° ì „ë¶€ ì¶œë ¥
 		/*
 		for(int i = 0; i<subject.length; i=i+1) {
 			System.out.println(subject[i]);
@@ -20,10 +20,10 @@ public class Main1 {
 			System.out.println(temp);
 		}
 		
-		//OracleÀÇ À§Ä¡ °Ë»ö
+		//Oracleì˜ ìœ„ì¹˜ ê²€ìƒ‰
 		int idx = Arrays.binarySearch(subject, "Oracle");
 		System.out.println(idx);
-		//AndroidÀÇ À§Ä¡ °Ë»ö
+		//Androidì˜ ìœ„ì¹˜ ê²€ìƒ‰
 		idx = Arrays.binarySearch(subject, "Android");
 		System.out.println(idx);
 	}

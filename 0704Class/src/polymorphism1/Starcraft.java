@@ -1,7 +1,7 @@
 package polymorphism1;
 
-public class Starcraft { //¾Õ¿¡ abstract(Ãß»ó) ºÙ¿© ÀÎ½ºÅÏ½º »ı¼º(new Starcraft)·Î »ı¼º ¸øÇÏ°ÔÇÔ
-	//¿À¹ö¶óÀÌµù °ü°è¸¦ ¸¸µé±â À§ÇÑ ¸Ş¼Òµå
-	public void attack() {} //public abstract void call(); ³»¿ëÀÌ ¾ø´Â ¸Ş¼Òµå, ÇÏÀ§Å¬·¡½º¿¡¼­ ¹İµå½Ã ÀçÁ¤ÀÇ, Ãß»óÅ¬·¡½º³ª ÀÎÅÍÆäÀÌ½º¿¡¸¸ Á¸Àç
+public class Starcraft { //ì•ì— abstract(ì¶”ìƒ) ë¶™ì—¬ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±(new Starcraft)ë¡œ ìƒì„± ëª»í•˜ê²Œí•¨
+	//ì˜¤ë²„ë¼ì´ë”© ê´€ê³„ë¥¼ ë§Œë“¤ê¸° ìœ„í•œ ë©”ì†Œë“œ
+	public void attack() {} //public abstract void call(); ë‚´ìš©ì´ ì—†ëŠ” ë©”ì†Œë“œ, í•˜ìœ„í´ë˜ìŠ¤ì—ì„œ ë°˜ë“œì‹œ ì¬ì •ì˜, ì¶”ìƒí´ë˜ìŠ¤ë‚˜ ì¸í„°í˜ì´ìŠ¤ì—ë§Œ ì¡´ì¬
 	
 }

@@ -8,22 +8,22 @@ public class ListMain4 {
 		ArrayList<Singer> list = new ArrayList<>();
 		
 		Singer singer = new Singer();
-		singer.setName("¼öÁö");
+		singer.setName("ìˆ˜ì§€");
 		singer.setAge(25);
 		list.add(singer);
 		
 		singer = new Singer();
-		singer.setName("¼³Çö");
+		singer.setName("ì„¤í˜„");
 		singer.setAge(24);
 		list.add(singer);
 		
 		singer = new Singer();
-		singer.setName("¾ÆÀÌ¸°");
+		singer.setName("ì•„ì´ë¦°");
 		singer.setAge(28);
 		list.add(singer);
 		
 		singer = new Singer();
-		singer.setName("ÅÂ¿¬");
+		singer.setName("íƒœì—°");
 		singer.setAge(30);
 		list.add(singer);
 		
@@ -37,7 +37,7 @@ public class ListMain4 {
 			}
 		};
 		list.sort(comp);
-		//°¢°¢ÀÇ µ¥ÀÌÅÍ È®ÀÎ
+		//ê°ê°ì˜ ë°ì´í„° í™•ì¸
 		for(Singer temp : list) {
 			System.out.println(temp);
 		}

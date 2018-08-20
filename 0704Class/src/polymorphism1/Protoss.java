@@ -1,9 +1,9 @@
 package polymorphism1;
 
 public class Protoss extends Starcraft{
-	// °ø°İÇÏ´Â ¸Ş¼Òµå
+	// ê³µê²©í•˜ëŠ” ë©”ì†Œë“œ
 	public void attack() {
-		System.out.println("ÇÁ·ÎÅä½ºÀÇ °ø°İ");
+		System.out.println("í”„ë¡œí† ìŠ¤ì˜ ê³µê²©");
 
 	}
 }

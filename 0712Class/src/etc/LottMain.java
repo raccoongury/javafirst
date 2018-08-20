@@ -6,8 +6,8 @@ import java.util.TreeSet;
 public class LottMain {
 
 	public static void main(String[] args) {
-		//1ºÎÅÍ 45±îÁöÀÇ ¼ıÀÚ 6°³¸¦ ·£´ıÇÏ°Ô ÀúÀåÇØ¼­ Ãâ·Â
-		//·£´ıÇÑ ¼ıÀÚ¸¦ ¾ò¾î³»±â À§ÇØ¼­ ·£´ı ÀÎ½ºÅÏ½º¸¦ »ı¼º
+		//1ë¶€í„° 45ê¹Œì§€ì˜ ìˆ«ì 6ê°œë¥¼ ëœë¤í•˜ê²Œ ì €ì¥í•´ì„œ ì¶œë ¥
+		//ëœë¤í•œ ìˆ«ìë¥¼ ì–»ì–´ë‚´ê¸° ìœ„í•´ì„œ ëœë¤ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±
 		Random r = new Random();
 		TreeSet <Integer> lotto = new TreeSet<>();
 		while(lotto.size() < 6) {

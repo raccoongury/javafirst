@@ -3,9 +3,9 @@ package exceptionhandling;
 public class Main3 {
 
 	public static void main(String[] args) {
-		//java.lang.Thread ¶ó´Â Å¬·¡½º¿¡´Â sleep ÀÌ¶ó´Â ¸Þ¼Òµå°¡ ÀÖ´Âµ¥
-		//ÀÌ ¸Þ¼Òµå´Â ¸Å°³º¯¼ö·Î ´ëÀÔµÈ ½Ã°£¸¸Å­ ½ÇÇàÀ» ÁßÁö ½ÃÅ°´Â ¿ªÇÒÀ» ÇÕ´Ï´Ù.
-		//ÀÌ ¸Þ¼Òµå¸¦ ÀÌ¿ëÇØ¼­ 1-10±îÁö¸¦ 1ÃÊ¾¿ ½¬¸é¼­ Ãâ·Â
+		//java.lang.Thread ë¼ëŠ” í´ëž˜ìŠ¤ì—ëŠ” sleep ì´ë¼ëŠ” ë©”ì†Œë“œê°€ ìžˆëŠ”ë°
+		//ì´ ë©”ì†Œë“œëŠ” ë§¤ê°œë³€ìˆ˜ë¡œ ëŒ€ìž…ëœ ì‹œê°„ë§Œí¼ ì‹¤í–‰ì„ ì¤‘ì§€ ì‹œí‚¤ëŠ” ì—­í• ì„ í•©ë‹ˆë‹¤.
+		//ì´ ë©”ì†Œë“œë¥¼ ì´ìš©í•´ì„œ 1-10ê¹Œì§€ë¥¼ 1ì´ˆì”© ì‰¬ë©´ì„œ ì¶œë ¥
 	/*	
 		for(int i = 1; i <11; i=i+1) {
 			try {
@@ -18,7 +18,7 @@ public class Main3 {
 		}
 	*/
 		/*
-		//image0.png, image1.png, image2.png ¼ø¼­´ë·Î ¹Ýº¹
+		//image0.png, image1.png, image2.png ìˆœì„œëŒ€ë¡œ ë°˜ë³µ
 		int idx = 0;
 		for(;;) {
 			System.out.println("image" + (idx%3) + ".png");
@@ -31,8 +31,8 @@ public class Main3 {
 			idx = idx + 1;
 		}
 		*/
-		//±è±âÅÂ, ÀÌÁ¾¹ü, ÃÖÇâ³², ÀÌ´ëÁøÀ» ¹Ýº¹(¿¬°ü¼º ¾ø´Â°É ¿¬°ü¼º ÀÖ°Ô ¸¸µé¾îÁÖ´Â ¹è¿­)
-		String [] ar = {"±è±âÅÂ", "ÀÌÁ¾¹ü", "ÃÖÇâ³²", "ÀÌ´ëÁø"};
+		//ê¹€ê¸°íƒœ, ì´ì¢…ë²”, ìµœí–¥ë‚¨, ì´ëŒ€ì§„ì„ ë°˜ë³µ(ì—°ê´€ì„± ì—†ëŠ”ê±¸ ì—°ê´€ì„± ìžˆê²Œ ë§Œë“¤ì–´ì£¼ëŠ” ë°°ì—´)
+		String [] ar = {"ê¹€ê¸°íƒœ", "ì´ì¢…ë²”", "ìµœí–¥ë‚¨", "ì´ëŒ€ì§„"};
 		int size = ar.length;//size=4
 		int idx = 0;
 		while(true) {

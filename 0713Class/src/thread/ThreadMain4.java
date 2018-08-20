@@ -3,21 +3,21 @@ package thread;
 public class ThreadMain4 {
 
 	public static void main(String[] args) {
-		//Runnable ÀÎÅÍÆäÀÌ½º¸¦ implements ÇÑ Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º
-		ThreadEx4 obj1 = new ThreadEx4("½º·¹µå 1");
-		ThreadEx4 obj2 = new ThreadEx4("½º·¹µå 2");
+		//Runnable ì¸í„°í˜ì´ìŠ¤ë¥¼ implements í•œ í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤
+		ThreadEx4 obj1 = new ThreadEx4("ìŠ¤ë ˆë“œ 1");
+		ThreadEx4 obj2 = new ThreadEx4("ìŠ¤ë ˆë“œ 2");
 		
-		//½º·¹µå »ı¼º
+		//ìŠ¤ë ˆë“œ ìƒì„±
 		Thread th1 = new Thread(obj1);
 		Thread th2 = new Thread(obj2);
 		
-		//½º·¹µåÀÇ ¿ì¼± ¼øÀ§ º¯°æ
-		//°¡Àå ³·Àº ¿ì¼± ¼øÀ§·Î ¼³Á¤
+		//ìŠ¤ë ˆë“œì˜ ìš°ì„  ìˆœìœ„ ë³€ê²½
+		//ê°€ì¥ ë‚®ì€ ìš°ì„  ìˆœìœ„ë¡œ ì„¤ì •
 		th1.setPriority(Thread.MIN_PRIORITY);
-		//°¡Àå ³ôÀº ¿ì¼± ¼øÀ§·Î ¼³Á¤
+		//ê°€ì¥ ë†’ì€ ìš°ì„  ìˆœìœ„ë¡œ ì„¤ì •
 		th2.setPriority(Thread.MAX_PRIORITY);
 		
-		//½º·¹µå ½ÃÀÛ
+		//ìŠ¤ë ˆë“œ ì‹œì‘
 		th1.start();
 		th2.start();
 		

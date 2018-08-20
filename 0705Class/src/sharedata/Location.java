@@ -1,15 +1,15 @@
 package sharedata;
 
-//À§Ä¡ Á¤º¸¸¦ °¡Á®¿À´Â Å¬·¡½º
+//ìœ„ì¹˜ ì •ë³´ë¥¼ ê°€ì ¸ì˜¤ëŠ” í´ë˜ìŠ¤
 public class Location {
 	public double latitude;
 	public double longitude;
 	
 	public void getLocation() {
-		//»ı¼ºÀÚ¸¦ ÀÌ¿ëÇÑ µ¥ÀÌÅÍ Àü´Ş
+		//ìƒì„±ìë¥¼ ì´ìš©í•œ ë°ì´í„° ì „ë‹¬
 		//Map map = new Map(latitude, longitude);
 		
-		//setter¸¦ ÀÌ¿ëÇÑ µ¥ÀÌÅÍ Àü´Ş
+		//setterë¥¼ ì´ìš©í•œ ë°ì´í„° ì „ë‹¬
 		Map map = new Map();
 		map.setLatitude(latitude);
 		map.setLongitude(longitude);

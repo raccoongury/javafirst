@@ -1,22 +1,22 @@
 package inheritance;
-//Á÷¿ø Á¤º¸¸¦ ÀúÀåÇÏ±â À§ÇÑ Å¬·¡½º
+//ì§ì› ì •ë³´ë¥¼ ì €ì¥í•˜ê¸° ìœ„í•œ í´ë˜ìŠ¤
 public class Employee {
 
-	//¹øÈ£¿Í ÀÌ¸§À» ÀúÀåÇÏ±â À§ÇÑ º¯¼ö
-	protected int num;//private int num;ÀÌ°É Manager¿¡¼­ »ó¼Ó¹Ş±â À§ÇØ private¸¦ protected·Î º¯°æ
+	//ë²ˆí˜¸ì™€ ì´ë¦„ì„ ì €ì¥í•˜ê¸° ìœ„í•œ ë³€ìˆ˜
+	protected int num;//private int num;ì´ê±¸ Managerì—ì„œ ìƒì†ë°›ê¸° ìœ„í•´ privateë¥¼ protectedë¡œ ë³€ê²½
 	protected String name;
 	
-	//numÀÇ °ªÀ» ÀÏ·Ã¹øÈ£·Î ¸¸µé±â À§ÇÑ °øÀ¯ º¯¼ö - static
+	//numì˜ ê°’ì„ ì¼ë ¨ë²ˆí˜¸ë¡œ ë§Œë“¤ê¸° ìœ„í•œ ê³µìœ  ë³€ìˆ˜ - static
 	private static int autoincrement;
 	
-	//»ı¼ºÀÚ(Constructor)
+	//ìƒì„±ì(Constructor)
 	public Employee(int n) {
-		//ÀÏ·Ã¹øÈ£¸¦ ¸¸µé±â
+		//ì¼ë ¨ë²ˆí˜¸ë¥¼ ë§Œë“¤ê¸°
 		autoincrement = autoincrement + 1;
 		num = autoincrement;
 	}
 	
-	//ÀÎ½ºÅÏ½º º¯¼ö¸¦ »ç¿ëÇÒ ¼ö ÀÖµµ·Ï ÇÏ±â À§ÇÑ Á¢±ÙÀÚ ¸Ş¼Òµå
+	//ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ë¥¼ ì‚¬ìš©í•  ìˆ˜ ìˆë„ë¡ í•˜ê¸° ìœ„í•œ ì ‘ê·¼ì ë©”ì†Œë“œ
 	
 	public int getNum() {
 		return num;
@@ -35,7 +35,7 @@ public class Employee {
 	}
 
 	
-	//°ªÀ» È®ÀÎÇÏ±â ½±°Ô ÇÏ±â À§ÇÑ ¸Ş¼Òµå
+	//ê°’ì„ í™•ì¸í•˜ê¸° ì‰½ê²Œ í•˜ê¸° ìœ„í•œ ë©”ì†Œë“œ
 	@Override
 	public String toString() {
 		return "Employee [num=" + num + ", name=" + name + "]";

@@ -3,7 +3,7 @@ package thread;
 public class ThreadMain {
 
 	public static void main(String[] args) {
-		//¾Õ¿¡¼­ ¸¸µç Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸¦ ¸¸µé°í run ¸Ş¼Òµå¸¦ È£Ãâ
+		//ì•ì—ì„œ ë§Œë“  í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ë§Œë“¤ê³  run ë©”ì†Œë“œë¥¼ í˜¸ì¶œ
 		/*
 		ThreadEx1 th1 = new ThreadEx1();
 		th1.run();
@@ -11,7 +11,7 @@ public class ThreadMain {
 		th2.run();
 	*/
 		
-		//½º·¹µå·Î ½ÇÇà
+		//ìŠ¤ë ˆë“œë¡œ ì‹¤í–‰
 		ThreadEx1 th1 = new ThreadEx1();
 		th1.start();
 		ThreadEx1 th2 = new ThreadEx1();

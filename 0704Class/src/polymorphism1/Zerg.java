@@ -1,8 +1,8 @@
 package polymorphism1;
 
 public class Zerg extends Starcraft{
-	// °ø°İÇÏ´Â ¸Ş¼Òµå
+	// ê³µê²©í•˜ëŠ” ë©”ì†Œë“œ
 	public void attack() {
-		System.out.println("Àú±×ÀÇ °ø°İ");
+		System.out.println("ì €ê·¸ì˜ ê³µê²©");
 	}
 }

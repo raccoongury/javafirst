@@ -7,7 +7,7 @@ import java.util.LinkedList;
 public class ListMain3 {
 
 	public static void main(String[] args) {
-		// Á¤¼ö List ¿Í ¹®ÀÚ¿­ ListÀÇ Á¤·Ä
+		// ì •ìˆ˜ List ì™€ ë¬¸ìì—´ Listì˜ ì •ë ¬
 		ArrayList<Integer> list1 = new ArrayList<>();
 		list1.add(40);
 		list1.add(30);
@@ -23,14 +23,14 @@ public class ListMain3 {
 			}
 		};
 		list1.sort(comp);
-		//List´Â toString ÀçÁ¤ÀÇ µÇ¾î ÀÖ¾î¼­ ÀÎ½ºÅÏ½º Ãâ·ÂÇÏ¸é
-		//µ¥ÀÌÅÍ°¡ ¼ø¼­´ë·Î toStringÀ» È£ÃâÇÕ´Ï´Ù.
+		//ListëŠ” toString ì¬ì •ì˜ ë˜ì–´ ìˆì–´ì„œ ì¸ìŠ¤í„´ìŠ¤ ì¶œë ¥í•˜ë©´
+		//ë°ì´í„°ê°€ ìˆœì„œëŒ€ë¡œ toStringì„ í˜¸ì¶œí•©ë‹ˆë‹¤.
 		System.out.println(list1);
 		
 		LinkedList<String> list2 = new LinkedList<>();
-		list2.add("µ¥´Ï½º ¸®Ä¡È÷");
-		list2.add("Á¦ÀÓ½º °í½½¸µ");
-		list2.add("¸®´©½º Åä¹ßÁî");
+		list2.add("ë°ë‹ˆìŠ¤ ë¦¬ì¹˜íˆ");
+		list2.add("ì œì„ìŠ¤ ê³ ìŠ¬ë§");
+		list2.add("ë¦¬ëˆ„ìŠ¤ í† ë°œì¦ˆ");
 
 		Comparator<String> comp1 = new Comparator() {
 

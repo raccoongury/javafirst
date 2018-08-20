@@ -6,7 +6,7 @@ public class Main {
 			ThreadEx obj = new ThreadEx();
 			obj.start();
 			
-			//Thread Å¬·¡½ºÀÇ Anonymous ¸¸µé±â
+			//Thread í´ë˜ìŠ¤ì˜ Anonymous ë§Œë“¤ê¸°
 			Thread th = new Thread() {
 				public void run() {
 				try {

@@ -7,62 +7,62 @@ import java.util.Scanner;
 public class Main2 {
 
 	public static void main(String[] args) {
-		// ÀÎ½ºÅÏ½º ¹è¿­ ¸¸µé±â - 5°³ ÀúÀåÇÒ ¼ö ÀÖ´Â ¹è¿­À» »ı¼º
-				// ¾ÆÁ÷Àº ¸ğµÎ null
+		// ì¸ìŠ¤í„´ìŠ¤ ë°°ì—´ ë§Œë“¤ê¸° - 5ê°œ ì €ì¥í•  ìˆ˜ ìˆëŠ” ë°°ì—´ì„ ìƒì„±
+				// ì•„ì§ì€ ëª¨ë‘ null
 		Book[] books = new Book[5];
-		// ÀÎ½ºÅÏ½º »ı¼º
+		// ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		books[0] = new Book();
-		// °ªÀ» Ã¤¿ó´Ï´Ù.
-		books[0].setTitle("»ï±¹Áö");
-		books[0].setAuthor("³ª°üÁß");
+		// ê°’ì„ ì±„ì›ë‹ˆë‹¤.
+		books[0].setTitle("ì‚¼êµ­ì§€");
+		books[0].setAuthor("ë‚˜ê´€ì¤‘");
 		books[0].setPubdate("2017-08-11");
 		books[0].setPrice(30000);
 
-		// ÀÎ½ºÅÏ½º »ı¼º
+		// ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		books[1] = new Book();
-		// °ªÀ» Ã¤¿ó´Ï´Ù.
-		books[1].setTitle("»ç±â");
-		books[1].setAuthor("»ç¸¶ÀÇ");
+		// ê°’ì„ ì±„ì›ë‹ˆë‹¤.
+		books[1].setTitle("ì‚¬ê¸°");
+		books[1].setAuthor("ì‚¬ë§ˆì˜");
 		books[1].setPubdate("345-04-20");
 		books[1].setPrice(90000);
 
-		// ÀÎ½ºÅÏ½º »ı¼º
+		// ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		books[2] = new Book();
-		// °ªÀ» Ã¤¿ó´Ï´Ù.
-		books[2].setTitle("»ï±¹»ç±â");
-		books[2].setAuthor("±èºÎ½Ä");
+		// ê°’ì„ ì±„ì›ë‹ˆë‹¤.
+		books[2].setTitle("ì‚¼êµ­ì‚¬ê¸°");
+		books[2].setAuthor("ê¹€ë¶€ì‹");
 		books[2].setPubdate("789-02-15");
 		books[2].setPrice(60000);
 
-		// ÀÎ½ºÅÏ½º »ı¼º
+		// ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		books[3] = new Book();
-		// °ªÀ» Ã¤¿ó´Ï´Ù.
-		books[3].setTitle("19È£½Ç·Î °¡´Ù");
-		books[3].setAuthor("È£ÅÚ¸®¾î");
+		// ê°’ì„ ì±„ì›ë‹ˆë‹¤.
+		books[3].setTitle("19í˜¸ì‹¤ë¡œ ê°€ë‹¤");
+		books[3].setAuthor("í˜¸í…”ë¦¬ì–´");
 		books[3].setPubdate("2015-09-19");
 		books[3].setPrice(20000);
 
-		// ÀÎ½ºÅÏ½º »ı¼º
+		// ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		books[4] = new Book();
-		// °ªÀ» Ã¤¿ó´Ï´Ù.
-		books[4].setTitle("³ª´Â ³ª´ë·Î »ì±â·Î Çß´Ù");
-		books[4].setAuthor("³ª»ì±â");
+		// ê°’ì„ ì±„ì›ë‹ˆë‹¤.
+		books[4].setTitle("ë‚˜ëŠ” ë‚˜ëŒ€ë¡œ ì‚´ê¸°ë¡œ í–ˆë‹¤");
+		books[4].setAuthor("ë‚˜ì‚´ê¸°");
 		books[4].setPubdate("2017-06-25");
 		books[4].setPrice(20000);
 
-		// ¹è¿­ÀÇ µ¥ÀÌÅÍ¸¦ Á¤·Ä
-		// ±âº»ÀûÀ¸·Î Á¤·ÄÀ» ÇÏ·Á¸é °¢ µ¥ÀÌÅÍÀÇ Å©±â¸¦ ºñ±³ÇÒ ¼ö ÀÖ¾î¾ß ÇÕ´Ï´Ù.
-		//java¿¡¼­ Å©±â ºñ±³¸¦ ÇÏ´Â ¸Ş¼Òµå´Â
-		//Comparable ÀÎÅÍÆäÀÌ½ºÀÇ compare ¸Ş¼Òµå ÀÔ´Ï´Ù.
-		//Á÷Á¢ ¹İµç Å¬·¡½ºÀÇ °æ¿ì´Â Å¬·¡½º¿¡ comparable ÀÎÅÍÆäÀÌ½º¸¦
-		//implements ÇÏ´ø°¡ Comparator ÀÎÅÍÆäÀÌ½º¸¦ implementsÇÑ
-		//ÀÎ½ºÅÏ½º¸¦ °°ÀÌ ´ëÀÔÇØ¾ß ÇÕ´Ï´Ù.
+		// ë°°ì—´ì˜ ë°ì´í„°ë¥¼ ì •ë ¬
+		// ê¸°ë³¸ì ìœ¼ë¡œ ì •ë ¬ì„ í•˜ë ¤ë©´ ê° ë°ì´í„°ì˜ í¬ê¸°ë¥¼ ë¹„êµí•  ìˆ˜ ìˆì–´ì•¼ í•©ë‹ˆë‹¤.
+		//javaì—ì„œ í¬ê¸° ë¹„êµë¥¼ í•˜ëŠ” ë©”ì†Œë“œëŠ”
+		//Comparable ì¸í„°í˜ì´ìŠ¤ì˜ compare ë©”ì†Œë“œ ì…ë‹ˆë‹¤.
+		//ì§ì ‘ ë°˜ë“  í´ë˜ìŠ¤ì˜ ê²½ìš°ëŠ” í´ë˜ìŠ¤ì— comparable ì¸í„°í˜ì´ìŠ¤ë¥¼
+		//implements í•˜ë˜ê°€ Comparator ì¸í„°í˜ì´ìŠ¤ë¥¼ implementsí•œ
+		//ì¸ìŠ¤í„´ìŠ¤ë¥¼ ê°™ì´ ëŒ€ì…í•´ì•¼ í•©ë‹ˆë‹¤.
 		
 		Scanner sc = new Scanner(System.in);
 		while(true) {
-			//ºñ±³ÇÒ Comparator º¯¼ö ¼±¾ğ
+			//ë¹„êµí•  Comparator ë³€ìˆ˜ ì„ ì–¸
 			Comparator <Book> comparator = null;
-			System.out.print("0:Á¾·á 1:Á¦¸ñ¿À¸§Â÷¼ø 2.Á¦¸ñ³»¸²Â÷¼ø:");
+			System.out.print("0:ì¢…ë£Œ 1:ì œëª©ì˜¤ë¦„ì°¨ìˆœ 2.ì œëª©ë‚´ë¦¼ì°¨ìˆœ:");
 			int menu = sc.nextInt();
 			if(menu == 0) {
 				break;
@@ -73,7 +73,7 @@ public class Main2 {
 					public int compare(Object o1, Object o2) {
 						Book book1 = (Book)o1;
 						Book book2 = (Book)o2;
-						return book1.getTitle().compareTo(book2.getTitle());//¿À¸§Â÷¼ø
+						return book1.getTitle().compareTo(book2.getTitle());//ì˜¤ë¦„ì°¨ìˆœ
 					}
 					
 				};
@@ -84,13 +84,13 @@ public class Main2 {
 					public int compare(Object o1, Object o2) {
 						Book book1 = (Book)o1;
 						Book book2 = (Book)o2;
-						return book2.getTitle().compareTo(book1.getTitle());//³»¸²Â÷¼ø
+						return book2.getTitle().compareTo(book1.getTitle());//ë‚´ë¦¼ì°¨ìˆœ
 					}
 					
 				};
 			}
 			Arrays.sort(books, comparator);
-		//Comparator ÀÎÅÍÆäÀÌ½º¸¦ implements ÇÑ ÀÎ½ºÅÏ½º ¸¸µé±â
+		//Comparator ì¸í„°í˜ì´ìŠ¤ë¥¼ implements í•œ ì¸ìŠ¤í„´ìŠ¤ ë§Œë“¤ê¸°
 		
 //		Comparator comparator = new Comparator() {
 //
@@ -98,7 +98,7 @@ public class Main2 {
 //			public int compare(Object o1, Object o2) {
 //				Book first = (Book)o1;
 //				Book second = (Book)o2;
-//				//titleÀ» ÀÌ¿ëÇØ¼­ ºñ±³
+//				//titleì„ ì´ìš©í•´ì„œ ë¹„êµ
 //				return first.getTitle().compareTo(second.getTitle());
 //			}
 //		};
@@ -109,7 +109,7 @@ public class Main2 {
 //				Comparator <Book> comp = new Comparator() {
 //					@Override
 //					public int compare(Object o1, Object o2) {
-//						//µ¥ÀÌÅÍ Çü º¯È¯
+//						//ë°ì´í„° í˜• ë³€í™˜
 //						Book first = (Book)o1;
 //						Book second = (Book)o2;
 //						return first.getPrice() - second.getPrice();
@@ -117,7 +117,7 @@ public class Main2 {
 //				};
 //				Arrays.sort(books, comp);
 				
-			//¹è¿­ÀÇ µ¥ÀÌÅÍ ÀüºÎ Ãâ·Â
+			//ë°°ì—´ì˜ ë°ì´í„° ì „ë¶€ ì¶œë ¥
 			for(Book book : books) {
 				System.out.println(book);
 			}

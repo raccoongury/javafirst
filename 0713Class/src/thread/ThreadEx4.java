@@ -3,16 +3,16 @@ package thread;
 public class ThreadEx4 implements Runnable {
 	private String name;
 	
-	//»ı¼ºÀÚ
-	//ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇÒ ¶§ ¹®ÀÚ¿­À» 1°³ ¹Ş¾Æ¼­ name¿¡ ÀúÀåÇØÁÖ´Â »ı¼ºÀÚ
+	//ìƒì„±ì
+	//ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•  ë•Œ ë¬¸ìì—´ì„ 1ê°œ ë°›ì•„ì„œ nameì— ì €ì¥í•´ì£¼ëŠ” ìƒì„±ì
 	public ThreadEx4(String name) {
 		this.name = name;
 	}
 	
 	@Override
 	public void run() {
-		//ÀÏÁ¤ÇÑ ÁÖ±â¸¦ °¡Áö°í ¹İº¹ÇØ¼­ ¼öÇàÇÒ ¸¸ÇÑ ³»¿ë
-		//1ÃÊ¸¶´Ù nameÀ» Ãâ·ÂÇÏ´Â ÀÛ¾÷ 10¹ø ¼öÇà
+		//ì¼ì •í•œ ì£¼ê¸°ë¥¼ ê°€ì§€ê³  ë°˜ë³µí•´ì„œ ìˆ˜í–‰í•  ë§Œí•œ ë‚´ìš©
+		//1ì´ˆë§ˆë‹¤ nameì„ ì¶œë ¥í•˜ëŠ” ì‘ì—… 10ë²ˆ ìˆ˜í–‰
 		for(int i=0; i<10; i=i+1) {
 			System.out.println(name);
 			try {

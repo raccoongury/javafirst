@@ -1,9 +1,9 @@
 package thread;
 
 public class ThreadEx1 extends Thread {
-	//½º·¹µå·Î µ¿ÀÛÇÒ ¸Ş¼Òµå
+	//ìŠ¤ë ˆë“œë¡œ ë™ì‘í•  ë©”ì†Œë“œ
 	public void run() {
-		//1ÃÊ¸¶´Ù Thread¶ó´Â ±ÛÀÚ¸¦ 10¹ø Ãâ·Â
+		//1ì´ˆë§ˆë‹¤ Threadë¼ëŠ” ê¸€ìë¥¼ 10ë²ˆ ì¶œë ¥
 		/*
 		for(int i = 0; i<10; i=i+1) {
 			
@@ -12,15 +12,15 @@ public class ThreadEx1 extends Thread {
 		int i = 0;
 		while(i<10) {
 			System.out.println("Thread");
-			//1ÃÊ¾¿ ´ë±â
-			//Thread Å¬·¡½ºÀÇ static ¸Ş¼ÒµåÀÎ
-			//sleep(½Ã°£)À» ÀÌ¿ë
+			//1ì´ˆì”© ëŒ€ê¸°
+			//Thread í´ë˜ìŠ¤ì˜ static ë©”ì†Œë“œì¸
+			//sleep(ì‹œê°„)ì„ ì´ìš©
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				System.out.println(e.getMessage());
-				//½º·¹µå¸¦ °­Á¦ Á¾·á ÇÒ ¼ö ÀÖµµ·Ï
-				//¿¹¿Ü°¡ ¹ß»ıÇÏ¸é run ¸Ş¼Òµå Á¾·á
+				//ìŠ¤ë ˆë“œë¥¼ ê°•ì œ ì¢…ë£Œ í•  ìˆ˜ ìˆë„ë¡
+				//ì˜ˆì™¸ê°€ ë°œìƒí•˜ë©´ run ë©”ì†Œë“œ ì¢…ë£Œ
 				return;
 			}
 			

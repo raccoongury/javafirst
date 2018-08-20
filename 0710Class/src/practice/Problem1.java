@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Problem1 {
 
 	public static void main(String[] args) {
-		//¸¸¿ø ´ÜÀ§ ±İ¾×À» ÀÔ·Â¹Ş¾Æ¼­ ¿À¸¸¿ø°ú ¸¸¿øÂ¥¸® ¸î Àå Áö±ŞÇØ¾ß ÇÏ´ÂÁö
+		//ë§Œì› ë‹¨ìœ„ ê¸ˆì•¡ì„ ì…ë ¥ë°›ì•„ì„œ ì˜¤ë§Œì›ê³¼ ë§Œì›ì§œë¦¬ ëª‡ ì¥ ì§€ê¸‰í•´ì•¼ í•˜ëŠ”ì§€
 		Scanner sc = new Scanner(System.in);
 		
 		int money = sc.nextInt();
@@ -13,7 +13,7 @@ public class Problem1 {
 		int o = money / 50000;
 		int m = money % 50000/ 10000;
 		
-		System.out.printf("¿À¸¸¿ø:%dÀå ¸¸¿ø:%Àå\n", o, m);
+		System.out.printf("ì˜¤ë§Œì›:%dì¥ ë§Œì›:%ì¥\n", o, m);
 
 	}
 

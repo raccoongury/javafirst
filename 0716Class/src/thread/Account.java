@@ -3,32 +3,32 @@ package thread;
 public class Account {
 	private int balance;
 
-	// ÀÜ¾×À» Ãß°¡ÇÏ´Â ¸Ş¼Òµå
+	// ì”ì•¡ì„ ì¶”ê°€í•˜ëŠ” ë©”ì†Œë“œ
 	public synchronized void save() {
-		System.out.println("ÀÔ±İ Àü ÀÜ¾×:" + balance);
+		System.out.println("ì…ê¸ˆ ì „ ì”ì•¡:" + balance);
 		balance = balance + 1000;
-		//wait() ÁßÀÎ ¸Ş¼Òµå ±ú¿ì±â
+		//wait() ì¤‘ì¸ ë©”ì†Œë“œ ê¹¨ìš°ê¸°
 		notify();
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("ÀÔ±İ ÈÄ ÀÜ¾×:" + balance);
+		System.out.println("ì…ê¸ˆ í›„ ì”ì•¡:" + balance);
 
 	}
 
-	// ÀÜ¾×À» °¨¼Ò½ÃÅ°´Â ¸Ş¼Òµå
+	// ì”ì•¡ì„ ê°ì†Œì‹œí‚¤ëŠ” ë©”ì†Œë“œ
 	public synchronized void depo() {
 		if(balance < 1000) {
 			try {
-				//notify()¸¦ È£ÃâÇÒ ¶§ ±îÁö ´ë±â
+				//notify()ë¥¼ í˜¸ì¶œí•  ë•Œ ê¹Œì§€ ëŒ€ê¸°
 				wait();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
-		System.out.println("Ãâ±İ Àü ÀÜ¾×:" + balance);
+		System.out.println("ì¶œê¸ˆ ì „ ì”ì•¡:" + balance);
 		balance = balance - 1000;
 		try {
 			Thread.sleep(1000);
@@ -36,7 +36,7 @@ public class Account {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("Ãâ±İ ÈÄ ÀÜ¾×:" + balance);
+		System.out.println("ì¶œê¸ˆ í›„ ì”ì•¡:" + balance);
 
 	}
 }

@@ -7,17 +7,17 @@ import java.awt.Frame;
 import java.awt.Panel;
 
 public class MyWindow extends Frame {
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	public MyWindow() {
 		setBackground(Color.BLUE);
 		setSize(500, 500);
 		setLocation(100, 100);
-		setTitle("³ªÀÇ Ã¹¹øÂ° À©µµ¿ì ÇÁ·Î±×·¥");
+		setTitle("ë‚˜ì˜ ì²«ë²ˆì§¸ ìœˆë„ìš° í”„ë¡œê·¸ë¨");
 		
 		Panel panel = new Panel();
 		
-		Button btn1 = new Button("¹öÆ°1");
-		//¹öÆ°ÀÇ ¹è°æ»öÀ» º¯°æÇÏ´Â ½º·¹µå
+		Button btn1 = new Button("ë²„íŠ¼1");
+		//ë²„íŠ¼ì˜ ë°°ê²½ìƒ‰ì„ ë³€ê²½í•˜ëŠ” ìŠ¤ë ˆë“œ
 		//ColorThread th1 = new ColorThread(btn1);
 		Thread th1 = new Thread() {
 			public void run() {
@@ -41,13 +41,13 @@ public class MyWindow extends Frame {
 		th1.start();
 		panel.add(btn1);
 		
-		Button btn2 = new Button("¹öÆ°2");
-		//¹öÆ°ÀÇ ÅØ½ºÆ®¸¦ º¯°æÇÏ´Â ½º·¹µå
+		Button btn2 = new Button("ë²„íŠ¼2");
+		//ë²„íŠ¼ì˜ í…ìŠ¤íŠ¸ë¥¼ ë³€ê²½í•˜ëŠ” ìŠ¤ë ˆë“œ
 		TextThread th2 = new TextThread(btn2);
 		th2.start();
 		
 		panel.add(btn2);
-		//ÆĞ³ÎÀ» ÇÁ·¹ÀÓ¿¡ Ãß°¡
+		//íŒ¨ë„ì„ í”„ë ˆì„ì— ì¶”ê°€
 		add(panel);
 		
 		

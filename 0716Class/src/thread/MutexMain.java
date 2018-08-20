@@ -4,7 +4,7 @@ public class MutexMain {
 
 			public static void main(String[ ] args) {
 				Bank bank = new Bank ( ) ;
-				//½º·¹µå ÀÎ½ºÅÏ½º ¸¸µé±â
+				//ìŠ¤ë ˆë“œ ì¸ìŠ¤í„´ìŠ¤ ë§Œë“¤ê¸°
 				ThreadEx2 atm =
 						new ThreadEx2(bank, "ATM");
 				atm.start();

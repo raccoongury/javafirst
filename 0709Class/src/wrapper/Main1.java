@@ -5,7 +5,7 @@ import java.io.IOException;
 public class Main1 {
 
 	public static void main(String[] args) {
-		//HelloWorld 100¸¸¹ø Ãâ·ÂÇÏ´Â ½Ã°£ ÃøÁ¤ÇÏ±â
+		//HelloWorld 100ë§Œë²ˆ ì¶œë ¥í•˜ëŠ” ì‹œê°„ ì¸¡ì •í•˜ê¸°
 		long start = System.currentTimeMillis();
 		
 		for (int i =0; i<100; i=i+1) {
@@ -13,11 +13,11 @@ public class Main1 {
 		}
 		
 		long end = System.currentTimeMillis();
-		System.out.println("ÀÛ¾÷½Ã°£:" + (end-start));
+		System.out.println("ìž‘ì—…ì‹œê°„:" + (end-start));
 		
-		//È¯°æº¯¼ö È®ÀÎ
+		//í™˜ê²½ë³€ìˆ˜ í™•ì¸
 		System.out.println(System.getenv("path"));
-		//½Ã½ºÅÛ ¼Ó¼º È®ÀÎ
+		//ì‹œìŠ¤í…œ ì†ì„± í™•ì¸
 		System.out.println(System.getProperty("java.version"));
 		
 		Runtime r = Runtime.getRuntime();

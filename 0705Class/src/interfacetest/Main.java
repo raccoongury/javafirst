@@ -5,34 +5,34 @@ import java.util.Scanner;
 public class Main {
 	String msg = new String();
 	public static void main(String[] args) {
-		//ÀÎÅÍÆäÀÌ½º·Îµµ º¯¼ö¸¦ ¸¸µé ¼ö ÀÖ°í 
-		//ÀÎÅÍÆäÀÌ½º·Î ¸¸µç º¯¼ö´Â ÀÚ½ÅÀ» implements ÇÑ Å¬·¡½ºÀÇ 
-		//ÀÎ½ºÅÏ½ºÀÇ ÁÖ¼Ò¸¦ ÀúÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.
+		//ì¸í„°í˜ì´ìŠ¤ë¡œë„ ë³€ìˆ˜ë¥¼ ë§Œë“¤ ìˆ˜ ìˆê³  
+		//ì¸í„°í˜ì´ìŠ¤ë¡œ ë§Œë“  ë³€ìˆ˜ëŠ” ìì‹ ì„ implements í•œ í´ë˜ìŠ¤ì˜ 
+		//ì¸ìŠ¤í„´ìŠ¤ì˜ ì£¼ì†Œë¥¼ ì €ì¥í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
 		MemberService memberService = 
 				new MemberServiceImpl();
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.print("ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 		String id = sc.nextLine();
 		boolean r = memberService.idCheck(id);
 		if(r == true) {
-			System.out.println("»ç¿ë °¡´ÉÇÑ ¾ÆÀÌµğ ÀÔ´Ï´Ù.");
+			System.out.println("ì‚¬ìš© ê°€ëŠ¥í•œ ì•„ì´ë”” ì…ë‹ˆë‹¤.");
 		}
 		else {
-			System.out.println("ÀÌ¹Ì Á¸ÀçÇÏ´Â ¾ÆÀÌµğ ÀÔ´Ï´Ù.");
+			System.out.println("ì´ë¯¸ ì¡´ì¬í•˜ëŠ” ì•„ì´ë”” ì…ë‹ˆë‹¤.");
 		}
 		
-		System.out.print("·Î±×ÀÎ ÇÒ ¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.print("ë¡œê·¸ì¸ í•  ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 		id = sc.nextLine();
-		System.out.print("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.print("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 		String password = sc.nextLine();
 		int result = memberService.login(id, password);
 		if(result == 0) {
-			System.out.println("·Î±×ÀÎ ¼º°ø");
+			System.out.println("ë¡œê·¸ì¸ ì„±ê³µ");
 		}else if(result == 1) {
-			System.out.println("ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù.");
+			System.out.println("ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤.");
 		}else if(result == 2) {
-			System.out.println("¾ø´Â ¾ÆÀÌµğ ÀÔ´Ï´Ù.");
+			System.out.println("ì—†ëŠ” ì•„ì´ë”” ì…ë‹ˆë‹¤.");
 		}
 		
 		

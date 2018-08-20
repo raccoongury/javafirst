@@ -3,9 +3,9 @@ package abstracttest;
 public class Android extends SmartPhone {
 	public void call() {
 		double x = 10.75;
-		// ¼Ò¼ö Ã¹Â°ÀÚ¸® ¹Ý¿Ã¸²ÇØ¼­ Ãâ·ÂÇÏ±â
+		// ì†Œìˆ˜ ì²«ì§¸ìžë¦¬ ë°˜ì˜¬ë¦¼í•´ì„œ ì¶œë ¥í•˜ê¸°
 		System.out.println("x:" + (int) (x + 0.5));
-		// ¼Ò¼ö µÎÂ°ÀÚ¸® ¹Ý¿Ã¸²ÇØ¼­ Ãâ·ÂÇÏ±â
+		// ì†Œìˆ˜ ë‘ì§¸ìžë¦¬ ë°˜ì˜¬ë¦¼í•´ì„œ ì¶œë ¥í•˜ê¸°
 		System.out.println("x:" + ((int)(x*10+0.5))/10.0);
 		//10.75 -> 107.5 ->108.0 -> 108 -> 10.8
 	}

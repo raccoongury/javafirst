@@ -7,25 +7,25 @@ public class StringClass {
 	public static void main(String[] args) {
 		int x = 200;
 		int y = 100;
-		// x:200 y:100 Çü½ÄÀÇ ¹®ÀÚ¿­ ¸¸µé±â
+		// x:200 y:100 í˜•ì‹ì˜ ë¬¸ìì—´ ë§Œë“¤ê¸°
 		String str = String.format("x:%d y:%d", x, y);
 		System.out.println(str);
 
 		String msg = "I like Java";
-		// À§ÀÇ ¹®ÀÚ¿­¿¡¼­ java Æ÷ÇÔ¿©ºÎ È®ÀÎ - ´ë¼Ò¹®ÀÚ ±¸ºĞ¾øÀÌ
+		// ìœ„ì˜ ë¬¸ìì—´ì—ì„œ java í¬í•¨ì—¬ë¶€ í™•ì¸ - ëŒ€ì†Œë¬¸ì êµ¬ë¶„ì—†ì´
 		int idx = msg.toLowerCase().indexOf("java".toLowerCase());
 		if (idx >= 0) {
-			System.out.println("java°¡ Á¸ÀçÇÕ´Ï´Ù.");
+			System.out.println("javaê°€ ì¡´ì¬í•©ë‹ˆë‹¤.");
 		} else {
-			System.out.println("java°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("javaê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
 
-		// msgÀÇ ¹®ÀÚ¿­À» °ø¹éÀ» ±âÁØÀ¸·Î ºĞÇÒÇØ¼­ ÇÏ³ª¾¿ Ãâ·ÂÇÏ±â
+		// msgì˜ ë¬¸ìì—´ì„ ê³µë°±ì„ ê¸°ì¤€ìœ¼ë¡œ ë¶„í• í•´ì„œ í•˜ë‚˜ì”© ì¶œë ¥í•˜ê¸°
 		String[] ar = msg.split(" ");
 		for (int i = 0; i < ar.length; i = i + 1) {
 			System.out.println(ar[i]);
 		}
-		// msgÀÇ 3¹øÂ° ºÎÅÍ 7¹øÂ° ±ÛÀÚ±îÁö Ãâ·ÂÇÏ±â
+		// msgì˜ 3ë²ˆì§¸ ë¶€í„° 7ë²ˆì§¸ ê¸€ìê¹Œì§€ ì¶œë ¥í•˜ê¸°
 
 		String sub = msg.substring(3, 8);
 		System.out.println(sub);

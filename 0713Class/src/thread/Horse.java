@@ -5,12 +5,12 @@ import java.util.Random;
 public class Horse extends Thread {
 	private static int rank;
 	public void run() {
-		//½º·¹µå ÀÌ¸§ Ãâ·Â
-		System.out.println(getName() + " Ãâ¹ß");
+		//ìŠ¤ë ˆë“œ ì´ë¦„ ì¶œë ¥
+		System.out.println(getName() + " ì¶œë°œ");
 		
-		//ÇöÀç À§Ä¡¸¦ ÀúÀåÇÒ º¯¼ö
+		//í˜„ì¬ ìœ„ì¹˜ë¥¼ ì €ì¥í•  ë³€ìˆ˜
 		int pos = 0;
-		//·£´ıÇÑ °ªÀ» °¡Á®¿À±â À§ÇÑ º¯¼ö
+		//ëœë¤í•œ ê°’ì„ ê°€ì ¸ì˜¤ê¸° ìœ„í•œ ë³€ìˆ˜
 		Random r = new Random();
 		while(true) {
 			try {
@@ -25,8 +25,8 @@ public class Horse extends Thread {
 			}
 		}
 		rank = rank + 1;
-		System.out.println(getName() + "¹ø¸» °ñÀÎ");
-		System.out.println(getName() +"¹ø¸»" + " " + rank + "µî");
+		System.out.println(getName() + "ë²ˆë§ ê³¨ì¸");
+		System.out.println(getName() +"ë²ˆë§" + " " + rank + "ë“±");
 	}
 }
 

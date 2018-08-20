@@ -1,25 +1,25 @@
 package inheritance;
 
-//Employee Å¬·¡½º¸¦ »ó¼Ó¹ŞÀº Manager Å¬·¡½º
+//Employee í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ì€ Manager í´ë˜ìŠ¤
 public class Manager extends Employee {
 	public Manager() {
-		//ÀÌ·¸°Ô »ı¼ºÀÚ¸¦ Á÷Á¢ ¸¸µé¾î¼­ »óÀ§ Å¬·¡½ºÀÇ »ı¼ºÀÚ¸¦ ºÎ¸£´Â °æ¿ì´Â
-		//¾Èµå·ÎÀÌµå¿¡¼­ ¸¹ÀÌ ¹ß»ıÇÕ´Ï´Ù.
+		//ì´ë ‡ê²Œ ìƒì„±ìë¥¼ ì§ì ‘ ë§Œë“¤ì–´ì„œ ìƒìœ„ í´ë˜ìŠ¤ì˜ ìƒì„±ìë¥¼ ë¶€ë¥´ëŠ” ê²½ìš°ëŠ”
+		//ì•ˆë“œë¡œì´ë“œì—ì„œ ë§ì´ ë°œìƒí•©ë‹ˆë‹¤.
 		super(10);
 		/*
 		System.out.println("10");
-		super(10); ¿©±â¿À¸é ¾ÈµÊ
+		super(10); ì—¬ê¸°ì˜¤ë©´ ì•ˆë¨
 		*/
 	}
 	
-	//Á÷Ã¥À» ÀúÀåÇÒ º¯¼ö
+	//ì§ì±…ì„ ì €ì¥í•  ë³€ìˆ˜
 	private String task;
 
 	public String getTask() {
 		return task;
 	}
 	
-	//¸Ş¼Òµå ¿øÇü: setTask(String)
+	//ë©”ì†Œë“œ ì›í˜•: setTask(String)
 	public void setTask(String task) {
 		this.task = task;
 	}
@@ -27,7 +27,7 @@ public class Manager extends Employee {
 
 	@Override
 	public String toString() {
-		//super.toString()Àº »óÀ§ Å¬·¡½º ÀÎ EmployeeÀÇ toStringÀ» È£ÃâÇÕ´Ï´Ù.
+		//super.toString()ì€ ìƒìœ„ í´ë˜ìŠ¤ ì¸ Employeeì˜ toStringì„ í˜¸ì¶œí•©ë‹ˆë‹¤.
 		return super.toString() + "Manager [task=" + task + "]"; //return "Manager [task=" + task + "]";
 	}
 

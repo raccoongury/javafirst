@@ -1,13 +1,13 @@
 package method;
 
-public class Member {//public ÀÌ ¾øÀ¸¸é ÀÚ±â ÆĞÅ°Áö ¾È¿¡¼­¸¸ »ç¿ë, ÀÖÀ¸¸é ´Ù¸¥ÆĞÅ°Áö¿¡¼­ »ç¿ë°¡´É
+public class Member {//public ì´ ì—†ìœ¼ë©´ ìê¸° íŒ¨í‚¤ì§€ ì•ˆì—ì„œë§Œ ì‚¬ìš©, ìˆìœ¼ë©´ ë‹¤ë¥¸íŒ¨í‚¤ì§€ì—ì„œ ì‚¬ìš©ê°€ëŠ¥
 
 		private String email;
-		//emaiÀÇ getter
+		//emaiì˜ getter
 		public String getEmail() {
 			return email;
 		}
-		//emailÀÇ setter
+		//emailì˜ setter
 		public void setEmail(String arg) {
 			email = arg;
 		}
@@ -36,30 +36,30 @@ public class Member {//public ÀÌ ¾øÀ¸¸é ÀÚ±â ÆĞÅ°Áö ¾È¿¡¼­¸¸ »ç¿ë, ÀÖÀ¸¸é ´Ù¸¥ÆĞ
 		public void setAge(int age) {
 			this.age = age;
 		}
-		//ÀÎ½ºÅÏ½º º¯¼öµéÀ» Ãâ·ÂÇØÁÖ´Â ¸Ş¼Òµå
-		//Å¬·¡½º ¾È¿¡¼­ Å¬·¡½º¿¡ ¸¸µé¾îÁø º¯¼ö¸¦ »ç¿ëÇÒ ¶§´Â
-		//ÀÎ½ºÅÏ½º³ª Å¬·¡½º ÀÌ¸§À» ±âÀçÇÏÁö ¾Ê½À´Ï´Ù.member1À» ´Ù»­
+		//ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ë“¤ì„ ì¶œë ¥í•´ì£¼ëŠ” ë©”ì†Œë“œ
+		//í´ë˜ìŠ¤ ì•ˆì—ì„œ í´ë˜ìŠ¤ì— ë§Œë“¤ì–´ì§„ ë³€ìˆ˜ë¥¼ ì‚¬ìš©í•  ë•ŒëŠ”
+		//ì¸ìŠ¤í„´ìŠ¤ë‚˜ í´ë˜ìŠ¤ ì´ë¦„ì„ ê¸°ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.member1ì„ ë‹¤ëºŒ
 		public void display() {
-			System.out.println("ÀÌ¸ŞÀÏ:" + email + "\t" + 
-					"ºñ¹Ğ¹øÈ£:" + password + "\t" + 
-					"´Ğ³×ÀÓ:" + nickname + "\t" +
-					"³ªÀÌ:" + age);
+			System.out.println("ì´ë©”ì¼:" + email + "\t" + 
+					"ë¹„ë°€ë²ˆí˜¸:" + password + "\t" + 
+					"ë‹‰ë„¤ì„:" + nickname + "\t" +
+					"ë‚˜ì´:" + age);
 			
 		}
 		//1
-		@Override//Source -> Generate tostring ÀÚµ¿»ı¼º½Ã
+		@Override//Source -> Generate tostring ìë™ìƒì„±ì‹œ
 		public String toString() {
 			return "Member [email=" + email + ", password=" + password + ", nickname=" + nickname + ", age=" + age
 					+ "]";
 		}
 		//0
-		//static ¸Ş¼Òµå: Å¬·¡½º ÀÌ¸§À¸·Î È£ÃâÇÒ ¼ö ÀÖ´Â ¸Ş¼Òµå
-		//¸Å°³º¯¼ö¿¡ ... ÀÌ ÀÖÀ¸¸é ¸Å°³º¯¼ö °³¼ö¿¡ »ó°ü¾øÀÌ
-		//´ëÀÔ °¡´É
-		public static int sum(int ... ar) {// ...À¸·Î Áà¼­
+		//static ë©”ì†Œë“œ: í´ë˜ìŠ¤ ì´ë¦„ìœ¼ë¡œ í˜¸ì¶œí•  ìˆ˜ ìˆëŠ” ë©”ì†Œë“œ
+		//ë§¤ê°œë³€ìˆ˜ì— ... ì´ ìˆìœ¼ë©´ ë§¤ê°œë³€ìˆ˜ ê°œìˆ˜ì— ìƒê´€ì—†ì´
+		//ëŒ€ì… ê°€ëŠ¥
+		public static int sum(int ... ar) {// ...ìœ¼ë¡œ ì¤˜ì„œ
 			int tot = 0;
-			//heap¿¡ ÀÖ´Â µ¥ÀÌÅÍ¸¦ stack¿¡ ÀúÀå
-			//ÀÚÁÖ »ç¿ëÇÏ±â ¶§¹®¿¡ heap¿¡ ÀÖÀ¸¸é È¿À²ÀÌ ¶³¾îÁü
+			//heapì— ìˆëŠ” ë°ì´í„°ë¥¼ stackì— ì €ì¥
+			//ìì£¼ ì‚¬ìš©í•˜ê¸° ë•Œë¬¸ì— heapì— ìˆìœ¼ë©´ íš¨ìœ¨ì´ ë–¨ì–´ì§
 			int len = ar.length;
 			
 			for(int i = 0; i<len; i=i+1) {

@@ -19,23 +19,23 @@ public class SlotMain {
 		
 		String slot ="";
 		Random r = new Random();
-		//list¿¡ ÀÖ´Â ¸ğ¾ç 3°³¸¦ ·£´ıÇÏ°Ô ÃßÃâÇØ¼­ slot¿¡ Ãß°¡
+		//listì— ìˆëŠ” ëª¨ì–‘ 3ê°œë¥¼ ëœë¤í•˜ê²Œ ì¶”ì¶œí•´ì„œ slotì— ì¶”ê°€
 		for(int i=0; i<3; i=i+1) {
 			slot = slot + list.get(r.nextInt(list.size()));
 		}
 		System.out.println(slot);
-		//3°³ÀÇ ¹®ÀÚ°¡ µ¿ÀÏÇÑ Áö È®ÀÎ
+		//3ê°œì˜ ë¬¸ìê°€ ë™ì¼í•œ ì§€ í™•ì¸
 		if(slot.charAt(0) == slot.charAt(1) && 
 				slot.charAt(1) == slot.charAt(2)) {
-			System.out.println(slot.charAt(0) + "ÀÌ 3°³");
+			System.out.println(slot.charAt(0) + "ì´ 3ê°œ");
 		}
-		//¾ÕÀÇ 2°³ ¹®ÀÚ¸¸ µ¿ÀÏÇÑÁö È®ÀÎ
+		//ì•ì˜ 2ê°œ ë¬¸ìë§Œ ë™ì¼í•œì§€ í™•ì¸
 		else if(slot.charAt(0) == slot.charAt(1)) {
-			System.out.println(slot.charAt(0) + "ÀÌ ¾Õ¿¡ 2°³");
+			System.out.println(slot.charAt(0) + "ì´ ì•ì— 2ê°œ");
 		}
-		//±× ÀÌ¿ÜÀÇ °æ¿ì
+		//ê·¸ ì´ì™¸ì˜ ê²½ìš°
 		else {
-			System.out.println("²Î ´ÙÀ½ ±âÈ¸¿¡ !!!!");
+			System.out.println("ê½ ë‹¤ìŒ ê¸°íšŒì— !!!!");
 		}
 		
 

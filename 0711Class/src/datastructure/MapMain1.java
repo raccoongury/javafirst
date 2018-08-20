@@ -7,19 +7,19 @@ public class MapMain1 {
 
 	public static void main(String[] args) {
 		HashMap<String, Object> map = new HashMap<>();
-		map.put("name", "ÅÂ¿¬");
+		map.put("name", "íƒœì—°");
 		map.put("age", 30);
 		map.put("company", "SM");
-		// µ¿ÀÏÇÑ Å°·Î ´Ù½Ã ÀúÀåÇÏ¸é ¾÷µ¥ÀÌÆ®°¡ µË´Ï´Ù.
+		// ë™ì¼í•œ í‚¤ë¡œ ë‹¤ì‹œ ì €ì¥í•˜ë©´ ì—…ë°ì´íŠ¸ê°€ ë©ë‹ˆë‹¤.
 		map.put("company", "SM Town");
 		
-		//company Å°ÀÇ °ªÀ» Ãâ·ÂÇÏ±â
+		//company í‚¤ì˜ ê°’ì„ ì¶œë ¥í•˜ê¸°
 		System.out.println(map.get("company"));
-		//¾ø´Â Å°ÀÇ ÀÌ¸§À» »ç¿ëÇÏ¸é nullÀ» ¸®ÅÏ
+		//ì—†ëŠ” í‚¤ì˜ ì´ë¦„ì„ ì‚¬ìš©í•˜ë©´ nullì„ ë¦¬í„´
 		System.out.println(map.get("position"));
 		
-		//¸ğµç µ¥ÀÌÅÍ Á¶È¸ - ÀúÀåÇÒ ¶§ »ç¿ëÇÑ Key¸¦ ¸ô¶óµµ Á¶È¸°¡´É
-		//¸ğµç Å°¸¦ SetÀ¸·Î ÀúÀå
+		//ëª¨ë“  ë°ì´í„° ì¡°íšŒ - ì €ì¥í•  ë•Œ ì‚¬ìš©í•œ Keyë¥¼ ëª°ë¼ë„ ì¡°íšŒê°€ëŠ¥
+		//ëª¨ë“  í‚¤ë¥¼ Setìœ¼ë¡œ ì €ì¥
 		Set<String> keys = map.keySet();
 		
 		for(String key : keys) {

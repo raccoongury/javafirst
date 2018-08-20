@@ -5,10 +5,10 @@ import java.util.StringTokenizer;
 public class StringTokenMain {
 
 	public static void main(String[] args) {
-		String msg = "³ª´Â ÁßÇĞ±³¶§±îÁö ¾ß±¸ ¼±¼ö ¿´½À´Ï´Ù.";
+		String msg = "ë‚˜ëŠ” ì¤‘í•™êµë•Œê¹Œì§€ ì•¼êµ¬ ì„ ìˆ˜ ì˜€ìŠµë‹ˆë‹¤.";
 		
-		//msg¸¦ °ø¹é´ÜÀ§·Î ºĞÇÒ ÇØ¼­ Ãâ·Â
-		//1.split ¸Ş¼Òµå ÀÌ¿ë
+		//msgë¥¼ ê³µë°±ë‹¨ìœ„ë¡œ ë¶„í•  í•´ì„œ ì¶œë ¥
+		//1.split ë©”ì†Œë“œ ì´ìš©
 		String [] ar = msg.split(" ");
 		for(String token : ar) {
 			System.out.println(token);
@@ -20,13 +20,13 @@ public class StringTokenMain {
 			System.out.println(st.nextElement());
 		}
 		String data = "90.30.20.60";
-		//data¸¦ , ´ÜÀ§·Î ºĞÇÒÇØ¼­ ÇÕ°è¸¦ ±¸ÇÏ±â
+		//dataë¥¼ , ë‹¨ìœ„ë¡œ ë¶„í• í•´ì„œ í•©ê³„ë¥¼ êµ¬í•˜ê¸°
 		String [] tokens = data.split("\\.");
 		int sum = 0;
 		for(String token : tokens) {
 			sum = sum + Integer.parseInt(token);
 		}
-		System.out.println("ÇÕ°è:" + sum);
+		System.out.println("í•©ê³„:" + sum);
 
 	}
 }

@@ -5,18 +5,18 @@ public class Main {
 	public static void main(String[] args) {
 		SmartPhone smartPhone = new Iphone();// Iphone iphone = new Iphone();
 		smartPhone.call();// iphone.call();
-		// call¿¡ ¿À·ù³ª¸é SmartPhone Å¬·¡½º¿¡ °¡¼­ public void call() {}Ãß°¡
+		// callì— ì˜¤ë¥˜ë‚˜ë©´ SmartPhone í´ë˜ìŠ¤ì— ê°€ì„œ public void call() {}ì¶”ê°€
 		smartPhone = new Android();// Android android = new Android();
 		smartPhone.call();// android.call();
 
-		// SmartPhoneÀÇ ÀÎ½ºÅÏ½º »ı¼º
-		// smartPhone = new SmartPhone();//SmartPhone Å¬·¡½º¿¡ abstract¸¦ Ãß°¡ÇÑ Ãß»ó¸Ş¼Òµå°¡ µÇ¸é
+		// SmartPhoneì˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
+		// smartPhone = new SmartPhone();//SmartPhone í´ë˜ìŠ¤ì— abstractë¥¼ ì¶”ê°€í•œ ì¶”ìƒë©”ì†Œë“œê°€ ë˜ë©´
 
 		smartPhone = new WinPhone();
 		smartPhone.call();
 
-		// final º¯¼ö - °ªÀ» º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.
-		// Áö¿ªº¯¼öÁö¸¸ Àü¿ªº¯¼öÃ³·³ ¸Ş¸ğ¸®¿¡¼­ ¼Ò¸êµÇÁö ¾Ê½À´Ï´Ù.
+		// final ë³€ìˆ˜ - ê°’ì„ ë³€ê²½í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
+		// ì§€ì—­ë³€ìˆ˜ì§€ë§Œ ì „ì—­ë³€ìˆ˜ì²˜ëŸ¼ ë©”ëª¨ë¦¬ì—ì„œ ì†Œë©¸ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
 		final int ZERO = 0;
 		// ZERO = 1;
 

@@ -3,14 +3,14 @@ package exceptionhandling;
 public class Main1 {
 
 	public static void main(String[] args) {
-		try {//¹®Á¦°¡ ÀÖÀ»°Í °°Àº°÷À» try·Î ¹­À½
+		try {//ë¬¸ì œê°€ ìˆì„ê²ƒ ê°™ì€ê³³ì„ tryë¡œ ë¬¶ìŒ
 		int i = 10;
 		int j = 0;
 		int result = i/j;
-		System.out.println("°á°ú:"+result);
+		System.out.println("ê²°ê³¼:"+result);
 		}		catch(Exception e) {
 		}
-		System.out.println("¿¹¿Ü ¹ß»ı ÈÄ ½ÇÇà");
+		System.out.println("ì˜ˆì™¸ ë°œìƒ í›„ ì‹¤í–‰");
 		
 		String str = null;
 		str.charAt(10);

@@ -2,10 +2,10 @@
 public class Main {
 
 	public static void main(String[] args) {
-		//ÇÁ·Î±×·¥ Á¾·á
+		//í”„ë¡œê·¸ë¨ ì¢…ë£Œ
 		System.exit(0);
 		
-		System.out.println("ÀÌ¹®ÀåÀº ½ÇÇà ¾ÈµÊ");
+		System.out.println("ì´ë¬¸ì¥ì€ ì‹¤í–‰ ì•ˆë¨");
 
 	}
 

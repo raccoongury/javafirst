@@ -5,10 +5,10 @@ public class WinPhone extends SmartPhone {
 		@Override
 		public void call() {
 			int time = 132400;
-			//À§¿¡ ÀúÀå µÈ °ªÀÌ ÃÊ¶ó°í °¡Á¤ÇÏ°í ¸î½Ã°£ ¸îºĞ ¸îÃÊÀÎÁö Ãâ·Â
+			//ìœ„ì— ì €ì¥ ëœ ê°’ì´ ì´ˆë¼ê³  ê°€ì •í•˜ê³  ëª‡ì‹œê°„ ëª‡ë¶„ ëª‡ì´ˆì¸ì§€ ì¶œë ¥
 			int hour = time / 3600;
 			int minute = (time % 3600)/ 60;//(time - (hour * 3600)) / 60;
 			int second = time % 60;
-			System.out.println(hour + "½Ã°£" + minute + "ºĞ" + second + "ÃÊ");
+			System.out.println(hour + "ì‹œê°„" + minute + "ë¶„" + second + "ì´ˆ");
 		}
 }
