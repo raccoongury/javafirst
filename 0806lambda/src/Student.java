@@ -9,7 +9,7 @@ public class Student {
 	
 	
 	public Student() {
-		//»óÀ§ Å¬·¡½ºÀÇ »ı¼ºÀÚ¸¦ È£ÃâÇÏ´Â ±¸¹®: new Object()
+		//ìƒìœ„ í´ë˜ìŠ¤ì˜ ìƒì„±ìë¥¼ í˜¸ì¶œí•˜ëŠ” êµ¬ë¬¸: new Object()
 		super();
 	}
 		

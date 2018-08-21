@@ -2,7 +2,7 @@
 public class Main {
 
 	public static void main(String[] args) {
-		//º°µµÀÇ Å¬·¡½º¸¦ ¸¸µé¾î¼­ ÀÌ¿ë
+		//ë³„ë„ì˜ í´ëž˜ìŠ¤ë¥¼ ë§Œë“¤ì–´ì„œ ì´ìš©
 		/*
 		RunnableImpl r = 
 				new RunnableImpl();
@@ -15,9 +15,9 @@ public class Main {
 		th1.start();
 		*/
 		
-		//ÀÍ¸í Å¬·¡½º ÀÌ¿ëÇÏ±â
+		//ìµëª… í´ëž˜ìŠ¤ ì´ìš©í•˜ê¸°
 		Runnable r = () -> {
-				//1ÃÊ¸¶´Ù ½¬¸é¼­ 1ºÎÅÍ 10±îÁö Ãâ·Â
+				//1ì´ˆë§ˆë‹¤ ì‰¬ë©´ì„œ 1ë¶€í„° 10ê¹Œì§€ ì¶œë ¥
 				int i=1;
 				while(i<=10) {
 					try {

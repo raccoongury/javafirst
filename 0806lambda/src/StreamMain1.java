@@ -6,22 +6,22 @@ import java.util.stream.Stream;
 public class StreamMain1 {
 
 	public static void main(String[] args) {
-		//¹®ÀÚ¿­ ¹è¿­À» »ı¼º
-		String [] ar = {"¾ÆÀÌ¸°", "¹è¼öÁö", "±èÅÂ¿¬"};
+		//ë¬¸ìì—´ ë°°ì—´ì„ ìƒì„±
+		String [] ar = {"ì•„ì´ë¦°", "ë°°ìˆ˜ì§€", "ê¹€íƒœì—°"};
 		
-		//¹®ÀÚ¿­ ¸®½ºÆ®¸¦ »ı¼º
+		//ë¬¸ìì—´ ë¦¬ìŠ¤íŠ¸ë¥¼ ìƒì„±
 		List<String> person = new ArrayList<String>();
-		person.add("³²ÀÚÇö");
-		person.add("È«¹üµµ");
-		person.add("±è¿øºÀ");
-		person.add("ÀåÁØÇÏ");
+		person.add("ë‚¨ìí˜„");
+		person.add("í™ë²”ë„");
+		person.add("ê¹€ì›ë´‰");
+		person.add("ì¥ì¤€í•˜");
 		
-		//¹®ÀÚ¿­ ¹è¿­À» °¡Áö°í ½ºÆ®¸² ¸¸µé±â
+		//ë¬¸ìì—´ ë°°ì—´ì„ ê°€ì§€ê³  ìŠ¤íŠ¸ë¦¼ ë§Œë“¤ê¸°
 		Stream<String> stream = Arrays.stream(ar);
-		//ÀÛ¾÷ ¼öÇà
+		//ì‘ì—… ìˆ˜í–‰
 		stream.forEach(name -> {System.out.println(name);});
 		System.out.println("======================");
-		//List¸¦ °¡Áö°í ½ºÆ®¸² ¸¸µé±â
+		//Listë¥¼ ê°€ì§€ê³  ìŠ¤íŠ¸ë¦¼ ë§Œë“¤ê¸°
 		stream = person.stream();
 		stream.forEach(name -> {System.out.println(name);});
 

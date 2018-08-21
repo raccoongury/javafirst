@@ -7,14 +7,14 @@ public class BroadCastSend {
 
 	public static void main(String[] args) {
 		try {
-			//UDP Àü¼ÛÀ» À§ÇÑ ¼ÒÄÏ »ı¼º
+			//UDP ì „ì†¡ì„ ìœ„í•œ ì†Œì¼“ ìƒì„±
 			DatagramSocket ds = new DatagramSocket();
-			//½ºÄ³³Ê ÀÌ¿ëÇØ¼­ ´Ğ³×ÀÓ ÀÔ·Â
+			//ìŠ¤ìºë„ˆ ì´ìš©í•´ì„œ ë‹‰ë„¤ì„ ì…ë ¥
 			Scanner sc = new Scanner(System.in);
-			System.out.print("´Ğ ³×ÀÓ ÀÔ·Â:");
+			System.out.print("ë‹‰ ë„¤ì„ ì…ë ¥:");
 			String nick = sc.nextLine();
-			String msg = nick + "´ÔÀÌ Àü¼ÛÇÒ ÁØºñ°¡ µÇ¾ú½À´Ï´Ù.";
-			//´Ğ ³×ÀÓ Àü¼Û
+			String msg = nick + "ë‹˜ì´ ì „ì†¡í•  ì¤€ë¹„ê°€ ë˜ì—ˆìŠµë‹ˆë‹¤.";
+			//ë‹‰ ë„¤ì„ ì „ì†¡
 			DatagramPacket dp = 
 				new DatagramPacket(
 					msg.getBytes(),
@@ -25,7 +25,7 @@ public class BroadCastSend {
 			ds.send(dp);
 			
 			while(true) {
-				System.out.print("¸Ş½ÃÁö:");
+				System.out.print("ë©”ì‹œì§€:");
 				msg = sc.nextLine();
 				msg = nick + ":" + msg;
 				 dp = new DatagramPacket(

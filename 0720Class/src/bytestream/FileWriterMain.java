@@ -9,14 +9,14 @@ public class FileWriterMain {
 		FileWriter fw = null;
 		try {
 			fw = new FileWriter("./char.txt");
-			fw.write("¾È³çÇÏ¼¼¿ä");
-			fw.write("¹İ°©½À´Ï´Ù.\n");
-			fw.write("¹®ÀÚ¿­À» ÆÄÀÏ¿¡ ±â·ÏÇÏ°í ÀÖ½À´Ï´Ù.");
+			fw.write("ì•ˆë…•í•˜ì„¸ìš”");
+			fw.write("ë°˜ê°‘ìŠµë‹ˆë‹¤.\n");
+			fw.write("ë¬¸ìì—´ì„ íŒŒì¼ì— ê¸°ë¡í•˜ê³  ìˆìŠµë‹ˆë‹¤.");
 			fw.flush();
 		}
 		catch(Exception e) {
 			System.out.println(
-				"±â·Ï ¿¹¿Ü:" + e.getMessage());
+				"ê¸°ë¡ ì˜ˆì™¸:" + e.getMessage());
 		}
 		finally {
 			if(fw != null)

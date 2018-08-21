@@ -5,24 +5,24 @@ public class StreamMain2 {
 
 	public static void main(String[] args) {
 		String [] ar = 
-			{"±èÁÂÁø", "±è¿øºÀ", "³²ÀÚÇö", "¾ÈÁß±Ù", "½ÅÃ¤È£",
-				"¾ÈÃ¢È£", "È«¹üµµ", "À±ºÀ±æ", "ÀÌºÀÃ¢", "¾È±Ù"};
-		//½ºÆ®¸² º¯È¯
+			{"ê¹€ì¢Œì§„", "ê¹€ì›ë´‰", "ë‚¨ìí˜„", "ì•ˆì¤‘ê·¼", "ì‹ ì±„í˜¸",
+				"ì•ˆì°½í˜¸", "í™ë²”ë„", "ìœ¤ë´‰ê¸¸", "ì´ë´‰ì°½", "ì•ˆê·¼"};
+		//ìŠ¤íŠ¸ë¦¼ ë³€í™˜
 		Stream<String> stream = Arrays.stream(ar);
-		//¸ğµç µ¥ÀÌÅÍ Ãâ·Â
+		//ëª¨ë“  ë°ì´í„° ì¶œë ¥
 		//stream.forEach(name -> {System.out.println(name);});
 		
-		//Áßº¹ Á¦°Å
+		//ì¤‘ë³µ ì œê±°
 		/*
 		stream.distinct().skip(2).limit(3).forEach(
 			name -> {System.out.println(name);});
 		*/
 		
-		//±èÀ¸·Î ½ÃÀÛÇÏ´Â µ¥ÀÌÅÍ¸¸ Ã£¾Æ¼­ Ãâ·Â
-		//return ¹®Àå ÇÏ³ª ¹Û¿¡ ¾øÀ» ¶§´Â return ÀÌ¶ó´Â ´Ü¾î¸¦ »ı·«°¡´É
-		//¼öÇàµÇ´Â ÄÚµå°¡ ÇÑ ÁÙ ÀÏ ¶§´Â {} »ı·« °¡´É
+		//ê¹€ìœ¼ë¡œ ì‹œì‘í•˜ëŠ” ë°ì´í„°ë§Œ ì°¾ì•„ì„œ ì¶œë ¥
+		//return ë¬¸ì¥ í•˜ë‚˜ ë°–ì— ì—†ì„ ë•ŒëŠ” return ì´ë¼ëŠ” ë‹¨ì–´ë¥¼ ìƒëµê°€ëŠ¥
+		//ìˆ˜í–‰ë˜ëŠ” ì½”ë“œê°€ í•œ ì¤„ ì¼ ë•ŒëŠ” {} ìƒëµ ê°€ëŠ¥
 		/*
-		stream.filter(name->name.startsWith("±è"))
+		stream.filter(name->name.startsWith("ê¹€"))
 			.forEach(name -> System.out.println(name));
 		*/
 		stream.filter(name->name.length() != 3)

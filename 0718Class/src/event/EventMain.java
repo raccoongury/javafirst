@@ -3,9 +3,9 @@ package event;
 public class EventMain {
 
 	public static void main(String[] args) {
-			//ÀÎ½ºÅÏ½º »ı¼º
+			//ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 	//	new EventHandling1();
-		//ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇØ¼­ º¯¼ö¿¡ ´ëÀÔ
+		//ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•´ì„œ ë³€ìˆ˜ì— ëŒ€ì…
 		//EventHandling1 window = new EventHandling1();
 
 		new EventHandling2();

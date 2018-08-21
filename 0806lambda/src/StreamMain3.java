@@ -5,35 +5,35 @@ import java.util.stream.Stream;
 public class StreamMain3 {
 
 	public static void main(String[] args) {
-		//Student Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½ºÀÇ ¹è¿­
+		//Student í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ì˜ ë°°ì—´
 		Student [] ar = new Student[5];
 		ar[0] = 
-			new Student("À»Áö¹®´ö", "³²ÀÚ", 98, 24, "ÄÄÇ»ÅÍ°øÇĞ°ú");
+			new Student("ì„ì§€ë¬¸ë•", "ë‚¨ì", 98, 24, "ì»´í“¨í„°ê³µí•™ê³¼");
 		ar[1] = 
-			new Student("±ÇÀ¯¸®", "¿©ÀÚ", 75, 30, "Á¶¸®ÇĞ°ú");
+			new Student("ê¶Œìœ ë¦¬", "ì—¬ì", 75, 30, "ì¡°ë¦¬í•™ê³¼");
 		ar[2] = 
-			new Student("ÀÌÁö¿¬", "¿©ÀÚ", 99, 28, "ÄÄÇ»ÅÍ°øÇĞ°ú");
+			new Student("ì´ì§€ì—°", "ì—¬ì", 99, 28, "ì»´í“¨í„°ê³µí•™ê³¼");
 		ar[3] = 
-			new Student("ÃÖ¼öÁö", "¿©ÀÚ", 100, 29, "ÄÄÇ»ÅÍ°øÇĞ°ú");	
+			new Student("ìµœìˆ˜ì§€", "ì—¬ì", 100, 29, "ì»´í“¨í„°ê³µí•™ê³¼");	
 		ar[4] = 
-			new Student("ÃÖÀç¼º", "³²ÀÚ", 45, 38, "Ã¼À°ÇĞ°ú");
+			new Student("ìµœì¬ì„±", "ë‚¨ì", 45, 38, "ì²´ìœ¡í•™ê³¼");
 		
-		//¼ºº°ÀÌ ³²ÀÚÀÎ µ¥ÀÌÅÍ¸¸ Ãâ·Â
+		//ì„±ë³„ì´ ë‚¨ìì¸ ë°ì´í„°ë§Œ ì¶œë ¥
 		/*
 		Stream<Student> stream = Arrays.stream(ar);
-		stream.filter(student -> student.getGender().equals("³²ÀÚ"))
+		stream.filter(student -> student.getGender().equals("ë‚¨ì"))
 		.forEach(student -> System.out.println(student));
 		*/
-		//¼ºº°ÀÌ ¿©ÀÚÀÌ°í ³ªÀÌ°¡ 30ÀÌ»óÀÎ µ¥ÀÌÅÍ
+		//ì„±ë³„ì´ ì—¬ìì´ê³  ë‚˜ì´ê°€ 30ì´ìƒì¸ ë°ì´í„°
 		/*
 		Stream<Student> stream = Arrays.stream(ar);
 		stream.filter(
-				student -> student.getGender().equals("¿©ÀÚ")
+				student -> student.getGender().equals("ì—¬ì")
 				&& student.getAge() >= 30)
 		.forEach(student -> System.out.println(student));
 		*/
 		
-		//Student¸¦ score·Î º¯°æ
+		//Studentë¥¼ scoreë¡œ ë³€ê²½
 		/*
 		Stream<Student> stream = Arrays.stream(ar);
 		stream.mapToInt(Student::getScore)
@@ -48,7 +48,7 @@ public class StreamMain3 {
 		String [] insa = {
 				"Morning", "Afternoon", "Evening", "Night"
 		};
-		//¹®ÀÚ¿­ ¹è¿­À» Á¤·ÄÇØ¼­ Ãâ·Â
+		//ë¬¸ìì—´ ë°°ì—´ì„ ì •ë ¬í•´ì„œ ì¶œë ¥
 		Stream<String> s = Arrays.stream(insa);
 		//s.sorted().forEach(su -> System.out.println(su));
 		s.sorted((n1, n2)->n2.compareTo(n1)).forEach(su -> System.out.println(su));

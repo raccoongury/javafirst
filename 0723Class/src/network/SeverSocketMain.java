@@ -9,20 +9,20 @@ public class SeverSocketMain {
 
 	public static void main(String[] args) {
 	try {
-		//¼­¹ö ¼ÒÄÏ »ı¼º
+		//ì„œë²„ ì†Œì¼“ ìƒì„±
 		ServerSocket ss= new ServerSocket(9999);
 		while(true) {
-			System.out.println("¼­¹ö ´ë±â Áß....");
-			//Å¬¶óÀÌ¾ğÆ® Á¢¼Ó ´ë±â - Å¬¶óÀÌ¾ğÆ®°¡ Á¢¼ÓÇÏ¸é
-			//Å¬¶óÀÌ¾ğÆ®¿ÍÀÇ Åë½ÅÀ» À§ÇÑ SocketÀ»
-			//¸®ÅÏÇÏ°í ´ÙÀ½ ÁÙÀÇ ÄÚµå ½ÇÇà
+			System.out.println("ì„œë²„ ëŒ€ê¸° ì¤‘....");
+			//í´ë¼ì´ì–¸íŠ¸ ì ‘ì† ëŒ€ê¸° - í´ë¼ì´ì–¸íŠ¸ê°€ ì ‘ì†í•˜ë©´
+			//í´ë¼ì´ì–¸íŠ¸ì™€ì˜ í†µì‹ ì„ ìœ„í•œ Socketì„
+			//ë¦¬í„´í•˜ê³  ë‹¤ìŒ ì¤„ì˜ ì½”ë“œ ì‹¤í–‰
 			Socket socket = ss.accept();
-			//ÇÑ ÁÙÀÇ µ¥ÀÌÅÍ¸¦ ÀĞ¾î¼­ Ãâ·Â
+			//í•œ ì¤„ì˜ ë°ì´í„°ë¥¼ ì½ì–´ì„œ ì¶œë ¥
 			BufferedReader br = new BufferedReader( 
 					new InputStreamReader(socket.getInputStream()));
 			String msg = br.readLine();
-			System.out.println("¸Ş½ÃÁö:" + msg);
-			System.out.println("Á¢¼ÓÀÚ:" + socket.getInetAddress());
+			System.out.println("ë©”ì‹œì§€:" + msg);
+			System.out.println("ì ‘ì†ì:" + socket.getInetAddress());
 			br.close();
 			socket.close();
 		}

@@ -8,44 +8,44 @@ import java.util.Scanner;
 public class OracleDataBinding {
 
 	public static void main(String[] args) {
-		// µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á º¯¼ö
+		// ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²° ë³€ìˆ˜
 		Connection con = null;
-		// SQL ½ÇÇà º¯¼ö
+		// SQL ì‹¤í–‰ ë³€ìˆ˜
 		PreparedStatement pstmt = null;
 		
-		//Å°º¸µå·Î ºÎÅÍ ÀÔ·ÂÀ» ¹ÞÀ» ¼ö ÀÖ´Â °´Ã¼ »ý¼º
+		//í‚¤ë³´ë“œë¡œ ë¶€í„° ìž…ë ¥ì„ ë°›ì„ ìˆ˜ ìžˆëŠ” ê°ì²´ ìƒì„±
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("ºÎ¼­¹øÈ£:");
+		System.out.print("ë¶€ì„œë²ˆí˜¸:");
 		int deptno = sc.nextInt();
 		
-		System.out.print("ºÎ¼­ÀÌ¸§:");
-		//ÀÌÀü¿¡ ³²¾ÆÀÖ´ø Enter¸¦ Á¦°ÅÇÏ±â À§ÇÑ ÄÚµåÀÔ´Ï´Ù.
+		System.out.print("ë¶€ì„œì´ë¦„:");
+		//ì´ì „ì— ë‚¨ì•„ìžˆë˜ Enterë¥¼ ì œê±°í•˜ê¸° ìœ„í•œ ì½”ë“œìž…ë‹ˆë‹¤.
 		sc.nextLine();
 		String dname = sc.nextLine();
 		
-		System.out.print("Áö¿ª:");
+		System.out.print("ì§€ì—­:");
 		String loc = sc.nextLine();
 		
 		sc.close();
 		
 		try {
-			// µå¶óÀÌ¹ö Å¬·¡½º ·Îµå
+			// ë“œë¼ì´ë²„ í´ëž˜ìŠ¤ ë¡œë“œ
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			// µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á
+			// ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²°
 			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "scott", "tiger");
 			String sql = "insert into dept(deptno, dname, loc) "
 					+ "values(?,?,?)";
-			//pstmt »ý¼º - ´Ù¸¥ µ¥ÀÌÅÍ¸¦ ¹ÙÀÎµùÇÒ ¼ö ÀÖ´Â PreparedStatement »ý¼º
+			//pstmt ìƒì„± - ë‹¤ë¥¸ ë°ì´í„°ë¥¼ ë°”ì¸ë”©í•  ìˆ˜ ìžˆëŠ” PreparedStatement ìƒì„±
 			pstmt = con.prepareStatement(sql);
-			//µ¥ÀÌÅÍ ¹ÙÀÎµù
+			//ë°ì´í„° ë°”ì¸ë”©
 			pstmt.setInt(1, deptno);
 			pstmt.setString(2, dname);
 			pstmt.setString(3, loc);
 			
 			int r = pstmt.executeUpdate();
 			if(r > 0) {
-				System.out.println("»ðÀÔ ¼º°ø");
+				System.out.println("ì‚½ìž… ì„±ê³µ");
 			}
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

@@ -18,78 +18,78 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
 public class AddressBook extends JFrame {
-	//ÄÃ·³ ÀÌ¸§ ¹è¿­
+	//ì»¬ëŸ¼ ì´ë¦„ ë°°ì—´
 	String [ ] colums = {
-			"ÀÌ¸§", "ÀüÈ­¹øÈ£", "ÁÖ¼Ò"
+			"ì´ë¦„", "ì „í™”ë²ˆí˜¸", "ì£¼ì†Œ"
 	};
 	
-	//µ¥ÀÌÅÍ ¹è¿­
+	//ë°ì´í„° ë°°ì—´
 	String [ ] [ ] data = {
-			{"È«±æµ¿", "01037901997",
-				"¼­¿ï½Ã ¾çÃµ±¸ È«±æµ¿"},
-			{"¹Ú±æµ¿", "01012345678",
-					"¼­¿ï½Ã ¼­ÃÊ±¸ ¹Ú±æµ¿"},
-			{"ÀÌ±æµ¿", "01098765431",
-					"¼­¿ï½Ã °­ºÏ±¸ ÀÌ±æµ¿"},
-			{"¼Ò±æµ¿", "01067895431",
-			"¼­¿ï½Ã °­ºÏ±¸ ¼Ò±æµ¿"}
+			{"í™ê¸¸ë™", "01037901997",
+				"ì„œìš¸ì‹œ ì–‘ì²œêµ¬ í™ê¸¸ë™"},
+			{"ë°•ê¸¸ë™", "01012345678",
+					"ì„œìš¸ì‹œ ì„œì´ˆêµ¬ ë°•ê¸¸ë™"},
+			{"ì´ê¸¸ë™", "01098765431",
+					"ì„œìš¸ì‹œ ê°•ë¶êµ¬ ì´ê¸¸ë™"},
+			{"ì†Œê¸¸ë™", "01067895431",
+			"ì„œìš¸ì‹œ ê°•ë¶êµ¬ ì†Œê¸¸ë™"}
 	};
 	
 	public AddressBook() {
 		setBounds(100, 100, 1000, 400);
-		setTitle("¿¬¶ôÃ³");
+		setTitle("ì—°ë½ì²˜");
 		setDefaultCloseOperation(
 				EXIT_ON_CLOSE);
 		
-		//Å×ÀÌºí ¸ğµ¨ ¸¸µé±â
+		//í…Œì´ë¸” ëª¨ë¸ ë§Œë“¤ê¸°
 		DefaultTableModel model = 
 			new DefaultTableModel(data, colums);
-		//Å×ÀÌºí ¸ğµ¨À» ÀÌ¿ëÇØ¼­ Å×ÀÌºíÀ» ¸¸µé±â
+		//í…Œì´ë¸” ëª¨ë¸ì„ ì´ìš©í•´ì„œ í…Œì´ë¸”ì„ ë§Œë“¤ê¸°
 		JTable table = new JTable(model);
 		//table.setModel(model);
-		//Ãâ·Â ¿µ¿ªÀÇ Å©±âº¸´Ù tableÀÌ Ä¿Áö´õ¶óµµ
-		//½ºÅ©·Ñ ¹Ù¸¦ ÀÌ¿ëÇÒ ¼ö ÀÖµµ·Ï ScrollÀ» »ı¼º
+		//ì¶œë ¥ ì˜ì—­ì˜ í¬ê¸°ë³´ë‹¤ tableì´ ì»¤ì§€ë”ë¼ë„
+		//ìŠ¤í¬ë¡¤ ë°”ë¥¼ ì´ìš©í•  ìˆ˜ ìˆë„ë¡ Scrollì„ ìƒì„±
 		JScrollPane scrollPane = 
 			new JScrollPane(table);
-		//½ºÅ©·Ñ ÆĞÀÎÀ» ÇÁ·¹ÀÓ¿¡ ºÎÂø
+		//ìŠ¤í¬ë¡¤ íŒ¨ì¸ì„ í”„ë ˆì„ì— ë¶€ì°©
 		add(scrollPane);
 		
 		/*
-		//¸Ş´º ¹Ù¸¦ »ı¼º
+		//ë©”ë‰´ ë°”ë¥¼ ìƒì„±
 		JMenuBar menuBar = new JMenuBar();
 		
-		JMenu file = new JMenu("ÆÄÀÏ(a)");
-		//´ÜÃàÅ° ¼³Á¤
+		JMenu file = new JMenu("íŒŒì¼(a)");
+		//ë‹¨ì¶•í‚¤ ì„¤ì •
 		file.setMnemonic('a');
 		
-		JMenuItem item1 = new JMenuItem("¿­±â");
+		JMenuItem item1 = new JMenuItem("ì—´ê¸°");
 		file.add(item1);
 	
 		JCheckBoxMenuItem item2 = 
-			new JCheckBoxMenuItem("ÀúÀå");
+			new JCheckBoxMenuItem("ì €ì¥");
 		file.add(item2);
 	
 		JRadioButtonMenuItem item3 = 
-				new JRadioButtonMenuItem("ÆíÁı");
+				new JRadioButtonMenuItem("í¸ì§‘");
 		file.add(item3);
 	
 		
 		menuBar.add(file);
 		
-		//¸Ş´º ¹Ù¸¦ À©µµ¿ì¿¡ ºÎÂø
+		//ë©”ë‰´ ë°”ë¥¼ ìœˆë„ìš°ì— ë¶€ì°©
 		setJMenuBar(menuBar);
 		
 		*/
 		
-		JLabel lblName = new JLabel("ÀÌ¸§");
+		JLabel lblName = new JLabel("ì´ë¦„");
 		JTextField tfName = new JTextField(10);
-		JLabel lblPhone = new JLabel("ÀüÈ­¹øÈ£");
+		JLabel lblPhone = new JLabel("ì „í™”ë²ˆí˜¸");
 		JTextField tfPhone = new JTextField(15);
-		JLabel lblAddress = new JLabel("ÁÖ¼Ò");
+		JLabel lblAddress = new JLabel("ì£¼ì†Œ");
 		JTextField tfAddress = new JTextField(30);
 		
-		JButton btnInsert = new JButton("»ğÀÔ");
-		JButton btnDelete = new JButton("»èÁ¦");
+		JButton btnInsert = new JButton("ì‚½ì…");
+		JButton btnDelete = new JButton("ì‚­ì œ");
 		
 		JPanel southPanel = new JPanel();
 		southPanel.add(lblName);
@@ -105,47 +105,47 @@ public class AddressBook extends JFrame {
 		
 		setVisible(true);
 		
-		//»ğÀÔ ¹öÆ°ÀÇ Å¬¸¯ ÀÌº¥Æ® Ã³¸®(ActionListener) Ã³¸®
+		//ì‚½ì… ë²„íŠ¼ì˜ í´ë¦­ ì´ë²¤íŠ¸ ì²˜ë¦¬(ActionListener) ì²˜ë¦¬
 		ActionListener insertListener = new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-					//ÅØ½ºÆ® ÇÊµå¿¡ ÀÔ·ÂµÈ ³»¿ë °¡Á®¿À±â
+					//í…ìŠ¤íŠ¸ í•„ë“œì— ì…ë ¥ëœ ë‚´ìš© ê°€ì ¸ì˜¤ê¸°
 				String name = tfName.getText();
 				String phone = tfPhone.getText();
 				String address = tfAddress.getText();
 				
-				//ÁÂ¿ì °ø¹é Á¦°ÅÇÏ±â
+				//ì¢Œìš° ê³µë°± ì œê±°í•˜ê¸°
 				name = name.trim();
 				phone = phone.trim();
 				address = address.trim();
 				
-				//nameÀÇ ÇÊ¼ö ÀÔ·Â
+				//nameì˜ í•„ìˆ˜ ì…ë ¥
 				if(name.length() == 0) {
-					JOptionPane.showMessageDialog(null, "ÀÌ¸§Àº ÇÊ¼ö ÀÔ·Â", "ÀÌ¸§", 
+					JOptionPane.showMessageDialog(null, "ì´ë¦„ì€ í•„ìˆ˜ ì…ë ¥", "ì´ë¦„", 
 							JOptionPane.WARNING_MESSAGE);
-				//¾Æ·¡ÂÊÀ» ´õÀÌ»ó ¼öÇàÇÏÁö ¾Êµµ·Ï ¸®ÅÏ
+				//ì•„ë˜ìª½ì„ ë”ì´ìƒ ìˆ˜í–‰í•˜ì§€ ì•Šë„ë¡ ë¦¬í„´
 					return;
 				}
 				
-				//Å×ÀÌºíÀÇ µ¥ÀÌÅÍ¸¦ ÆíÁıÇÏ±â À§ÇØ¼­ Å×ÀÌºíÀÇ 
-				//µ¥ÀÌÅÍ ¸ğµ¨À» °¡Á®¿É´Ï´Ù.
+				//í…Œì´ë¸”ì˜ ë°ì´í„°ë¥¼ í¸ì§‘í•˜ê¸° ìœ„í•´ì„œ í…Œì´ë¸”ì˜ 
+				//ë°ì´í„° ëª¨ë¸ì„ ê°€ì ¸ì˜µë‹ˆë‹¤.
 				DefaultTableModel model = (DefaultTableModel)table.getModel();
-				//µ¥ÀÌÅÍ¸¦ Ãß°¡ÇÏ±â À§ÇØ¼­ Ãß°¡ÇÒ µ¥ÀÌÅÍ ¹è¿­À» »ı¼º
+				//ë°ì´í„°ë¥¼ ì¶”ê°€í•˜ê¸° ìœ„í•´ì„œ ì¶”ê°€í•  ë°ì´í„° ë°°ì—´ì„ ìƒì„±
 				String [ ] row = {name, phone, address};
-				//¸ğµ¨¿¡ Ãß°¡
+				//ëª¨ë¸ì— ì¶”ê°€
 				model.addRow(row);
-				//Å×ÀÌºíÀ» °»½Å
+				//í…Œì´ë¸”ì„ ê°±ì‹ 
 				table.updateUI();
 				
-				//ÅØ½ºÆ® ÇÊµå Å¬¸®¾î
+				//í…ìŠ¤íŠ¸ í•„ë“œ í´ë¦¬ì–´
 				tfName.setText("");
 				tfPhone.setText("");
 				tfAddress.setText("");
 				
-				//¸Ş½ÃÁö ¹Ú½º Ãâ·Â
+				//ë©”ì‹œì§€ ë°•ìŠ¤ ì¶œë ¥
 				JOptionPane.showMessageDialog(null, 
-					"µ¥ÀÌÅÍ »ğÀÔ ¼º°ø", "»ğÀÔÀÛ¾÷", 
+					"ë°ì´í„° ì‚½ì… ì„±ê³µ", "ì‚½ì…ì‘ì—…", 
 					JOptionPane.PLAIN_MESSAGE);
 				
 			}
@@ -157,46 +157,46 @@ public class AddressBook extends JFrame {
 		new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				//¼±ÅÃÇÑ Çà ¹øÈ£ Ã£±â
+				//ì„ íƒí•œ í–‰ ë²ˆí˜¸ ì°¾ê¸°
 				int idx = table.getSelectedRow();
-				//Å×ÀÌºí¿¡¼­ ÇàÀ» ¼±ÅÃÇÏÁö ¾Ê¾Ò´Ù¸é
+				//í…Œì´ë¸”ì—ì„œ í–‰ì„ ì„ íƒí•˜ì§€ ì•Šì•˜ë‹¤ë©´
 				if(idx<0 || idx >=table.getRowCount()) {
-					JOptionPane.showMessageDialog( null, "ÇàÀ» ¼±ÅÃÇÏ¼¼¿ä!!", "»èÁ¦ ½ÇÆĞ", JOptionPane.WARNING_MESSAGE);
+					JOptionPane.showMessageDialog( null, "í–‰ì„ ì„ íƒí•˜ì„¸ìš”!!", "ì‚­ì œ ì‹¤íŒ¨", JOptionPane.WARNING_MESSAGE);
 					return;
 				}
 				
-				//Å×ÀÌºíÀÇ ¸ğµ¨ °¡Á®¿À±â
+				//í…Œì´ë¸”ì˜ ëª¨ë¸ ê°€ì ¸ì˜¤ê¸°
 				DefaultTableModel model = 
 					(DefaultTableModel)table.getModel();
-				//¼±ÅÃÇÑ Çà¿¡ ÇØ´çÇÏ´Â µ¥ÀÌÅÍ Áö¿ì±â
+				//ì„ íƒí•œ í–‰ì— í•´ë‹¹í•˜ëŠ” ë°ì´í„° ì§€ìš°ê¸°
 				model.removeRow(idx);
 				table.updateUI();
 				JOptionPane.showMessageDialog(
-					null, "µ¥ÀÌÅÍ »èÁ¦ ¼º°ø", 
-					"»èÁ¦", JOptionPane.WARNING_MESSAGE);
+					null, "ë°ì´í„° ì‚­ì œ ì„±ê³µ", 
+					"ì‚­ì œ", JOptionPane.WARNING_MESSAGE);
 				
 			}
 	};
 	btnDelete.addActionListener(deleteListener);
 		
-		//¸Ş½ÃÁö ´ÙÀÌ¾ó·Î±× Ãâ·Â
+		//ë©”ì‹œì§€ ë‹¤ì´ì–¼ë¡œê·¸ ì¶œë ¥
 		/*
 		JOptionPane.showMessageDialog(
-			null, "¸Ş½ÃÁö ´ÙÀÌ¾ó·Î±×", "´ëÈ­»óÀÚ",
+			null, "ë©”ì‹œì§€ ë‹¤ì´ì–¼ë¡œê·¸", "ëŒ€í™”ìƒì",
 			JOptionPane.QUESTION_MESSAGE);
 		*/
 		
-		//¼±ÅÃ ´ÙÀÌ¾ó·Î±× Ãâ·Â
+		//ì„ íƒ ë‹¤ì´ì–¼ë¡œê·¸ ì¶œë ¥
 		/*
 		int r = JOptionPane.showConfirmDialog(
-			null, "¸Ş½ÃÁö ´ÙÀÌ¾ó·Î±×", "´ëÈ­»óÀÚ",
+			null, "ë©”ì‹œì§€ ë‹¤ì´ì–¼ë¡œê·¸", "ëŒ€í™”ìƒì",
 			JOptionPane.YES_NO_OPTION);
 		System.out.println(r);
 		*/
-		//ÇÑÁÙ ÀÔ·Â¹Ş´Â ´ÙÀÌ¾ó·Î±× Ãâ·Â
+		//í•œì¤„ ì…ë ¥ë°›ëŠ” ë‹¤ì´ì–¼ë¡œê·¸ ì¶œë ¥
 		/*
 		String r = JOptionPane.showInputDialog(
-				null, "¸Ş½ÃÁö ´ÙÀÌ¾ó·Î±×", "´ëÈ­»óÀÚ",
+				null, "ë©”ì‹œì§€ ë‹¤ì´ì–¼ë¡œê·¸", "ëŒ€í™”ìƒì",
 				JOptionPane.YES_NO_OPTION);
 		System.out.println(r);
 		*/

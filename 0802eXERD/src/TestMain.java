@@ -2,15 +2,15 @@
 public class TestMain {
 
 	public static void main(String[] args) {
-		//»ı¼ºÀÚ¸¦ ÀÌ¿ëÇØ¼­ °´Ã¼¸¦ »ı¼º
+		//ìƒì„±ìë¥¼ ì´ìš©í•´ì„œ ê°ì²´ë¥¼ ìƒì„±
 		//T obj1 = new T();
 		//T obj2= new T();
 		
-		//½Ì±ÛÅæ ÆĞÅÏÀ» Àû¿ëÇÒ Å¬·¡½ºÀÇ °´Ã¼ ¸¸µé±â
+		//ì‹±ê¸€í†¤ íŒ¨í„´ì„ ì ìš©í•  í´ë˜ìŠ¤ì˜ ê°ì²´ ë§Œë“¤ê¸°
 		T obj1 = T.getInstace();
 		T obj2 = T.getInstace();
 		
-		//ÇØ½ÃÄÚµå Ãâ·Â
+		//í•´ì‹œì½”ë“œ ì¶œë ¥
 			System.out.println(System.identityHashCode(obj1));
 			System.out.println(System.identityHashCode(obj2));
 			

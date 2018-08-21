@@ -11,7 +11,7 @@ import java.awt.event.WindowListener;
 public class EventHandling2 extends Frame {
 	public EventHandling2() {
 		setBounds(100,100, 500, 500);
-		setTitle("Å°º¸µå ÀÌº¥Æ®");
+		setTitle("í‚¤ë³´ë“œ ì´ë²¤íŠ¸");
 		setLayout(null);
 		
 		Label air = new Label("@");
@@ -20,7 +20,7 @@ public class EventHandling2 extends Frame {
 		
 		KeyListener keyListener = 
 			new KeyListener() {
-				//Å°º¸µå¸¦ ´­·¶À» ¶§ È£ÃâµÇ´Â ¸Ş¼Òµå
+				//í‚¤ë³´ë“œë¥¼ ëˆŒë €ì„ ë•Œ í˜¸ì¶œë˜ëŠ” ë©”ì†Œë“œ
 				@Override
 				public void keyPressed(KeyEvent arg0) {
 					int x = air.getLocation().x;
@@ -38,19 +38,19 @@ public class EventHandling2 extends Frame {
 						y = y + 10;
 					}
 					air.setLocation(x, y);
-					//Modifiers´Â °°ÀÌ ´©¸¥ Á¶ÇÕÅ° °ªÀ» ¸®ÅÏ 
+					//ModifiersëŠ” ê°™ì´ ëˆ„ë¥¸ ì¡°í•©í‚¤ ê°’ì„ ë¦¬í„´ 
 					if(arg0.getModifiers() == KeyEvent.ALT_MASK
 							&& arg0.getKeyCode() == KeyEvent.VK_F1) {
 						System.exit(0);
 					}
 					
 					if(arg0.getKeyCode() == KeyEvent.VK_ENTER) {
-						Label label = new Label("ÃÑ¾Ë");
+						Label label = new Label("ì´ì•Œ");
 						label.setBounds(air.getLocation().x,
 							air.getLocation().y-30, 30, 30);
 						add(label);
 						
-						//½º·¹µå¸¦ ¸¸µé¾î¼­ ½ÇÇà
+						//ìŠ¤ë ˆë“œë¥¼ ë§Œë“¤ì–´ì„œ ì‹¤í–‰
 						Thread th = new Thread() {
 							public void run() {
 								try {
@@ -71,28 +71,28 @@ public class EventHandling2 extends Frame {
 						th.start();
 					}
 				}
-				//Å°º¸µå¿¡¼­ ¼ÕÀ» ¶¿ ¶§	
+				//í‚¤ë³´ë“œì—ì„œ ì†ì„ ë—„ ë•Œ	
 				@Override
 				public void keyReleased(KeyEvent arg0) {
 				}
-				//¹®ÀÚ Å°¸¦ ´­·¶À» ¶§	
+				//ë¬¸ì í‚¤ë¥¼ ëˆŒë €ì„ ë•Œ	
 				@Override
 				public void keyTyped(KeyEvent arg0) {
 				}
 		};
-		//Frame¿¡ Å°º¸µå ÀÌº¥Æ® ¼³Á¤
+		//Frameì— í‚¤ë³´ë“œ ì´ë²¤íŠ¸ ì„¤ì •
 		addKeyListener(keyListener);
 		
-		//À©µµ¿ì Á¶ÀÛÀ» À§ÇÑ ÀÌº¥Æ®¸¦ Ã³¸®ÇÏ±â À§ÇÑ ¸®½º³Ê
+		//ìœˆë„ìš° ì¡°ì‘ì„ ìœ„í•œ ì´ë²¤íŠ¸ë¥¼ ì²˜ë¦¬í•˜ê¸° ìœ„í•œ ë¦¬ìŠ¤ë„ˆ
 		WindowAdapter windowListener = new WindowAdapter() {
 			
-			//Á¾·á ¹öÆ°À» ´©¸¦ ¶§ È£ÃâµÇ´Â ¸Ş¼Òµå
+			//ì¢…ë£Œ ë²„íŠ¼ì„ ëˆ„ë¥¼ ë•Œ í˜¸ì¶œë˜ëŠ” ë©”ì†Œë“œ
 			@Override
 			public void windowClosed(WindowEvent e) {
 			}
 			@Override
 			public void windowClosing(WindowEvent e) {
-				//ÇÁ·Î±×·¥ Á¾·á
+				//í”„ë¡œê·¸ë¨ ì¢…ë£Œ
 				System.exit(0);
 			}
 			
@@ -120,7 +120,7 @@ public class EventHandling2 extends Frame {
 			}
 		};
 		
-		//ÇÁ·¹ÀÓ¿¡ À©µµ¿ì ÀÌº¥Æ® ¿¬°á
+		//í”„ë ˆì„ì— ìœˆë„ìš° ì´ë²¤íŠ¸ ì—°ê²°
 		addWindowListener(windowListener);
 		
 		setVisible(true);

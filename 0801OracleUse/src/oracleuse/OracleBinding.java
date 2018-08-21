@@ -8,56 +8,56 @@ import java.util.Scanner;
 public class OracleBinding {
 
 	public static void main(String[] args) {
-		//1.Á¤¼ö¸¦ ÀÔ·Â¹Ş±â
+		//1.ì •ìˆ˜ë¥¼ ì…ë ¥ë°›ê¸°
 		Scanner sc = new Scanner(System.in);
-		System.out.print("»èÁ¦ÇÒ ºÎ¼­¹øÈ£(Á¤¼ö):");
+		System.out.print("ì‚­ì œí•  ë¶€ì„œë²ˆí˜¸(ì •ìˆ˜):");
 		int deptno = sc.nextInt();
-		//System.out.println("ºÎ¼­¹øÈ£:" + deptno);
+		//System.out.println("ë¶€ì„œë²ˆí˜¸:" + deptno);
 		sc.close();
 		
-		//2.ÀÔ·Â¹ŞÀº µ¥ÀÌÅÍ¸¦ °¡Áö°í µ¥ÀÌÅÍº£ÀÌ½º¿¡ »èÁ¦ÇÏ±â
-		//ÇÊ¿äÇÑ º¯¼ö ¼±¾ğ
+		//2.ì…ë ¥ë°›ì€ ë°ì´í„°ë¥¼ ê°€ì§€ê³  ë°ì´í„°ë² ì´ìŠ¤ì— ì‚­ì œí•˜ê¸°
+		//í•„ìš”í•œ ë³€ìˆ˜ ì„ ì–¸
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		
 		try {
-			//µå¶óÀÌ¹ö Å¬·¡½º¸¦ ·Îµå
+			//ë“œë¼ì´ë²„ í´ë˜ìŠ¤ë¥¼ ë¡œë“œ
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			//System.out.println("·Îµå ¼º°ø");
+			//System.out.println("ë¡œë“œ ì„±ê³µ");
 			
-			//µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á
+			//ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²°
 			con = DriverManager.getConnection(
 				"jdbc:oracle:thin:@localhost:1521:xe", 
 				"scott", "tiger");
-			//System.out.println("¿¬°á ¼º°ø");
+			//System.out.println("ì—°ê²° ì„±ê³µ");
 			
-			//SQL ½ÇÇà°´Ã¼ »ı¼º
+			//SQL ì‹¤í–‰ê°ì²´ ìƒì„±
 			pstmt = con.prepareStatement(
 				"delete from dept where deptno = ?");
 			pstmt.setInt(1, deptno);
 			
-			//sql ½ÇÇà
-			//½ÇÇàÇÏ°í ³ª¸é ¿µÇâ¹ŞÀº ÇàÀÇ °³¼ö¸¦ ¸®ÅÏÇÕ´Ï´Ù.
-			//Á¶°Ç¿¡ ¸Â´Â µ¥ÀÌÅÍ°¡ ¾øÀ¸¸é ½ÇÆĞÇÏ´Â°Ô ¾Æ´Ï°í
-			//»èÁ¦ÇÏ´Â ÇàÀÇ °³¼ö°¡ 0ÀÔ´Ï´Ù.
-			//½ÇÆĞÇÏ¸é ¿¹¿Ü°¡ ¹ß»ıÇÏ¹Ç·Î catch·Î °©´Ï´Ù.
+			//sql ì‹¤í–‰
+			//ì‹¤í–‰í•˜ê³  ë‚˜ë©´ ì˜í–¥ë°›ì€ í–‰ì˜ ê°œìˆ˜ë¥¼ ë¦¬í„´í•©ë‹ˆë‹¤.
+			//ì¡°ê±´ì— ë§ëŠ” ë°ì´í„°ê°€ ì—†ìœ¼ë©´ ì‹¤íŒ¨í•˜ëŠ”ê²Œ ì•„ë‹ˆê³ 
+			//ì‚­ì œí•˜ëŠ” í–‰ì˜ ê°œìˆ˜ê°€ 0ì…ë‹ˆë‹¤.
+			//ì‹¤íŒ¨í•˜ë©´ ì˜ˆì™¸ê°€ ë°œìƒí•˜ë¯€ë¡œ catchë¡œ ê°‘ë‹ˆë‹¤.
 			int r = pstmt.executeUpdate();
 			if(r > 0) {
-				System.out.println("»èÁ¦ ¼º°ø");
-				//ÀÛ¾÷¿¡ ¼º°øÇÏ¸é commitÀ» È£Ãâ
+				System.out.println("ì‚­ì œ ì„±ê³µ");
+				//ì‘ì—…ì— ì„±ê³µí•˜ë©´ commitì„ í˜¸ì¶œ
 				con.commit();
 			}
 			else
-				System.out.println("Á¶°Ç¿¡ ¸Â´Â µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+				System.out.println("ì¡°ê±´ì— ë§ëŠ” ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
 			
 		}catch(Exception e) {
 			try {
-				//ÀÛ¾÷µµÁß ¿¹¿Ü°¡ ¹ß»ıÇÑ °æ¿ì rollbackÀ» È£Ãâ
+				//ì‘ì—…ë„ì¤‘ ì˜ˆì™¸ê°€ ë°œìƒí•œ ê²½ìš° rollbackì„ í˜¸ì¶œ
 				con.rollback();
 			}catch(Exception e1) {}
-			//¿¹¿ÜÀÇ ³»¿ëÀ» Ãâ·Â
+			//ì˜ˆì™¸ì˜ ë‚´ìš©ì„ ì¶œë ¥
 			System.out.println(e.getMessage());
-			//¿¹¿Ü°¡ ¹ß»ıÇÑ ÁöÁ¡À» ¿ªÃßÀû
+			//ì˜ˆì™¸ê°€ ë°œìƒí•œ ì§€ì ì„ ì—­ì¶”ì 
 			e.printStackTrace();
 		}finally {
 			try {

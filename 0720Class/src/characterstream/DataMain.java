@@ -14,26 +14,26 @@ public class DataMain {
 		try {
 			br = new BufferedReader(
 				new FileReader(
-				"C:\\Users\\503-17\\Documents\\ÀÌÁ¤¿ø\\access_log.txt"));
-			//Á¢¼ÓÇÑ ¾ÆÀÌÇÇ¸¦ Áßº¹ »ó°ü¾øÀÌ ÀúÀåÇÏ±â À§ÇÑ ÀÚ·á±¸Á¶
+				"C:\\Users\\503-17\\Documents\\ì´ì •ì›\\access_log.txt"));
+			//ì ‘ì†í•œ ì•„ì´í”¼ë¥¼ ì¤‘ë³µ ìƒê´€ì—†ì´ ì €ì¥í•˜ê¸° ìœ„í•œ ìë£Œêµ¬ì¡°
 			ArrayList<String> iplist = new ArrayList<>();
-			//Áßº¹ ¾øÀÌ ÀúÀåÇÏ±â À§ÇÑ Set ¸¸µé±â
+			//ì¤‘ë³µ ì—†ì´ ì €ì¥í•˜ê¸° ìœ„í•œ Set ë§Œë“¤ê¸°
 			Set<String>ipset = new HashSet<String>();
 			while(true) {
-				//ÇÑ ÁÙÀ» ÀĞ±â
+				//í•œ ì¤„ì„ ì½ê¸°
 				String line = br.readLine();
-				//ÀĞÀº µ¥ÀÌÅÍ°¡ ¾øÀ¸¸é Á¾·á
+				//ì½ì€ ë°ì´í„°ê°€ ì—†ìœ¼ë©´ ì¢…ë£Œ
 				if(line == null) {
 					break;
 				}
-				//°ø¹éÀ¸·Î ºĞÇÒ
+				//ê³µë°±ìœ¼ë¡œ ë¶„í• 
 				String []  ar = line.split(" ");
 				//System.out.println(ar[0]);
 				ipset.add(ar[0]);
 				iplist.add(ar[0]);
 				
 			}
-			System.out.println(iplist);//ipset·ÎÇÏ¸é  Áßº¹¾øÀÌÃâ·Â
+			System.out.println(iplist);//ipsetë¡œí•˜ë©´  ì¤‘ë³µì—†ì´ì¶œë ¥
 			
 		}
 		catch(Exception e) {

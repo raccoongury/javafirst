@@ -3,19 +3,19 @@ package oracleuse;
 import java.util.List;
 
 public interface ContactDao {
-		//╣╔юлем╦╕ ╩Пютго╢б ╦ч╪р╣Е
+		//К█╟Л²╢М└╟К╔╪ Л┌╫Л·┘М∙≤К┼■ К╘■Л├▄К⌠°
 	public boolean insertContact (Contact contact);
 	
-		//╣╔юлем╦╕ ╪Жа╓го╢б ╦ч╪р╣Е
+		//К█╟Л²╢М└╟К╔╪ Л┬≤Л═∙М∙≤К┼■ К╘■Л├▄К⌠°
 	public boolean updateContact (Contact contact);
 	
-	//╣╔юлем╦╕ ╩Ха╕го╢б ╦ч╪р╣Е
+	//К█╟Л²╢М└╟К╔╪ Л┌╜Л═°М∙≤К┼■ К╘■Л├▄К⌠°
 	public boolean deleteContact (int num);
 	
-	//╣╔юлем юЭц╪╦╕ юп╬Н©ю╢б ╦ч╪р╣Е
-	//=╣╔юлем╟║ 0╟Ё юл╩Сюл╧г╥н List╥н ╦╝еого╟М юп╬Н©ц дц╥Ё╣Ию╩ юЗюЕгр
-	//DTOе╛╥║╫╨Ё╙ Mapю╦╥н а╕Ёй╦╞ю╩ юШ©Кго╦И ╣к╢о╢ы.
+	//К█╟Л²╢М└╟ Л═└Л╡╢К╔╪ Л²╫Л√╢Л≤╓К┼■ К╘■Л├▄К⌠°
+	//=К█╟Л²╢М└╟Й╟─ 0Й╟° Л²╢Л┐│Л²╢К╞─К║° ListК║° К╕╛М└╢М∙≤ЙЁ═ Л²╫Л√╢Л≤╛ Л╩╛К÷╪К⌠╓Л²└ Л═─Л·╔М∙═
+	//DTOМ│╢К·≤Л┼╓К┌≤ MapЛ°╪К║° Л═°К└┬К╕╜Л²└ Л═│Л ╘М∙≤К╘╢ К░╘К▀┬К▀╓.
 	public  List<Contact> allContact();
-	//юл╦╖ю╩ ╟║аЖ╟М а╤х╦го╢б ╦ч╪р╣Е
+	//Л²╢К╕└Л²└ Й╟─Л╖─ЙЁ═ Л║╟М ▄М∙≤К┼■ К╘■Л├▄К⌠°
 	public List<Contact> nameContact(String name);
 }

@@ -6,30 +6,30 @@ import java.util.Date;
 public class FileMain {
 
 	public static void main(String[] args) {
-			//ÆÄÀÏ¿¡ ´ëÇÑ Á¤º¸¸¦ È®ÀÎ ÇÒ ¼ö ÀÖ´Â Å¬·¡½ºÀÇ
-		//ÀÎ½ºÅÏ½º¸¦ »ı¼º
+			//íŒŒì¼ì— ëŒ€í•œ ì •ë³´ë¥¼ í™•ì¸ í•  ìˆ˜ ìˆëŠ” í´ë˜ìŠ¤ì˜
+		//ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±
 		File f = new File(
-				"c:\\¹®ÀÚ¿­Å×½ºÆ®.txt");
-				//ÆÄÀÏÀÇ Á¸Àç ¿©ºÎ
+				"c:\\ë¬¸ìì—´í…ŒìŠ¤íŠ¸.txt");
+				//íŒŒì¼ì˜ ì¡´ì¬ ì—¬ë¶€
 				System.out.println(f.exists());
-		//ÆÄÀÏÀÇ Å©±â
+		//íŒŒì¼ì˜ í¬ê¸°
 		long size = f.length();
 		System.out.println(size/1024 + " K ");
 		
-		//ÆÄÀÏÀÇ ÃÖÈÄ ¼öÁ¤½Ã°£
+		//íŒŒì¼ì˜ ìµœí›„ ìˆ˜ì •ì‹œê°„
 		Date date = new Date(f.lastModified());
 		System.out.println(date);
 		
 		File file = new File("C:\\log.txt");
 		String parent = file.getParent();
 		String filename = file.getName();
-		//filename ¿¡¼­ 15.À» Á¦°ÅÇÑ ºÎºĞÀ» °¡Á®¿À±â
-		//.ÀÇ À§Ä¡¸¦ Ã£¾Æ¼­ . ÀÌÈÄÀÇ ¹®ÀÚ¿­ °¡Á®¿À±â
+		//filename ì—ì„œ 15.ì„ ì œê±°í•œ ë¶€ë¶„ì„ ê°€ì ¸ì˜¤ê¸°
+		//.ì˜ ìœ„ì¹˜ë¥¼ ì°¾ì•„ì„œ . ì´í›„ì˜ ë¬¸ìì—´ ê°€ì ¸ì˜¤ê¸°
 		int idx = filename.indexOf('.');
-		//.ÀÌ Á¸ÀçÇÑ´Ù¸é: À§Ä¡¸¦ Ã£´Â ¸Ş¼Òµå´Â
-		//Ã£°íÀÚ ÇÏ´Â µ¥ÀÌÅÍ°¡ ¾øÀ¸¸é À½¼ö¸¦ ¸®ÅÏ
+		//.ì´ ì¡´ì¬í•œë‹¤ë©´: ìœ„ì¹˜ë¥¼ ì°¾ëŠ” ë©”ì†Œë“œëŠ”
+		//ì°¾ê³ ì í•˜ëŠ” ë°ì´í„°ê°€ ì—†ìœ¼ë©´ ìŒìˆ˜ë¥¼ ë¦¬í„´
 		if(idx >=0) {
-			//¹®ÀÚ¿­À» À§Ä¡¸¦ °¡Áö°í ÀÚ¸£´Â ¸Ş¼Òµå
+			//ë¬¸ìì—´ì„ ìœ„ì¹˜ë¥¼ ê°€ì§€ê³  ìë¥´ëŠ” ë©”ì†Œë“œ
 			//substring
 			filename = filename.substring(idx+1);
 		}

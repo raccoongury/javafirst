@@ -8,24 +8,24 @@ public class Main {
 		Connection con = null;
 		CallableStatement call = null;
 		try {
-			//µ¥ÀÌÅÍº£ÀÌ½º µå¶óÀÌ¹ö Å¬·¡½º ·Îµå
+			//ë°ì´í„°ë² ì´ìŠ¤ ë“œë¼ì´ë²„ í´ëž˜ìŠ¤ ë¡œë“œ
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			//µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á
+			//ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²°
 			con = DriverManager.getConnection(
 				"jdbc:oracle:thin:@localhost:1521:xe", 
 				"scott", "tiger");
-			//½ÇÇàÇÒ Statement °´Ã¼ ¸¸µé±â
+			//ì‹¤í–‰í•  Statement ê°ì²´ ë§Œë“¤ê¸°
 			call = con.prepareCall(
 				"{call deleteDeptProc(?)}");
-			//¹°À½Ç¥¿¡ ½ÇÁ¦ °ª ¹ÙÀÎµù
+			//ë¬¼ìŒí‘œì— ì‹¤ì œ ê°’ ë°”ì¸ë”©
 			call.setInt(1, 11);
 			
-			//»ðÀÔ ±¸¹® ½ÇÇà
+			//ì‚½ìž… êµ¬ë¬¸ ì‹¤í–‰
 			int r = call.executeUpdate();
 			if(r > 0) {
-				System.out.println("»èÁ¦ ¼º°ø");
+				System.out.println("ì‚­ì œ ì„±ê³µ");
 			}else {
-				System.out.println("»èÁ¦ ½ÇÆÐ");
+				System.out.println("ì‚­ì œ ì‹¤íŒ¨");
 			}
 			
 			

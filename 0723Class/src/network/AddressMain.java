@@ -7,7 +7,7 @@ public class AddressMain {
 
 	public static void main(String[] args) {
 		try {
-			//ÁÖ¼Ò Á¤º¸ 1°³ °¡Á®¿À±â
+			//ì£¼ì†Œ ì •ë³´ 1ê°œ ê°€ì ¸ì˜¤ê¸°
 			InetAddress addr = 
 				InetAddress.getByName(
 						"www.choongang.co.kr");

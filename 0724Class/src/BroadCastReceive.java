@@ -5,23 +5,23 @@ public class BroadCastReceive {
 
 	public static void main(String[] args) {
 		try {
-			//UDP ¹æ½ÄÀ¸·Î µ¥ÀÌÅÍ¸¦ Àü¼Û¹ŞÀ» ¼ö ÀÖ´À ¼ÒÄÏ ¸¸µé±â
-			//Æ÷Æ® ¹øÈ£°¡ ÀÖ¾î¾ß ÇÕ´Ï´Ù.
+			//UDP ë°©ì‹ìœ¼ë¡œ ë°ì´í„°ë¥¼ ì „ì†¡ë°›ì„ ìˆ˜ ìˆëŠ ì†Œì¼“ ë§Œë“¤ê¸°
+			//í¬íŠ¸ ë²ˆí˜¸ê°€ ìˆì–´ì•¼ í•©ë‹ˆë‹¤.
 			DatagramSocket ds = 
 					new DatagramSocket(7777);
-			System.out.println("¼­¹ö ´ë±â Áß....");
+			System.out.println("ì„œë²„ ëŒ€ê¸° ì¤‘....");
 			while(true) {
-				//¸Ş½ÃÁö¸¦ ÀúÀåÇÒ ¹è¿­À» »ı¼º
+				//ë©”ì‹œì§€ë¥¼ ì €ì¥í•  ë°°ì—´ì„ ìƒì„±
 				byte []  b = new byte[512];
-				//¸Ş½ÃÁö¸¦ ÀúÀåÇÒ DatagramPacket »ı¼º
+				//ë©”ì‹œì§€ë¥¼ ì €ì¥í•  DatagramPacket ìƒì„±
 				DatagramPacket dp = 
 					new DatagramPacket(b, 512);
-				//µ¥ÀÌÅÍ ¹Ş±â
+				//ë°ì´í„° ë°›ê¸°
 				ds.receive(dp);
-				//µ¥ÀÌÅÍ¸¦ ÀĞ±â
+				//ë°ì´í„°ë¥¼ ì½ê¸°
 				String msg = new String(b);
-				//512 ¹ÙÀÌÆ®°¡ ¾ÈµÉ ¶§ °ø¹éÀ» Á¦°ÅÇÏ±â À§ÇØ¼­
-				//trim()À» È£Ãâ
+				//512 ë°”ì´íŠ¸ê°€ ì•ˆë  ë•Œ ê³µë°±ì„ ì œê±°í•˜ê¸° ìœ„í•´ì„œ
+				//trim()ì„ í˜¸ì¶œ
 				System.out.println(msg.trim());
 			}
 		}catch(Exception e) {

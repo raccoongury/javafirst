@@ -12,20 +12,20 @@ import javax.swing.border.TitledBorder;
 
 public class MyWindow extends JFrame {
 public MyWindow() {
-	//À§Ä¡¿Í Å©±â ¼³Á¤
+	//ìœ„ì¹˜ì™€ í¬ê¸° ì„¤ì •
 	setBounds(100, 100, 400, 400);
-	//Á¦¸ñ ¼³Á¤
-	setTitle("½ºÀ®À» ÀÌ¿ëÇÑ À©µµ¿ì");
-	//Á¾·á¹öÆ° ÀÌº¥Æ® Ã³¸®	
+	//ì œëª© ì„¤ì •
+	setTitle("ìŠ¤ìœ™ì„ ì´ìš©í•œ ìœˆë„ìš°");
+	//ì¢…ë£Œë²„íŠ¼ ì´ë²¤íŠ¸ ì²˜ë¦¬	
 	setDefaultCloseOperation(EXIT_ON_CLOSE);
-	//ÆĞ³ÎÀ» »ı¼º
+	//íŒ¨ë„ì„ ìƒì„±
 	JPanel panel = new JPanel();
-	ImageIcon icon = new ImageIcon ("C:\\Users\\503-17\\Documents\\ÀÌÁ¤¿ø\\BTC.png");
+	ImageIcon icon = new ImageIcon ("C:\\Users\\503-17\\Documents\\ì´ì •ì›\\BTC.png");
 	
 	JLabel label = new JLabel(icon);
-	label.setToolTipText("¾È³çÇÏ¼¼¿ä");;
+	label.setToolTipText("ì•ˆë…•í•˜ì„¸ìš”");;
 	/*
-	TitledBorder border = new TitledBorder("°æ°è¼±");
+	TitledBorder border = new TitledBorder("ê²½ê³„ì„ ");
 	*/
 	EtchedBorder border = new EtchedBorder(Color.RED, Color.PINK);
 			label.setBorder(border);
@@ -33,25 +33,25 @@ public MyWindow() {
 	
 	panel.add(label);
 	
-	//ÆĞ³ÎÀ» ÇÁ·¹ÀÓ¿¡ ºÎÂø
+	//íŒ¨ë„ì„ í”„ë ˆì„ì— ë¶€ì°©
 	add(panel);
-	//È­¸éÃâ·Â
+	//í™”ë©´ì¶œë ¥
 	setVisible(true);
 	
-	//±×¸² ÆÄÀÏ ÀÌ¸§À» ¹è¿­·Î ¸¸µé±â
-	//¹è¿­Àº ¸¸µé¸é Å©±â º¯°æÀÌ ¾ÈµË´Ï´Ù.
+	//ê·¸ë¦¼ íŒŒì¼ ì´ë¦„ì„ ë°°ì—´ë¡œ ë§Œë“¤ê¸°
+	//ë°°ì—´ì€ ë§Œë“¤ë©´ í¬ê¸° ë³€ê²½ì´ ì•ˆë©ë‹ˆë‹¤.
 	String [] images = {
 		"XRP.png", "ADA.png", "EOS.png"
 	};
 	
-	//¸®½ºÆ®´Â Å©±â º¯°æÀÌ °¡´ÉÇÑ ¹è¿­ÀÔ´Ï´Ù.
+	//ë¦¬ìŠ¤íŠ¸ëŠ” í¬ê¸° ë³€ê²½ì´ ê°€ëŠ¥í•œ ë°°ì—´ì…ë‹ˆë‹¤.
 	ArrayList<String> list = new ArrayList<String>();
 	list.add("XRP.png");
 	list.add("ADA.png");
 	list.add("EOS.png");
 	
-	//ÀÌ¹ÌÁö°¡ º¯°æµÇ´Â µ¿¾È¿¡µµ ´Ù¸¥ ÀÛ¾÷À» ÇÒ ¼ö ÀÖ¾î¾ß ÇÏ¹Ç·Î
-	//ÀÌ¹ÌÁö º¯°æÀº ½º·¹µå·Î »ı¼º
+	//ì´ë¯¸ì§€ê°€ ë³€ê²½ë˜ëŠ” ë™ì•ˆì—ë„ ë‹¤ë¥¸ ì‘ì—…ì„ í•  ìˆ˜ ìˆì–´ì•¼ í•˜ë¯€ë¡œ
+	//ì´ë¯¸ì§€ ë³€ê²½ì€ ìŠ¤ë ˆë“œë¡œ ìƒì„±
 	Thread th = new Thread() {
 		public void run() {
 			int idx = 0 ;
@@ -61,12 +61,12 @@ public MyWindow() {
 					/*
 					ImageIcon icon = 
 							new ImageIcon(
-									"C:\\Users\\503-17\\Documents\\ÀÌÁ¤¿ø\\BTC.png"
+									"C:\\Users\\503-17\\Documents\\ì´ì •ì›\\BTC.png"
 							+ images[idx%images.length]);
 							*/
 					ImageIcon icon = 
 							new ImageIcon(
-									"C:\\Users\\503-17\\Documents\\ÀÌÁ¤¿ø\\BTC.png"
+									"C:\\Users\\503-17\\Documents\\ì´ì •ì›\\BTC.png"
 							+ list.get(idx%list.size()));
 					
 					label.setIcon(icon);

@@ -12,14 +12,14 @@ public class FileReaderMain {
 			fr = new FileReader("./sample.txt");
 			char [] buf = new char[15];
 			while(true) {
-				//bufÀÇ Å©±â ¸¸Å­ ÀĞ¾î¼­ buf¿¡ ÀúÀåÇÏ°í
-				//ÀĞÀº °³¼ö¸¦ r ¿¡ ÀúÀå
+				//bufì˜ í¬ê¸° ë§Œí¼ ì½ì–´ì„œ bufì— ì €ì¥í•˜ê³ 
+				//ì½ì€ ê°œìˆ˜ë¥¼ r ì— ì €ì¥
 				int r = fr.read(buf);
 				if(r <= 0) {
 					break;
 				}
-				//¹è¿­¿¡¼­ 0¹øÂ° ºÎÅÍ r ¸¸Å­ ¸¸
-				//¹®ÀÚ¿­·Î º¯È¯ÇØ¼­ Ãâ·Â
+				//ë°°ì—´ì—ì„œ 0ë²ˆì§¸ ë¶€í„° r ë§Œí¼ ë§Œ
+				//ë¬¸ìì—´ë¡œ ë³€í™˜í•´ì„œ ì¶œë ¥
 				System.out.println(
 					new String(buf, 0, r));
 			}
@@ -27,7 +27,7 @@ public class FileReaderMain {
 		}
 		catch(Exception e) {
 			System.out.println(
-				"¿¹¿Ü:" + e.getMessage());
+				"ì˜ˆì™¸:" + e.getMessage());
 		}
 		finally {
 			if(fr != null)

@@ -4,11 +4,11 @@ import java.sql.DriverManager;
 public class DBConnectMain {
 
 	public static void main(String[] args) {
-			//»ç¿ëÇÏ°íÀÚ ÇÏ´Â µå¶óÀÌ¹ö Å¬·¡½º¸¦ ·Îµå
-		//µ¥ÀÌÅÍº£ÀÌ½º Á¾·ù¿¡ µû¶ó ´Ù¸§
+			//ì‚¬ìš©í•˜ê³ ì í•˜ëŠ” ë“œë¼ì´ë²„ í´ë˜ìŠ¤ë¥¼ ë¡œë“œ
+		//ë°ì´í„°ë² ì´ìŠ¤ ì¢…ë¥˜ì— ë”°ë¼ ë‹¤ë¦„
 		
-		//µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á º¯¼ö ¼±¾ğ
-		//¹İµå½Ã close()¸¦ È£ÃâÇØ¾ß ÇÏ¹Ç·Î finally¿¡¼­ close()¸¦ È£Ãâ
+		//ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²° ë³€ìˆ˜ ì„ ì–¸
+		//ë°˜ë“œì‹œ close()ë¥¼ í˜¸ì¶œí•´ì•¼ í•˜ë¯€ë¡œ finallyì—ì„œ close()ë¥¼ í˜¸ì¶œ
 		Connection con = null;
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -18,7 +18,7 @@ public class DBConnectMain {
 	} catch (Exception e) {
 		System.out.println(e.getMessage());
 	}finally {
-		//¿¬°áÀÌ µÇ¾î ÀÖÀ¸¸é ¹İµå½Ã ¿¬°á ÇØÁ¦
+		//ì—°ê²°ì´ ë˜ì–´ ìˆìœ¼ë©´ ë°˜ë“œì‹œ ì—°ê²° í•´ì œ
 		if(con != null) {
 			try {
 				con.close();

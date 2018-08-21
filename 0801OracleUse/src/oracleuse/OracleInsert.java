@@ -7,35 +7,35 @@ import java.sql.PreparedStatement;
 public class OracleInsert {
 
 	public static void main(String[] args) {
-			//µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á º¯¼ö
+			//ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²° ë³€ìˆ˜
 			Connection con = null;
-			//SQL ½ÇÇà º¯¼ö
+			//SQL ì‹¤í–‰ ë³€ìˆ˜
 			PreparedStatement pstmt = null;
 			try {
-				//µå¶óÀÌ¹ö Å¬·¡½º ·Îµå
+				//ë“œë¼ì´ë²„ í´ëž˜ìŠ¤ ë¡œë“œ
 				Class.forName("oracle.jdbc.driver.OracleDriver");
-				//µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á
+				//ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²°
 				con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "scott", "tiger");
-				//SQL ½ÇÇà °´Ã¼¸¦ »ý¼º : sqlÀ» ¸Å°³º¯¼ö·Î ÇØ¼­ »ý¼º
-				//µ¥ÀÌÅÍ »ðÀÔ
+				//SQL ì‹¤í–‰ ê°ì²´ë¥¼ ìƒì„± : sqlì„ ë§¤ê°œë³€ìˆ˜ë¡œ í•´ì„œ ìƒì„±
+				//ë°ì´í„° ì‚½ìž…
 				/*
 				pstmt = con.prepareStatement("insert into dept(deptno, dname, loc)" 
-						+ "values (50, '¿µ¾÷', 'ºÎ»ê')");
+						+ "values (50, 'ì˜ì—…', 'ë¶€ì‚°')");
 						*/
 				/*
-				//µ¥ÀÌÅÍ »èÁ¦
+				//ë°ì´í„° ì‚­ì œ
 				pstmt = con.prepareStatement("delete from dept where deptno = 50");
 				*/
-				//dept Å×ÀÌºí¿¡¼­ deptno°¡ 10¹øÀÎ µ¥ÀÌÅÍÀÇ
-						//loc¸¦ ¸¸Àçµµ·Î º¯°æ
-						pstmt = con.prepareStatement("update dept set loc = '¸¸Àçµµ' where deptno = 10");
+				//dept í…Œì´ë¸”ì—ì„œ deptnoê°€ 10ë²ˆì¸ ë°ì´í„°ì˜
+						//locë¥¼ ë§Œìž¬ë„ë¡œ ë³€ê²½
+						pstmt = con.prepareStatement("update dept set loc = 'ë§Œìž¬ë„' where deptno = 10");
 						
-				//SQLÀ» ½ÇÇà - select¸¦ Á¦¿ÜÇÑ ±¸¹® ½ÇÇà
-				//r¿¡ ÀúÀåµÇ´Â °ªÀº ¿µÇâ¹ÞÀº ÇàÀÇ °³¼ö
+				//SQLì„ ì‹¤í–‰ - selectë¥¼ ì œì™¸í•œ êµ¬ë¬¸ ì‹¤í–‰
+				//rì— ì €ìž¥ë˜ëŠ” ê°’ì€ ì˜í–¥ë°›ì€ í–‰ì˜ ê°œìˆ˜
 				int r = pstmt.executeUpdate();
-				//¼º°ø¿©ºÎ Ãâ·Â
+				//ì„±ê³µì—¬ë¶€ ì¶œë ¥
 				if(r > 0) {
-					System.out.println("»ðÀÔ ¼º°ø");
+					System.out.println("ì‚½ìž… ì„±ê³µ");
 				}
 			}catch(Exception e) {
 				System.out.println(e.getMessage());

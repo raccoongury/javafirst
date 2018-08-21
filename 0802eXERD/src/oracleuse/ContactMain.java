@@ -7,14 +7,14 @@ import java.util.List;
 public class ContactMain {
 
 	public static void main(String[] args) {
-		// ÀÎÅÍÆäÀÌ½º³ª Å¬·¡½º¸¦ »ó¼ÓÇÑ °æ¿ì¿¡´Â
-		// »óÀ§ ÀÎÅÍÆäÀÌ½º³ª Å¬·¡½º ÀÌ¸§À¸·Î º¯¼ö¸¦ ¸¸µé°í
-		// ÇÏÀ§ Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇØ¼­ ´ëÀÔÇÕ´Ï´Ù.
+		// ì¸í„°í˜ì´ìŠ¤ë‚˜ í´ë˜ìŠ¤ë¥¼ ìƒì†í•œ ê²½ìš°ì—ëŠ”
+		// ìƒìœ„ ì¸í„°í˜ì´ìŠ¤ë‚˜ í´ë˜ìŠ¤ ì´ë¦„ìœ¼ë¡œ ë³€ìˆ˜ë¥¼ ë§Œë“¤ê³ 
+		// í•˜ìœ„ í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•´ì„œ ëŒ€ì…í•©ë‹ˆë‹¤.
 
 		/*
 		 * ContactDao dao = new ContactDaoImpl(); Contact contact = new Contact();
-		 * contact.setNum(1); contact.setName("¹Ú¹®¼®"); contact.setPhone("01037901997");
-		 * contact.setEmail("ggangpae1@gmail.com"); //ÇöÀç ½Ã°£À» ÀúÀåÇÑ Ä¶¸°´õ »ı¼º Calendar cal =
+		 * contact.setNum(1); contact.setName("ë°•ë¬¸ì„"); contact.setPhone("01037901997");
+		 * contact.setEmail("ggangpae1@gmail.com"); //í˜„ì¬ ì‹œê°„ì„ ì €ì¥í•œ ìº˜ë¦°ë” ìƒì„± Calendar cal =
 		 * Calendar.getInstance(); cal.set(Calendar.YEAR, 1970); cal.set(Calendar.MONTH,
 		 * 5); cal.set(Calendar.DAY_OF_MONTH,30); Date birthDay = new
 		 * Date(cal.getTimeInMillis()); contact.setBirthday(birthDay);
@@ -22,15 +22,15 @@ public class ContactMain {
 
 		/*
 		 * 
-		 * //µ¥ÀÌÅÍ¸¦ »ğÀÔÇÏ´Â ¸Ş¼Òµå È£Ãâ boolean result = dao.insertContact(contact); if( == true)
-		 * { System.out.println("¼öÁ¤ ¼º°ø"); }else { System.out.println("¼öÁ¤ ½ÇÆĞ");
-		 * System.out.println("¿¹¿Ü¸¦ È®ÀÎ");
+		 * //ë°ì´í„°ë¥¼ ì‚½ì…í•˜ëŠ” ë©”ì†Œë“œ í˜¸ì¶œ boolean result = dao.insertContact(contact); if( == true)
+		 * { System.out.println("ìˆ˜ì • ì„±ê³µ"); }else { System.out.println("ìˆ˜ì • ì‹¤íŒ¨");
+		 * System.out.println("ì˜ˆì™¸ë¥¼ í™•ì¸");
 		 * 
 		 */
 		/*
 		 * ContactDao dao = new ContactDaoImpl(); boolean r = dao.deleteContact(2); if(r
-		 * == true) { System.out.println("»èÁ¦ ¼º°ø"); }else { System.out.println("»èÁ¦ ½ÇÆĞ");
-		 * System.out.println("¿¹¿Ü¸¦ È®ÀÎ");
+		 * == true) { System.out.println("ì‚­ì œ ì„±ê³µ"); }else { System.out.println("ì‚­ì œ ì‹¤íŒ¨");
+		 * System.out.println("ì˜ˆì™¸ë¥¼ í™•ì¸");
 		 */
 		
 		/*
@@ -42,7 +42,7 @@ public class ContactMain {
 			*/
 		/*
 		ContactDao dao = new ContactDaoImpl();
-		List<Contact> list = dao.nameContact("¹Ú");
+		List<Contact> list = dao.nameContact("ë°•");
 		// System.out.println(list);
 		for (Contact contact : list) {
 			System.out.println(contact);

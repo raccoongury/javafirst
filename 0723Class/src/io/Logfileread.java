@@ -9,41 +9,41 @@ import java.util.Set;
 public class Logfileread {
 
 	public static void main(String[] args) {
-		// 1.¹øÂ° access -log.txt ÆÄÀÏÀ» ÀĞÀ» ¼ö ÀÖ´Â StreamÀ» »ı¼º
-		// BufferedReader °´Ã¼ ¸¸µé±â
+		// 1.ë²ˆì§¸ access -log.txt íŒŒì¼ì„ ì½ì„ ìˆ˜ ìˆëŠ” Streamì„ ìƒì„±
+		// BufferedReader ê°ì²´ ë§Œë“¤ê¸°
 		BufferedReader br = null;
 		try {
 			br = new BufferedReader(
-					new FileReader("C:\\Users\\503-17\\Documents\\ÀÌÁ¤¿ø\\access_log.txt"));
-			//4. HashMapÀ» ÀÌ¿ëÇØ¼­ Á¢¼ÓÇÑ Ipº° È½¼ö¸¦ Ãâ·Â
+					new FileReader("C:\\Users\\503-17\\Documents\\ì´ì •ì›\\access_log.txt"));
+			//4. HashMapì„ ì´ìš©í•´ì„œ ì ‘ì†í•œ Ipë³„ íšŸìˆ˜ë¥¼ ì¶œë ¥
 			HashMap<String, Integer> map = new HashMap<>();
 			
-			//5.HashMapÀ» ÀÌ¿ëÇØ¼­ Á¢¼ÓÇÒ IP º° Æ®·¡ÇÈ ÇÕ°è Ãâ·Â
+			//5.HashMapì„ ì´ìš©í•´ì„œ ì ‘ì†í•  IP ë³„ íŠ¸ë˜í”½ í•©ê³„ ì¶œë ¥
 			HashMap<String, Integer> traffic = 
-				new HashMap<>();
+				new HashMap<>(); 
 			
-			//2.¹øÂ°ÁÙ´ÜÀ§·Î µ¥ÀÌÅÍ¸¦ ÀĞ¾î¼­ Ãâ·Â
-			while(true) { //ÁÙ´ÜÀ§¸¦ ¸¸µé·Á¸é ¹®ÇÑ¹İº¹¹®À¸·Î
-				String line = br.readLine();		//ÇÑ ÁÙÀ» ÀĞ±â
-				//ÀĞÀº µ¥ÀÌÅÍ°¡ ¾øÀ¸¸é Á¾·á
+			//2.ë²ˆì§¸ì¤„ë‹¨ìœ„ë¡œ ë°ì´í„°ë¥¼ ì½ì–´ì„œ ì¶œë ¥
+			while(true) { //ì¤„ë‹¨ìœ„ë¥¼ ë§Œë“¤ë ¤ë©´ ë¬¸í•œë°˜ë³µë¬¸ìœ¼ë¡œ
+				String line = br.readLine();		//í•œ ì¤„ì„ ì½ê¸°
+				//ì½ì€ ë°ì´í„°ê°€ ì—†ìœ¼ë©´ ì¢…ë£Œ
 				if(line == null) {
 					break;
 				}
-				//System.out.println(line); //ÁÙ´ÜÀ§·Î Ãâ·Â È®ÀÎ Å×½ºÆ®
-				//3-1.ÁÙ ´ÜÀ§·Î ÀĞÀº µ¥ÀÌÅÍ¸¦ °ø¹éÀ¸·Î ºĞÇÒÇØ¼­ Ã¹¹øÂ°¿¡ ÀÖ´Â µ¥ÀÌÅÍ¸¸ Ãâ·Â
+				//System.out.println(line); //ì¤„ë‹¨ìœ„ë¡œ ì¶œë ¥ í™•ì¸ í…ŒìŠ¤íŠ¸
+				//3-1.ì¤„ ë‹¨ìœ„ë¡œ ì½ì€ ë°ì´í„°ë¥¼ ê³µë°±ìœ¼ë¡œ ë¶„í• í•´ì„œ ì²«ë²ˆì§¸ì— ìˆëŠ” ë°ì´í„°ë§Œ ì¶œë ¥
 				String [] ar= line.split(" ");
 				//3-2.System.out.println(ar[0]);
-				//4-2. ip·Î ÀúÀåµÈ µ¥ÀÌÅÍ¸¦ °¡Á®¿É´Ï´Ù
+				//4-2. ipë¡œ ì €ì¥ëœ ë°ì´í„°ë¥¼ ê°€ì ¸ì˜µë‹ˆë‹¤
 				Integer count = map.get(ar[0]);
-				//4-3.ÀúÀåµÈ µ¥ÀÌÅÍ°¡ ¾øÀ¸¸é 1À» ÀúÀåÇÕ´Ï´Ù.
+				//4-3.ì €ì¥ëœ ë°ì´í„°ê°€ ì—†ìœ¼ë©´ 1ì„ ì €ì¥í•©ë‹ˆë‹¤.
 				if(count == null) {
 					map.put(ar[0], 1);
 				}
-				//4-4.ÀúÀåµÈ µ¥ÀÌÅÍ°¡ ÀÖÀ¸¸é 1À» ´õÇØ¼­ ÀúÀåÇÕ´Ï´Ù.
+				//4-4.ì €ì¥ëœ ë°ì´í„°ê°€ ìˆìœ¼ë©´ 1ì„ ë”í•´ì„œ ì €ì¥í•©ë‹ˆë‹¤.
 				else {
 					map.put(ar[0], count + 1);
 				}
-				//5-1.Æ®·¹ÇÈÀ» °¡Áö°í¿Í¼­  ÀÌ°Å³ª ÀÌ°Ô ¾Æ´Ñ°æ¿ì¿¡ ¸¸ Á¤¼ö·Î ¹Ù²Ş
+				//5-1.íŠ¸ë ˆí”½ì„ ê°€ì§€ê³ ì™€ì„œ  ì´ê±°ë‚˜ ì´ê²Œ ì•„ë‹Œê²½ìš°ì— ë§Œ ì •ìˆ˜ë¡œ ë°”ê¿ˆ
 				Integer traf = traffic.get(ar[0]);
 				if(traf == null) {
 					if(!ar[9].equals("\"-\"")) {
@@ -58,7 +58,7 @@ public class Logfileread {
 				}
 				
 			}
-			//4-5.¸ÊÀÇ ¸ğµç µ¥ÀÌÅÍ¸¦ Ãâ·Â
+			//4-5.ë§µì˜ ëª¨ë“  ë°ì´í„°ë¥¼ ì¶œë ¥
 			Set<String> keySet = map.keySet();
 			for(String key : keySet) {
 				System.out.println(key + ":" + map.get(key));
@@ -75,4 +75,3 @@ public class Logfileread {
 		}
 	}
 }
-

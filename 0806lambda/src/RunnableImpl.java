@@ -3,7 +3,7 @@ public class RunnableImpl implements Runnable {
 
 	@Override
 	public void run() {
-		//1ÃÊ¸¶´Ù ½¬¸é¼­ 1ºÎÅÍ 10±îÁö Ãâ·Â
+		//1ì´ˆë§ˆë‹¤ ì‰¬ë©´ì„œ 1ë¶€í„° 10ê¹Œì§€ ì¶œë ¥
 		int i=1;
 		while(i<=10) {
 			try {

@@ -9,18 +9,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ContactDaoImpl implements ContactDao {
-	//¸ğµç ¸Ş¼Òµå¿¡¼­ °øÅëÀ¸·Î »ç¿ëÇÒ º¯¼ö ¼±¾ğ
+	//ëª¨ë“  ë©”ì†Œë“œì—ì„œ ê³µí†µìœ¼ë¡œ ì‚¬ìš©í•  ë³€ìˆ˜ ì„ ì–¸
 	private Connection con;
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 	
-	//µ¥ÀÌÅÍº£ÀÌ½º ¿¬°áÀ» ¼öÇàÇØÁÖ´Â ¸Ş¼Òµå
+	//ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²°ì„ ìˆ˜í–‰í•´ì£¼ëŠ” ë©”ì†Œë“œ
 	private void connect() {
 		try {
-			//µå¶óÀÌ¹ö Å¬·¡½º ·Îµå
+			//ë“œë¼ì´ë²„ í´ë˜ìŠ¤ ë¡œë“œ
 			Class.forName(
 				"oracle.jdbc.driver.OracleDriver");
-			//µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á
+			//ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²°
 			con = DriverManager.getConnection(
 				"jdbc:oracle:thin:@localhost:1521:xe",
 				"scott", "tiger");
@@ -30,7 +30,7 @@ public class ContactDaoImpl implements ContactDao {
 		}
 	}
 	
-	//µ¥ÀÌÅÍº£ÀÌ½º ÀÚ¿øÀ» ÇØÁ¦ÇØÁÖ´Â ¸Ş¼Òµå
+	//ë°ì´í„°ë² ì´ìŠ¤ ìì›ì„ í•´ì œí•´ì£¼ëŠ” ë©”ì†Œë“œ
 	private void close() {
 		try {
 			if(rs != null)rs.close();
@@ -40,23 +40,23 @@ public class ContactDaoImpl implements ContactDao {
 		catch(Exception e) {}
 	}
 	
-	//°¡Àå Å« numÀ» Ã£¾Æ¿À´Â ¸Ş¼Òµå
+	//ê°€ì¥ í° numì„ ì°¾ì•„ì˜¤ëŠ” ë©”ì†Œë“œ
 	//sql: select max(num) from contact
 	private int getMaxNum() {
 		int result = 0;
 		
 		try {
 			connect();
-			//°¡Àå Å« ±Û¹øÈ£¸¦ Ã£¾Æ¿À´Â sqlÀ» ½ÇÇàÇÏ´Â °´Ã¼ »ı¼º
+			//ê°€ì¥ í° ê¸€ë²ˆí˜¸ë¥¼ ì°¾ì•„ì˜¤ëŠ” sqlì„ ì‹¤í–‰í•˜ëŠ” ê°ì²´ ìƒì„±
 			pstmt = con.prepareStatement(
 				"select max(num) from contact");
-			//sql ½ÇÇà
+			//sql ì‹¤í–‰
 			rs = pstmt.executeQuery();
 			
-			//°á°ú ÀĞ±â
+			//ê²°ê³¼ ì½ê¸°
 			while(rs.next()) {
-				//select ÀıÀÇ Ã¹¹øÂ° ÄÃ·³ÀÇ °ªÀ» Á¤¼ö·Î ÀĞ¾î¼­
-				//result¿¡ ÀúÀå
+				//select ì ˆì˜ ì²«ë²ˆì§¸ ì»¬ëŸ¼ì˜ ê°’ì„ ì •ìˆ˜ë¡œ ì½ì–´ì„œ
+				//resultì— ì €ì¥
 				result = rs.getInt(1);
 			}
 		}catch(Exception e) {
@@ -69,28 +69,28 @@ public class ContactDaoImpl implements ContactDao {
 	}
 	
 	@Override
-	//µ¥ÀÌÅÍ¸¦ »ğÀÔÇÏ´Â ¸Ş¼Òµå
+	//ë°ì´í„°ë¥¼ ì‚½ì…í•˜ëŠ” ë©”ì†Œë“œ
 	public boolean insertContact(Contact contact) {
 		boolean result = false;
 		try {
-			//°¡Àå Å« ¹øÈ£ Ã£¾Æ¿À´Â SQLÀ» ½ÇÇà
+			//ê°€ì¥ í° ë²ˆí˜¸ ì°¾ì•„ì˜¤ëŠ” SQLì„ ì‹¤í–‰
 			int maxNum = getMaxNum();
 			
 			connect();
-			//SQL ½ÇÇà °´Ã¼ ¸¸µé±â
+			//SQL ì‹¤í–‰ ê°ì²´ ë§Œë“¤ê¸°
 			pstmt = con.prepareStatement(
 					"insert into contact(num, name, phone, email, birthday) " + 
 					"values(?,?,?,?,?)");
-			//¹°À½Ç¥¿¡ °ªÀ» ¹ÙÀÎµù
-			//°¡Àå Å« ¹øÈ£ + 1·Î ¼³Á¤
+			//ë¬¼ìŒí‘œì— ê°’ì„ ë°”ì¸ë”©
+			//ê°€ì¥ í° ë²ˆí˜¸ + 1ë¡œ ì„¤ì •
 			pstmt.setInt(1,  maxNum + 1);
 			pstmt.setString(2, contact.getName());
 			pstmt.setString(3, contact.getPhone());
 			pstmt.setString(4, contact.getEmail());
 			pstmt.setDate(5, contact.getBirthday());
 			
-			//select¸¦ Á¦¿ÜÇÑ ±¸¹®Àº executeUpdate·Î ½ÇÇà
-			//½ÇÇà°á°ú¸¦ ¿µÇâ¹ŞÀº ÇàÀÇ °³¼ö¸¦ Á¤¼ö·Î ¸®ÅÏ
+			//selectë¥¼ ì œì™¸í•œ êµ¬ë¬¸ì€ executeUpdateë¡œ ì‹¤í–‰
+			//ì‹¤í–‰ê²°ê³¼ë¥¼ ì˜í–¥ë°›ì€ í–‰ì˜ ê°œìˆ˜ë¥¼ ì •ìˆ˜ë¡œ ë¦¬í„´
 			int r = pstmt.executeUpdate();
 			if(r == 1) {
 				result = true;
@@ -113,21 +113,21 @@ public class ContactDaoImpl implements ContactDao {
 		boolean result = false;
 		connect();
 		try {
-			//SQL »ı¼º
+			//SQL ìƒì„±
 			pstmt = con.prepareStatement(
 				"update contact "
 				+ "set name=?,phone=?,email=?,birthday=? "
 				+ "where num=?");
-			//¹°À½Ç¥¿¡ ½ÇÁ¦ µ¥ÀÌÅÍ¸¦ ¹ÙÀÎµù
+			//ë¬¼ìŒí‘œì— ì‹¤ì œ ë°ì´í„°ë¥¼ ë°”ì¸ë”©
 			pstmt.setString(1, contact.getName());
 			pstmt.setString(2, contact.getPhone());
 			pstmt.setString(3, contact.getEmail());
 			pstmt.setDate(4, contact.getBirthday());
 			pstmt.setInt(5, contact.getNum());
 			
-			//sql ½ÇÇà
+			//sql ì‹¤í–‰
 			int r = pstmt.executeUpdate();
-			//°á°ú »ç¿ë
+			//ê²°ê³¼ ì‚¬ìš©
 			if(r > 0) {
 				result = true;
 			}
@@ -162,18 +162,18 @@ public class ContactDaoImpl implements ContactDao {
 
 	@Override
 	public List<Contact> allContact() {
-		//ÀĞ¾î¿Â µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ±â À§ÇÑ ¸®½ºÆ® »ı¼º
+		//ì½ì–´ì˜¨ ë°ì´í„°ë¥¼ ì €ì¥í•˜ê¸° ìœ„í•œ ë¦¬ìŠ¤íŠ¸ ìƒì„±
 		List<Contact> list = new ArrayList<Contact>();
 		connect();
 		try {
-			//contact Å×ÀÌºí¿¡ ÀÖ´Â ÀüÃ¼ µ¥ÀÌÅÍ¸¦ °¡Á®¿À´Â SQL ½ÇÇà °´Ã¼
-			//¸¦ »ı¼ºÇÕ´Ï´Ù.
+			//contact í…Œì´ë¸”ì— ìˆëŠ” ì „ì²´ ë°ì´í„°ë¥¼ ê°€ì ¸ì˜¤ëŠ” SQL ì‹¤í–‰ ê°ì²´
+			//ë¥¼ ìƒì„±í•©ë‹ˆë‹¤.
 			pstmt = con.prepareStatement(" select num, name, phone, email, birthday"
 					+ " from contact");
-			//select ±¸¹® ½ÇÇà
+			//select êµ¬ë¬¸ ì‹¤í–‰
 			rs = pstmt.executeQuery();
 			
-			//¹İº¹¹®À» ÀÌ¿ëÇØ¼­ µ¥ÀÌÅÍ¸¦ ÀĞ¾î¼­ List¿¡ ÀúÀå
+			//ë°˜ë³µë¬¸ì„ ì´ìš©í•´ì„œ ë°ì´í„°ë¥¼ ì½ì–´ì„œ Listì— ì €ì¥
 			while(rs.next()) {
 				Contact contact = new Contact ( );
 				contact.setNum(rs.getInt("num"));
@@ -181,7 +181,7 @@ public class ContactDaoImpl implements ContactDao {
 				contact.setPhone(rs.getString("phone"));
 				contact.setEmail(rs.getString("email"));
 				contact.setBirthday(rs.getDate("birthday"));
-				//ÀĞÀº µ¥ÀÌÅÍ¸¦ ¸®½ºÆ®¿¡ ÀúÀå
+				//ì½ì€ ë°ì´í„°ë¥¼ ë¦¬ìŠ¤íŠ¸ì— ì €ì¥
 				list.add(contact);
 			}
 		}
@@ -198,15 +198,15 @@ public class ContactDaoImpl implements ContactDao {
 			List<Contact>list = new ArrayList<Contact> ( );
 			connect();
 			try {
-				//contact Å×ÀÌºíÀÇ name ÄÃ·³¿¡ nameÀÇ °ªÀÌ Æ÷ÇÔµÈ
-				//µ¥ÀÌÅÍ¸¦ Á¶È¸ÇÏ´Â SQL ¸¸µé±â
+				//contact í…Œì´ë¸”ì˜ name ì»¬ëŸ¼ì— nameì˜ ê°’ì´ í¬í•¨ëœ
+				//ë°ì´í„°ë¥¼ ì¡°íšŒí•˜ëŠ” SQL ë§Œë“¤ê¸°
 				pstmt = con.prepareStatement(
 						"select * from contact where name like ?");
-				//¹°À½Ç¥¿¡ µ¥ÀÌÅÍ ¹ÙÀÎµù ÇÏ±â
+				//ë¬¼ìŒí‘œì— ë°ì´í„° ë°”ì¸ë”© í•˜ê¸°
 				pstmt.setString(1, "%" + name + "%");
-				//SQL ½ÇÇàÇÏ±â
+				//SQL ì‹¤í–‰í•˜ê¸°
 				rs = pstmt.executeQuery();
-				//µ¥ÀÌÅÍ¸¦ ÀĞ¾î¼­ list¿¡ ÀúÀåÇÏ±â
+				//ë°ì´í„°ë¥¼ ì½ì–´ì„œ listì— ì €ì¥í•˜ê¸°
 				while(rs.next()) {
 					Contact contact = new Contact ( );
 					contact.setNum(rs.getInt("num"));
@@ -214,7 +214,7 @@ public class ContactDaoImpl implements ContactDao {
 					contact.setPhone(rs.getString("phone"));
 					contact.setEmail(rs.getString("email"));
 					contact.setBirthday(rs.getDate("birthday"));
-					//ÀĞÀº µ¥ÀÌÅÍ¸¦ ¸®½ºÆ®¿¡ ÀúÀå
+					//ì½ì€ ë°ì´í„°ë¥¼ ë¦¬ìŠ¤íŠ¸ì— ì €ì¥
 					list.add(contact);
 				}
 			}catch(Exception e) {

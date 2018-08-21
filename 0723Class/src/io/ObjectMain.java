@@ -7,16 +7,16 @@ import java.io.ObjectInputStream;
 public class ObjectMain {
 
 	public static void main(String[] args) {
-		//°´Ã¼ ´ÜÀ§·Î µ¥ÀÌÅÍ¸¦ ±â·ÏÇÒ ¼ö ÀÖ´Â Å¬·¡½ºÀÇ º¯¼ö ¼±¾ğ
+		//ê°ì²´ ë‹¨ìœ„ë¡œ ë°ì´í„°ë¥¼ ê¸°ë¡í•  ìˆ˜ ìˆëŠ” í´ë˜ìŠ¤ì˜ ë³€ìˆ˜ ì„ ì–¸
 		ObjectInputStream ois = null;
 		try {
-			//ÆÄÀÏ¿¡ °´Ã¼ ´ÜÀ§·Î ±â·ÏÇÒ ¼ö ÀÖ´Â Å¬·¡½ºÀÇ
-			//°´Ã¼ ¸¸µé±â
+			//íŒŒì¼ì— ê°ì²´ ë‹¨ìœ„ë¡œ ê¸°ë¡í•  ìˆ˜ ìˆëŠ” í´ë˜ìŠ¤ì˜
+			//ê°ì²´ ë§Œë“¤ê¸°
 			ois = new ObjectInputStream(
 				new FileInputStream("./oos.txt"));
-			//read·Î ÀĞ¾î¿Ã ¶§ Object Å¸ÀÔÀ¸·Î ¸®ÅÏÇÏ±â ¶§¹®¿¡
-			//°­Á¦ Çü º¯È¯À» ÇØ¼­ ¿ø·¡ÀÇ ÀÚ·áÇüÀ¸·Î
-			//µÇµ¹·Á¼­ »ç¿ëÇØ¾ß ÇÕ´Ï´Ù.
+			//readë¡œ ì½ì–´ì˜¬ ë•Œ Object íƒ€ì…ìœ¼ë¡œ ë¦¬í„´í•˜ê¸° ë•Œë¬¸ì—
+			//ê°•ì œ í˜• ë³€í™˜ì„ í•´ì„œ ì›ë˜ì˜ ìë£Œí˜•ìœ¼ë¡œ
+			//ë˜ëŒë ¤ì„œ ì‚¬ìš©í•´ì•¼ í•©ë‹ˆë‹¤.
 			Member member = (Member)ois.readObject();
 			System.out.println(member);
 			/*

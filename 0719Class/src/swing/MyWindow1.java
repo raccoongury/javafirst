@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JPanel;
 
-//À©µµ¿ì Å¬·¡½º
+//ìœˆë„ìš° í´ë˜ìŠ¤
 public class MyWindow1 extends JFrame {
 	String [] data = {
 		"Encapsulation", "Inheritance",
@@ -15,7 +15,7 @@ public class MyWindow1 extends JFrame {
 	};
 	public MyWindow1() {
 		setBounds(100, 100, 400, 400);
-		setTitle("½ºÀ®");
+		setTitle("ìŠ¤ìœ™");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		JList<String>list = new JList<>(data);

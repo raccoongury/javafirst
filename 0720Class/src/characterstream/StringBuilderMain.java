@@ -11,24 +11,24 @@ public class StringBuilderMain {
 		try {
 			br = new BufferedReader(
 				new FileReader(
-				"C:\\Users\\503-17\\Documents\\ÀÌÁ¤¿ø\\0719.txt"));
-			//ÁÙ ´ÜÀ§·Î µ¥ÀÌÅÍ¸¦ ÀÌ¾îºÙÀÏ StringBuilder »ı¼º
+				"C:\\Users\\503-17\\Documents\\ì´ì •ì›\\0719.txt"));
+			//ì¤„ ë‹¨ìœ„ë¡œ ë°ì´í„°ë¥¼ ì´ì–´ë¶™ì¼ StringBuilder ìƒì„±
 			StringBuilder sb = 
 				new StringBuilder();
 			while(true) {
-				//ÇÑ ÁÙÀ» ÀĞ±â
+				//í•œ ì¤„ì„ ì½ê¸°
 				String line = br.readLine();
-				//ÀĞÀº µ¥ÀÌÅÍ°¡ ¾øÀ¸¸é Á¾·á
+				//ì½ì€ ë°ì´í„°ê°€ ì—†ìœ¼ë©´ ì¢…ë£Œ
 				if(line == null) {
 					break;
 				}
-				//ÀĞÀº µ¥ÀÌÅÍ°¡ ÀÖÀ¸¸é sb¿¡ Ãß°¡
+				//ì½ì€ ë°ì´í„°ê°€ ìˆìœ¼ë©´ sbì— ì¶”ê°€
 				sb.append(line);
 			}
 			
-			//ÀĞÀº ³»¿ëÀ» String¿¡ ÀúÀåÇÏ±â
+			//ì½ì€ ë‚´ìš©ì„ Stringì— ì €ì¥í•˜ê¸°
 			String content = sb.toString();
-			//¸Ş¸ğ¸® Á¤¸®¸¦ À§ÇØ¼­
+			//ë©”ëª¨ë¦¬ ì •ë¦¬ë¥¼ ìœ„í•´ì„œ
 			sb = null;
 			System.out.println(content);
 		}

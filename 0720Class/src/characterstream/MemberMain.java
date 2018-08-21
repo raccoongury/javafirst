@@ -9,53 +9,53 @@ import java.util.Map;
 public class MemberMain {
 
 	public static void main(String[] args) {
-		//Å°º¸µå·ÎºÎÅÍ ÁÙ ´ÜÀ§·Î ÀÔ·ÂÀ» ¹ŞÀ» ¼ö ÀÖ´Â Å¬·¡½ºÀÇ
-		//ÂüÁ¶Çü º¯¼ö ¼±¾ğ
-		//finallÀı¿¡¼­ close¸¦ ÇÒ ¼ö ÀÖµµ·Ï try ¹Û¿¡¼­
-		//º¯¼ö¸¦ ¼±¾ğÇÕ´Ï´Ù.
+		//í‚¤ë³´ë“œë¡œë¶€í„° ì¤„ ë‹¨ìœ„ë¡œ ì…ë ¥ì„ ë°›ì„ ìˆ˜ ìˆëŠ” í´ë˜ìŠ¤ì˜
+		//ì°¸ì¡°í˜• ë³€ìˆ˜ ì„ ì–¸
+		//finallì ˆì—ì„œ closeë¥¼ í•  ìˆ˜ ìˆë„ë¡ try ë°–ì—ì„œ
+		//ë³€ìˆ˜ë¥¼ ì„ ì–¸í•©ë‹ˆë‹¤.
 		BufferedReader br = null;
 		
 		try {
-			//Å°º¸µå·ÎºÎÅÍ ÀÔ·Â¹ŞÀ» ¼ö ÀÖ´Â ÀÎ½ºÅÏ½º »ı¼º
+			//í‚¤ë³´ë“œë¡œë¶€í„° ì…ë ¥ë°›ì„ ìˆ˜ ìˆëŠ” ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 			br = new BufferedReader(
 				new InputStreamReader(System.in));
-			System.out.print("ÀÌ¸§:");
-			//¹®ÀÚ¿­ ÇÑ ÁÙÀ» ÀĞ¾î¿À±â
+			System.out.print("ì´ë¦„:");
+			//ë¬¸ìì—´ í•œ ì¤„ì„ ì½ì–´ì˜¤ê¸°
 			String name = br.readLine();
 			
-			System.out.print("³ªÀÌ:");
+			System.out.print("ë‚˜ì´:");
 			String age = br.readLine();
 			
-			System.out.print("Å°:");
+			System.out.print("í‚¤:");
 			String height = br.readLine();
 			
-			//3°³ÀÇ µ¥ÀÌÅÍ¸¦ ÇÏ³ª·Î ÀúÀåÇÏ±â À§ÇÑ ÀÎ½ºÅÏ½º¸¦ »ı¼º
+			//3ê°œì˜ ë°ì´í„°ë¥¼ í•˜ë‚˜ë¡œ ì €ì¥í•˜ê¸° ìœ„í•œ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±
 			Member member = new Member();
 			member.setName(name);
-			//Á¤¼ö·Î º¯È¯ÇØ¼­ ÀúÀå
+			//ì •ìˆ˜ë¡œ ë³€í™˜í•´ì„œ ì €ì¥
 			member.setAge(Integer.parseInt(age));
-			//½Ç¼ö·Î º¯È¯ÇØ¼­ ÀúÀå
+			//ì‹¤ìˆ˜ë¡œ ë³€í™˜í•´ì„œ ì €ì¥
 			member.setHeight(Double.parseDouble(height));
 			
-			//¸ÊÀ» ÀÌ¿ëÇØ¼­ ÀúÀå
+			//ë§µì„ ì´ìš©í•´ì„œ ì €ì¥
 			Map<String, Object> map = 
 				new HashMap<>();
 			map.put("name", name);
 			map.put("age", Integer.parseInt(age));
 			map.put("height",Double.parseDouble(height));
 			
-			//Ãâ·ÂÇÒ ¶§´Â VO Å¬·¡½º³ª MapÀÌ º° Â÷ÀÌ°¡ ¾ø½À´Ï´Ù.
+			//ì¶œë ¥í•  ë•ŒëŠ” VO í´ë˜ìŠ¤ë‚˜ Mapì´ ë³„ ì°¨ì´ê°€ ì—†ìŠµë‹ˆë‹¤.
 
 			System.out.println(member);
 			System.out.println(map);
 			
-			//»ç¿ëÇÒ ¶§´Â Á¶±İ ´Ù¸¨´Ï´Ù. ³ªÀÌ¸¦ 1¾¿ ´õÇÏ±â
+			//ì‚¬ìš©í•  ë•ŒëŠ” ì¡°ê¸ˆ ë‹¤ë¦…ë‹ˆë‹¤. ë‚˜ì´ë¥¼ 1ì”© ë”í•˜ê¸°
 			int r = member.getAge()+1;
-			//Map¿¡¼­´Â µ¥ÀÌÅÍ¸¦ °¡Á®¿Í¼­ »ç¿ëÇÒ ¶§ °­Á¦ Çü º¯È¯À» ÇØ¾ßÇÕ´Ï´Ù
+			//Mapì—ì„œëŠ” ë°ì´í„°ë¥¼ ê°€ì ¸ì™€ì„œ ì‚¬ìš©í•  ë•Œ ê°•ì œ í˜• ë³€í™˜ì„ í•´ì•¼í•©ë‹ˆë‹¤
 			r = (Integer)map.get("age") + 1;
 		}catch(Exception e) {
 			System.out.println(
-				"¿¹¿Ü:" + e.getMessage());
+				"ì˜ˆì™¸:" + e.getMessage());
 		}finally {
 			if(br != null)
 				try {

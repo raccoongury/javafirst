@@ -9,12 +9,12 @@ public class PrintStreamMain {
 		PrintStream ps = null;
 		try {
 			ps = new PrintStream ( new FileOutputStream("./data.dat"));
-			ps.println("¹İ°©½À´Ï´Ù.");
-			ps.println("¹Ù·Î ¹Ù·Î Ã³¸®ÇÕ´Ï´Ù.");
+			ps.println("ë°˜ê°‘ìŠµë‹ˆë‹¤.");
+			ps.println("ë°”ë¡œ ë°”ë¡œ ì²˜ë¦¬í•©ë‹ˆë‹¤.");
 			ps.flush();
 		}
 		catch(Exception e) {
-			System.out.println("ÆÄÀÏ¾²±â ¿¹¿Ü:" + e.getMessage());
+			System.out.println("íŒŒì¼ì“°ê¸° ì˜ˆì™¸:" + e.getMessage());
 		}
 		finally {
 			if (ps !=null)

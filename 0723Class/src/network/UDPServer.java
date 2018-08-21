@@ -10,14 +10,14 @@ public class UDPServer {
 			DatagramSocket ds = new DatagramSocket(5000);
 			while(true) {
 				byte [ ] b = new byte [1024];
-				//DatagramPacket »ı¼º
+				//DatagramPacket ìƒì„±
 				DatagramPacket dp = new DatagramPacket(b, 1024);
-				//µ¥ÀÌÅÍ ¹Ş±â
+				//ë°ì´í„° ë°›ê¸°
 				ds.receive(dp);
-				//µ¥ÀÌÅÍ¸¦ ÀĞ¾î¼­ Ãâ·Â
+				//ë°ì´í„°ë¥¼ ì½ì–´ì„œ ì¶œë ¥
 				String msg = new String(b, 0, 1024);
-				System.out.println("º¸³½ °÷:" + dp.getAddress());
-				System.out.println("¸Ş½ÃÁö:" + msg);
+				System.out.println("ë³´ë‚¸ ê³³:" + dp.getAddress());
+				System.out.println("ë©”ì‹œì§€:" + msg);
 				
 			}
 		}

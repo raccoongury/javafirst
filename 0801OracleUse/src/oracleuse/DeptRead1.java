@@ -10,20 +10,20 @@ public class DeptRead1 {
 	public static void main(String[] args) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		// select ±¸¹®ÀÇ °á°ú¸¦ ÀúÀåÇÏ±â À§ÇÑ º¯¼ö
+		// select êµ¬ë¬¸ì˜ ê²°ê³¼ë¥¼ ì €ì¥í•˜ê¸° ìœ„í•œ ë³€ìˆ˜
 		ResultSet rs = null;
 
 		try {
-			//¿À¶óÅ¬ µå¶óÀÌ¹ö Å¬·¡½º ·Îµå
+			//ì˜¤ë¼í´ ë“œë¼ì´ë²„ í´ë˜ìŠ¤ ë¡œë“œ
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			//µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á
+			//ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²°
 			con = DriverManager.getConnection(
 					"jdbc:oracle:thin:@localhost:1521:xe", "scott", "tiger");
-			//sql ½ÇÇà °´Ã¼ »ı¼º
+			//sql ì‹¤í–‰ ê°ì²´ ìƒì„±
 			pstmt = con.prepareStatement("select deptno, dname, loc from dept");
-			//select ÇÏ´Â sql ½ÇÇà
+			//select í•˜ëŠ” sql ì‹¤í–‰
 			rs = pstmt.executeQuery();
-			//µ¥ÀÌÅÍ ÀüÃ¼ ÀĞ±â
+			//ë°ì´í„° ì „ì²´ ì½ê¸°
 			while(rs.next()) {
 				System.out.println(rs.getInt("deptno")+":");
 				System.out.println(rs.getString("dname") + ":");

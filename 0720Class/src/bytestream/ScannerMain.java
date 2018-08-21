@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class ScannerMain {
 
 	public static void main(String[] args) {
-		// Å°º¸µå·Î ºÎÅÍ ÀÔ·Â¹Ş´Â Scanner ÀÎ½ºÅÏ½º ¸¸µé±â
+		// í‚¤ë³´ë“œë¡œ ë¶€í„° ì…ë ¥ë°›ëŠ” Scanner ì¸ìŠ¤í„´ìŠ¤ ë§Œë“¤ê¸°
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Á¤¼ö:");
+		System.out.println("ì •ìˆ˜:");
 		int x = sc.nextInt();
 		System.out.println(x);
-		System.out.print("ÀÌ¸§:");
+		System.out.print("ì´ë¦„:");
 		String name = sc.nextLine();
 		System.out.println(name);
 		

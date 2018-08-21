@@ -9,40 +9,40 @@ import java.util.ArrayList;
 public class DataSaveDto {
 
 		public static void main(String[] args) {
-			//µ¥ÀÌÅÍº£ÀÌ½º¿¡¼­ µ¥ÀÌÅÍ ÀĞ±â¸¦ À§ÇÑ º¯¼ö
+			//ë°ì´í„°ë² ì´ìŠ¤ì—ì„œ ë°ì´í„° ì½ê¸°ë¥¼ ìœ„í•œ ë³€ìˆ˜
 			Connection con = null;
 			PreparedStatement pstmt = null;
 			ResultSet rs = null;
 			
-			//ÀĞ¾î¿Â µ¥ÀÌÅÍ ÀúÀåÀ» À§ÇÑ ÀÚ·á±¸Á¶
+			//ì½ì–´ì˜¨ ë°ì´í„° ì €ì¥ì„ ìœ„í•œ ìë£Œêµ¬ì¡°
 			ArrayList<Dept> list =
 					new ArrayList<>();
 			
 			try {
-				//µ¥ÀÌÅÍº£ÀÌ½º µå¶óÀÌ¹ö¸¦ ·Îµå
+				//ë°ì´í„°ë² ì´ìŠ¤ ë“œë¼ì´ë²„ë¥¼ ë¡œë“œ
 				Class.forName("oracle.jdbc.driver.OracleDriver");
-				//µ¥ÀÌÅÍº£ÀÌ½º Á¢¼Ó
+				//ë°ì´í„°ë² ì´ìŠ¤ ì ‘ì†
 				con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "scott", "tiger");
-				//sql ½ÇÇà °´Ã¼ »ı¼º
+				//sql ì‹¤í–‰ ê°ì²´ ìƒì„±
 				pstmt = con.prepareStatement(
 						"select deptno, dname, loc from dept");
-				//sql ½ÇÇà
+				//sql ì‹¤í–‰
 				rs = pstmt.executeQuery();
-				//µ¥ÀÌÅÍ ÀĞ±â
-				//Çà ´ÜÀ§·Î ÀĞ±â
+				//ë°ì´í„° ì½ê¸°
+				//í–‰ ë‹¨ìœ„ë¡œ ì½ê¸°
 				while(rs.next()) {
-					//ÇÏ³ªÀÇ ÇàÀ» ÀúÀåÇÒ DTO °´Ã¼ »ı¼º
+					//í•˜ë‚˜ì˜ í–‰ì„ ì €ì¥í•  DTO ê°ì²´ ìƒì„±
 					Dept dept = new Dept();
 					dept.setDeptno(rs.getInt("deptno"));
 					dept.setDname(rs.getString("dname"));
 					dept.setLoc(rs.getString("loc"));
 					
-					//ÀĞÀº ÇÏ³ªÀÇ ÇàÀ» ¸®½ºÆ®¿¡ ÀúÀå
+					//ì½ì€ í•˜ë‚˜ì˜ í–‰ì„ ë¦¬ìŠ¤íŠ¸ì— ì €ì¥
 					list.add(dept);
 				}
-				System.out.printf("%10s", "ºÎ¼­¹øÈ£");
-				System.out.printf("%20s", "ºÎ¼­¹øÈ£");
-				System.out.printf("%30s", "ºÎ¼­À§Ä¡");
+				System.out.printf("%10s", "ë¶€ì„œë²ˆí˜¸");
+				System.out.printf("%20s", "ë¶€ì„œë²ˆí˜¸");
+				System.out.printf("%30s", "ë¶€ì„œìœ„ì¹˜");
 				System.out.println();
 				for(Dept dept : list) {
 					System.out.printf("%10s", dept.getDeptno());
@@ -52,11 +52,11 @@ public class DataSaveDto {
 				}
 				
 			}catch(Exception e) {
-				//¿¹¿Ü ³»¿ëÀ» Ãâ·Â
+				//ì˜ˆì™¸ ë‚´ìš©ì„ ì¶œë ¥
 				System.out.println(e.getMessage());
-				//¿¹¿Ü ³»¿ëÀ» ÃßÀû
+				//ì˜ˆì™¸ ë‚´ìš©ì„ ì¶”ì 
 			}finally {
-				//»ç¿ëÀ» ´ÙÇÑ °æ¿ì ´İ±â
+				//ì‚¬ìš©ì„ ë‹¤í•œ ê²½ìš° ë‹«ê¸°
 				try {
 					if(con != null) con.close();
 					

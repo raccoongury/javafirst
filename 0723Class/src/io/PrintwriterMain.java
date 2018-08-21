@@ -5,14 +5,14 @@ import java.io.PrintWriter;
 public class PrintwriterMain {
 
 	public static void main(String[] args) {
-		// ÆÄÀÏ, ³×Æ®¿öÅ©, µ¥ÀÌÅÍº£ÀÌ½º °ü·Ã Å¬·¡½ºµéÀº
-		// ¿¹¿ÜÃ³¸®¸¦ °­Á¦ÇÕ´Ï´Ù.
+		// íŒŒì¼, ë„¤íŠ¸ì›Œí¬, ë°ì´í„°ë² ì´ìŠ¤ ê´€ë ¨ í´ë˜ìŠ¤ë“¤ì€
+		// ì˜ˆì™¸ì²˜ë¦¬ë¥¼ ê°•ì œí•©ë‹ˆë‹¤.
 		PrintWriter pw = null;
 		try {
-			// ÇöÀç µğ·ºÅä¸®¿¡ ÆÄÀÏÀ» »ı¼º
+			// í˜„ì¬ ë””ë ‰í† ë¦¬ì— íŒŒì¼ì„ ìƒì„±
 			pw = new PrintWriter("./file.txt");
-			pw.print("¾È³çÇÏ¼¼¿ä ¹İ°©½À´Ï´Ù.");
-			// ¸¶Áö¸·¿¡ ¹öÆÛÀÇ ³»¿ëÀ» ÀüºÎ Ãâ·Â
+			pw.print("ì•ˆë…•í•˜ì„¸ìš” ë°˜ê°‘ìŠµë‹ˆë‹¤.");
+			// ë§ˆì§€ë§‰ì— ë²„í¼ì˜ ë‚´ìš©ì„ ì „ë¶€ ì¶œë ¥
 			pw.flush();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

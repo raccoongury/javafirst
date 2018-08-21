@@ -7,53 +7,53 @@ public class MulticastSend {
 
 	public static void main(String[] args) {
 		try {
-			//º¸³»´Â ¸ÖÆ¼Ä³½ºÆ® ¼ÒÄÏÀ» »ı¼º
+			//ë³´ë‚´ëŠ” ë©€í‹°ìºìŠ¤íŠ¸ ì†Œì¼“ì„ ìƒì„±
 			MulticastSocket ms = new MulticastSocket();
-			//¹®ÀÚ¿­À» ÀÔ·Â¹Ş±â À§ÇÑ ½ºÄ³³Ê ¸¸µé±â
+			//ë¬¸ìì—´ì„ ì…ë ¥ë°›ê¸° ìœ„í•œ ìŠ¤ìºë„ˆ ë§Œë“¤ê¸°
 			Scanner sc = new Scanner(System.in);
-			//´Ğ³×ÀÓ ¼³Á¤ÇÏ±â
-			System.out.print("´Ğ³×ÀÓ ÀÔ·Â:");
+			//ë‹‰ë„¤ì„ ì„¤ì •í•˜ê¸°
+			System.out.print("ë‹‰ë„¤ì„ ì…ë ¥:");
 			String nick = sc.nextLine();
-			String str = nick + "´ÔÀÌ ÀÔÀåÇÏ¼Ì½À´Ï´Ù.";
-			//º¸³»´Â ÆĞÅ¶ ¸¸µé±â - ³»¿ë, ±æÀÌ, ¹ŞÀ»°÷ÀÇ ÁÖ¼Ò, Æ÷Æ®¹øÈ£
+			String str = nick + "ë‹˜ì´ ì…ì¥í•˜ì…¨ìŠµë‹ˆë‹¤.";
+			//ë³´ë‚´ëŠ” íŒ¨í‚· ë§Œë“¤ê¸° - ë‚´ìš©, ê¸¸ì´, ë°›ì„ê³³ì˜ ì£¼ì†Œ, í¬íŠ¸ë²ˆí˜¸
 			DatagramPacket dp = 
 				new DatagramPacket(
 					str.getBytes(),
 					str.getBytes().length,
 					InetAddress.getByName("FF7E:230::1234"),
 					9999);
-			//µ¥ÀÌÅÍ Àü¼Û
+			//ë°ì´í„° ì „ì†¡
 			ms.send(dp);
 			
 			while(true) {
-				System.out.print("¸Ş½ÃÁö(Á¾·á´Â end):");
+				System.out.print("ë©”ì‹œì§€(ì¢…ë£ŒëŠ” end):");
 				String msg = sc.nextLine();
 				if(msg.equals("end")) {
-					msg = nick + "´ÔÀÌ ÅğÀåÇÏ¼Ì½À´Ï´Ù.";
-					//º¸³»´Â ÆĞÅ¶ ¸¸µé±â - ³»¿ë, ±æÀÌ, ¹ŞÀ»°÷ÀÇ ÁÖ¼Ò, Æ÷Æ®¹øÈ£
+					msg = nick + "ë‹˜ì´ í‡´ì¥í•˜ì…¨ìŠµë‹ˆë‹¤.";
+					//ë³´ë‚´ëŠ” íŒ¨í‚· ë§Œë“¤ê¸° - ë‚´ìš©, ê¸¸ì´, ë°›ì„ê³³ì˜ ì£¼ì†Œ, í¬íŠ¸ë²ˆí˜¸
 					dp = 
 						new DatagramPacket(
 							msg.getBytes(),
 							msg.getBytes().length,
 							InetAddress.getByName("FF7E:230::1234"),
 							9999);
-					//µ¥ÀÌÅÍ Àü¼Û
+					//ë°ì´í„° ì „ì†¡
 					ms.send(dp);
-					//¼ÒÄÏ°ú ½ºÄ³³Ê ´İ±â
+					//ì†Œì¼“ê³¼ ìŠ¤ìºë„ˆ ë‹«ê¸°
 					ms.close();
 					sc.close();
 					break;
 				}else {
-					//¸Ş½ÃÁö ¸¸µé±â
+					//ë©”ì‹œì§€ ë§Œë“¤ê¸°
 					msg =nick + ":" + msg;
-					//Àü¼ÛÇÒ ÆĞÅ¶ ¸¸µé±â
+					//ì „ì†¡í•  íŒ¨í‚· ë§Œë“¤ê¸°
 					dp = 
 						new DatagramPacket(
 							msg.getBytes(),
 							msg.getBytes().length,
 							InetAddress.getByName("FF7E:230::1234"),
 							9999);
-					//µ¥ÀÌÅÍ Àü¼Û
+					//ë°ì´í„° ì „ì†¡
 					ms.send(dp);
 				}
 			}

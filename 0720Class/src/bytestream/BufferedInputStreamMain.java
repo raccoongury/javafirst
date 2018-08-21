@@ -7,7 +7,7 @@ import java.io.IOException;
 public class BufferedInputStreamMain {
 
 	public static void main(String[] args) {
-		//ÆÄÀÏ¿¡¼­ ¹ÙÀÌÆ® ´ÜÀ§·Î ¹öÆÛ¸µÀ» ÀÌ¿ëÇØ¼­ ÀĞ±â
+		//íŒŒì¼ì—ì„œ ë°”ì´íŠ¸ ë‹¨ìœ„ë¡œ ë²„í¼ë§ì„ ì´ìš©í•´ì„œ ì½ê¸°
 		BufferedInputStream bis = null;
 		try {
 			bis = new BufferedInputStream(
@@ -28,7 +28,7 @@ public class BufferedInputStreamMain {
 			}
 		}
 		catch(Exception e) {
-			System.out.println("¿¹¿Ü¹ß»ı:" +
+			System.out.println("ì˜ˆì™¸ë°œìƒ:" +
 		e.getMessage());
 		}
 		finally {

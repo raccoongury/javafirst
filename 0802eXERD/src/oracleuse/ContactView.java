@@ -17,66 +17,66 @@ import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
 public class ContactView extends JFrame {
-	// ÇÊ¿äÇÑ UI º¯¼ö ¼±¾ğ
+	// í•„ìš”í•œ UI ë³€ìˆ˜ ì„ ì–¸
 
-	// ·¹ÀÌºí ¼±¾ğ
+	// ë ˆì´ë¸” ì„ ì–¸
 	JLabel lblName, lblPhone, lblEmail, lblBirthday;
-	// ÀÔ·Â¹ŞÀ» ÅØ½ºÆ® ÇÊµå ¼±¾ğ
+	// ì…ë ¥ë°›ì„ í…ìŠ¤íŠ¸ í•„ë“œ ì„ ì–¸
 	JTextField tfName, tfPhone, tfEmail, tfBirthday;
-	// ¹öÆ° º¯¼ö
+	// ë²„íŠ¼ ë³€ìˆ˜
 	JButton btnFirst, btnLast, btnPrev, btnNext;
 	JButton btnInsert, btnUpdate, btnDelete, btnSearch, btnClear;
 
-	// ÇöÀç Ãâ·Â ÁßÀÎ µ¥ÀÌÅÍÀÇ ÀÎµ¦½º¸¦ Ç¥½ÃÇÒ ·¹ÀÌºí
+	// í˜„ì¬ ì¶œë ¥ ì¤‘ì¸ ë°ì´í„°ì˜ ì¸ë±ìŠ¤ë¥¼ í‘œì‹œí•  ë ˆì´ë¸”
 	JLabel lblIndex;
 
-	// µ¥ÀÌÅÍº£ÀÌ½º ÀÛ¾÷À» À§ÇÑ Dao º¯¼ö
+	// ë°ì´í„°ë² ì´ìŠ¤ ì‘ì—…ì„ ìœ„í•œ Dao ë³€ìˆ˜
 	ContactDao dao = new ContactDaoImpl();
-	// µ¥ÀÌÅÍº£ÀÌ½º¿¡¼­ °¡Á®¿Â °á°ú¸¦ ÀúÀåÇÏ±â À§ÇÑ List
+	// ë°ì´í„°ë² ì´ìŠ¤ì—ì„œ ê°€ì ¸ì˜¨ ê²°ê³¼ë¥¼ ì €ì¥í•˜ê¸° ìœ„í•œ List
 	List<Contact> list;
-	// ÇöÀç Ãâ·Â ÁßÀÎ µ¥ÀÌÅÍÀÇ ÀÎµ¦½º¸¦ ÀúÀåÇÒ º¯¼ö
+	// í˜„ì¬ ì¶œë ¥ ì¤‘ì¸ ë°ì´í„°ì˜ ì¸ë±ìŠ¤ë¥¼ ì €ì¥í•  ë³€ìˆ˜
 	int idx;
 
-	// idx ¹øÂ° µ¥ÀÌÅÍ¸¦ È­¸é¿¡ Ãâ·ÂÇØÁÖ´Â ¸Ş¼Òµå
-	// ¸Ç Ã³À½ ÇÑ¹ø È£ÃâÇÏ°í µ¥ÀÌÅÍ¿¡ ÀÛ¾÷ÀÌ ¹ß»ıÇÏ¸é È£ÃâÇÏ´Â ¸Ş¼Òµå
+	// idx ë²ˆì§¸ ë°ì´í„°ë¥¼ í™”ë©´ì— ì¶œë ¥í•´ì£¼ëŠ” ë©”ì†Œë“œ
+	// ë§¨ ì²˜ìŒ í•œë²ˆ í˜¸ì¶œí•˜ê³  ë°ì´í„°ì— ì‘ì—…ì´ ë°œìƒí•˜ë©´ í˜¸ì¶œí•˜ëŠ” ë©”ì†Œë“œ
 	private void printData() {
-		// ÀĞÀ» µ¥ÀÌÅÍ°¡ ¾ø´Ù¸é ¸Ş½ÃÁö ¹Ú½º¸¦ Ãâ·ÂÇÏ°í return
+		// ì½ì„ ë°ì´í„°ê°€ ì—†ë‹¤ë©´ ë©”ì‹œì§€ ë°•ìŠ¤ë¥¼ ì¶œë ¥í•˜ê³  return
 		if (list.size() == 0) {
-			JOptionPane.showMessageDialog(null, "ÀĞÀ» µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.", "µ¥ÀÌÅÍ ¾øÀ½", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "ì½ì„ ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.", "ë°ì´í„° ì—†ìŒ", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
-		// List¿¡¼­ idx ¹øÂ° µ¥ÀÌÅÍ¸¦ °¡Á®¿É´Ï´Ù.
+		// Listì—ì„œ idx ë²ˆì§¸ ë°ì´í„°ë¥¼ ê°€ì ¸ì˜µë‹ˆë‹¤.
 		Contact contact = list.get(idx);
 		tfName.setText(contact.getName());
 		tfPhone.setText(contact.getPhone());
 		tfEmail.setText(contact.getEmail());
-		// »ıÀÏÀº Data Å¸ÀÔÀÌ¹Ç·Î toStringÀ» È£ÃâÇØ¼­ StringÀ¸·Î º¯È¯ÇØ¼­
-		// Ãâ·ÂÇÕ´Ï´Ù.
+		// ìƒì¼ì€ Data íƒ€ì…ì´ë¯€ë¡œ toStringì„ í˜¸ì¶œí•´ì„œ Stringìœ¼ë¡œ ë³€í™˜í•´ì„œ
+		// ì¶œë ¥í•©ë‹ˆë‹¤.
 		tfBirthday.setText(contact.getBirthday().toString());
-		// ·¹ÀÌºí¿¡ ÇöÀç ÀÎµ¦½º¸¦ Ãâ·Â
+		// ë ˆì´ë¸”ì— í˜„ì¬ ì¸ë±ìŠ¤ë¥¼ ì¶œë ¥
 		// lblIndaex.setText(String.fromat("%d", idx+1));
 		lblIndex.setText((idx + 1) + "");
 	}
 
-	// »ı¼ºÀÚ
-	// °´Ã¼¸¦ ¸¸µé ¶§ ÃÊ±âÈ­¸¦ À§ÇØ¼­ »ı¼º
+	// ìƒì„±ì
+	// ê°ì²´ë¥¼ ë§Œë“¤ ë•Œ ì´ˆê¸°í™”ë¥¼ ìœ„í•´ì„œ ìƒì„±
 	public ContactView() {
-		// Áß¾Ó¿¡ ¹èÄ¡ÇÒ ÆĞ³Î »ı¼º
+		// ì¤‘ì•™ì— ë°°ì¹˜í•  íŒ¨ë„ ìƒì„±
 		JPanel centerPanel = new JPanel();
 
-		// ·¹ÀÌºíÀ» »ı¼º
-		lblName = new JLabel("ÀÌ¸§", JLabel.RIGHT);
-		lblPhone = new JLabel("ÀüÈ­¹øÈ£", JLabel.RIGHT);
-		lblEmail = new JLabel("ÀÌ¸ŞÀÏ", JLabel.RIGHT);
-		lblBirthday = new JLabel("»ı³â¿ùÀÏ", JLabel.RIGHT);
+		// ë ˆì´ë¸”ì„ ìƒì„±
+		lblName = new JLabel("ì´ë¦„", JLabel.RIGHT);
+		lblPhone = new JLabel("ì „í™”ë²ˆí˜¸", JLabel.RIGHT);
+		lblEmail = new JLabel("ì´ë©”ì¼", JLabel.RIGHT);
+		lblBirthday = new JLabel("ìƒë…„ì›”ì¼", JLabel.RIGHT);
 
-		// ÅØ½ºÆ® ÇÊµå »ı¼º
+		// í…ìŠ¤íŠ¸ í•„ë“œ ìƒì„±
 		tfName = new JTextField();
 		tfPhone = new JTextField();
 		tfEmail = new JTextField();
 		tfBirthday = new JTextField();
 
-		// È­¸é¿¡ ¹èÄ¡
+		// í™”ë©´ì— ë°°ì¹˜
 		centerPanel.setLayout(new GridLayout(4, 2, 3, 3));
 		centerPanel.add(lblName);
 		centerPanel.add(tfName);
@@ -90,18 +90,18 @@ public class ContactView extends JFrame {
 		centerPanel.add(lblBirthday);
 		centerPanel.add(tfBirthday);
 
-		// Æä³Î¿¡ ¿Ã¸®±â
+		// í˜ë„ì— ì˜¬ë¦¬ê¸°
 		add("Center", centerPanel);
 
-		// ÄÚµå°¡ ³Ê¹« ±æ¸é ¾ÈÁÁÀ¸´Ï ÄÚµå¸¦ Àß¶ó¼­ ¹Û¿¡´Ù°¡ ¸Ş¼Òµå¸¦ ¸¸µé°í ¸Ş¼Òµå¸¦ È£Ãâ
+		// ì½”ë“œê°€ ë„ˆë¬´ ê¸¸ë©´ ì•ˆì¢‹ìœ¼ë‹ˆ ì½”ë“œë¥¼ ì˜ë¼ì„œ ë°–ì—ë‹¤ê°€ ë©”ì†Œë“œë¥¼ ë§Œë“¤ê³  ë©”ì†Œë“œë¥¼ í˜¸ì¶œ
 		display();
 
-		// µ¥ÀÌÅÍº£ÀÌ½º¿¡¼­ µ¥ÀÌÅÍ¸¦ °¡Á®¿É´Ï´Ù.
+		// ë°ì´í„°ë² ì´ìŠ¤ì—ì„œ ë°ì´í„°ë¥¼ ê°€ì ¸ì˜µë‹ˆë‹¤.
 		list = dao.allContact();
 		printData();
 
 		setBounds(100, 100, 800, 700);
-		setTitle("¿¬¶ôÃ³");
+		setTitle("ì—°ë½ì²˜");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(false);
 		setVisible(true);
@@ -109,14 +109,14 @@ public class ContactView extends JFrame {
 
 	private void display() {
 		
-		//¹öÆ° »ı¼º
-		btnFirst = new JButton("Ã³À½À¸·Î");
-		btnPrev = new JButton("ÀÌÀüÀ¸·Î");
+		//ë²„íŠ¼ ìƒì„±
+		btnFirst = new JButton("ì²˜ìŒìœ¼ë¡œ");
+		btnPrev = new JButton("ì´ì „ìœ¼ë¡œ");
 		btnPrev.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(idx == 0) {
-					JOptionPane.showMessageDialog(null, "Ã¹¹øÂ° µ¥ÀÌÅÍ ÀÔ´Ï´Ù.", "Á¶È¸¿¡·¯",
+					JOptionPane.showMessageDialog(null, "ì²«ë²ˆì§¸ ë°ì´í„° ì…ë‹ˆë‹¤.", "ì¡°íšŒì—ëŸ¬",
 							JOptionPane.ERROR_MESSAGE);
 					return;
 				}
@@ -124,7 +124,7 @@ public class ContactView extends JFrame {
 				printData();
 			}
 		});
-		btnNext = new JButton("´ÙÀ½À¸·Î");
+		btnNext = new JButton("ë‹¤ìŒìœ¼ë¡œ");
 		btnNext.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -135,7 +135,7 @@ public class ContactView extends JFrame {
 				printData();
 			}
 		});
-		btnLast = new JButton("¸¶Áö¸·À¸·Î");
+		btnLast = new JButton("ë§ˆì§€ë§‰ìœ¼ë¡œ");
 		btnLast.addActionListener(new ActionListener() {
 			
 			@Override
@@ -145,36 +145,36 @@ public class ContactView extends JFrame {
 			}
 		});
 
-		btnInsert = new JButton("»ğÀÔ");
+		btnInsert = new JButton("ì‚½ì…");
 		
 		btnInsert.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				//lblIndexÀÇ ÅØ½ºÆ®°¡ »ğÀÔÀÌ ¾Æ´Ï¸é ¸Ş½ÃÁö ¹Ú½º¸¦
-				//Ãâ·ÂÇÏ°í ÇÔ¼öÀÇ ¼öÇàÀ» Á¾·á
-				//¹®ÀÚ¿­ÀÇ µ¿ÀÏ¼º ¿©ºÎ´Â == °¡ ¾Æ´Ï°í equals·Î ÇØ¾ß ÇÕ´Ï´Ù.
+				//lblIndexì˜ í…ìŠ¤íŠ¸ê°€ ì‚½ì…ì´ ì•„ë‹ˆë©´ ë©”ì‹œì§€ ë°•ìŠ¤ë¥¼
+				//ì¶œë ¥í•˜ê³  í•¨ìˆ˜ì˜ ìˆ˜í–‰ì„ ì¢…ë£Œ
+				//ë¬¸ìì—´ì˜ ë™ì¼ì„± ì—¬ë¶€ëŠ” == ê°€ ì•„ë‹ˆê³  equalsë¡œ í•´ì•¼ í•©ë‹ˆë‹¤.
 				
-				if(lblIndex.getText().equals("»ğÀÔ") == false) {
-					JOptionPane.showMessageDialog(null,  "Áö¿ì°í ¾²¼¼¿ä", "»ğÀÔ¿¡·¯",
+				if(lblIndex.getText().equals("ì‚½ì…") == false) {
+					JOptionPane.showMessageDialog(null,  "ì§€ìš°ê³  ì“°ì„¸ìš”", "ì‚½ì…ì—ëŸ¬",
 							JOptionPane.ERROR_MESSAGE);
 					return;
 				}
-				//ÀÔ·ÂÇÑ µ¥ÀÌÅÍ¸¦ °¡Á®¿À±â
+				//ì…ë ¥í•œ ë°ì´í„°ë¥¼ ê°€ì ¸ì˜¤ê¸°
 				String name = tfName.getText();
 				String phone = tfPhone.getText();
 				String email = tfEmail.getText();
 				String birthday = tfBirthday.getText();
 				
-				//nameÀº ÇÊ¼ö ÀÔ·ÂÀÌ°í 3ÀÚ ÀÌ»ó ÀÔ·ÂÇß´ÂÁö °Ë»ç
+				//nameì€ í•„ìˆ˜ ì…ë ¥ì´ê³  3ì ì´ìƒ ì…ë ¥í–ˆëŠ”ì§€ ê²€ì‚¬
 				if(name.trim().length() < 3) {
-					JOptionPane.showMessageDialog(null,  "ÀÌ¸§Àº 3ÀÚ ÀÌ»ó", "ÀÌ¸§¿À·ù", 
+					JOptionPane.showMessageDialog(null,  "ì´ë¦„ì€ 3ì ì´ìƒ", "ì´ë¦„ì˜¤ë¥˜", 
 							JOptionPane.ERROR_MESSAGE);
 					return;
 				}
-				//phoneÀº ÀüºÎ ¼ıÀÚÀÌ°í 11ÀÚ¸®ÀÎÁö °Ë»ç
+				//phoneì€ ì „ë¶€ ìˆ«ìì´ê³  11ìë¦¬ì¸ì§€ ê²€ì‚¬
 				if(phone.trim().length() != 11) {
-					JOptionPane.showMessageDialog(null, "ÀüÈ­¹øÈ£´Â 11ÀÚ¸®", "ÀüÈ­¹øÈ£ ¿À·ù",
+					JOptionPane.showMessageDialog(null, "ì „í™”ë²ˆí˜¸ëŠ” 11ìë¦¬", "ì „í™”ë²ˆí˜¸ ì˜¤ë¥˜",
 							JOptionPane.ERROR_MESSAGE);
 					return;
 				}
@@ -182,19 +182,19 @@ public class ContactView extends JFrame {
 				while(i<phone.trim().length()) {
 					char ch = phone.trim().charAt(i);
 					if(ch < '0' || ch > '9') {
-						JOptionPane.showMessageDialog(null, "ÀüÈ­¹øÈ£´Â ¼ıÀÚ¸¸", "ÀüÈ­¹øÈ£ ¿À·ù" ,
+						JOptionPane.showMessageDialog(null, "ì „í™”ë²ˆí˜¸ëŠ” ìˆ«ìë§Œ", "ì „í™”ë²ˆí˜¸ ì˜¤ë¥˜" ,
 								JOptionPane.ERROR_MESSAGE);
 						return;
 					}
 					i = i +1;
 				}
-				//DaoÀÇ ¸Ş¼Òµå¿¡ ¸Â°Ô µ¥ÀÌÅÍ¸¦ »ı¼º
+				//Daoì˜ ë©”ì†Œë“œì— ë§ê²Œ ë°ì´í„°ë¥¼ ìƒì„±
 				Contact contact = new Contact();
 				contact.setName(name);
 				contact.setEmail(email);
 				contact.setPhone(phone);
-				//birthday°¡ yyymmdd Çü½ÄÀ¸·Î ÀÔ·ÂµÇ¾ú´Ù°í °¡Á¤ÇÏ°í
-				//Date Å¸ÀÔÀ¸·Î º¯°æÇÏ±â
+				//birthdayê°€ yyymmdd í˜•ì‹ìœ¼ë¡œ ì…ë ¥ë˜ì—ˆë‹¤ê³  ê°€ì •í•˜ê³ 
+				//Date íƒ€ì…ìœ¼ë¡œ ë³€ê²½í•˜ê¸°
 				System.out.println(birthday);
 				int year = Integer.parseInt(birthday.substring(0, 4));
 				System.out.println(birthday.substring(0,4));
@@ -216,15 +216,15 @@ public class ContactView extends JFrame {
 		list = dao.allContact();
 		idx = list.size() - 1;
 		printData();
-		//´ëÈ­»óÀÚ Ãâ·ÂÇÏ±â
-		JOptionPane.showMessageDialog(null,  "»ğÀÔ¼º°ø", "µ¥ÀÌÅÍ »ğÀÔ", 
+		//ëŒ€í™”ìƒì ì¶œë ¥í•˜ê¸°
+		JOptionPane.showMessageDialog(null,  "ì‚½ì…ì„±ê³µ", "ë°ì´í„° ì‚½ì…", 
 				JOptionPane.INFORMATION_MESSAGE);
 			
 		}
 		});
 		
 		
-		btnUpdate= new JButton("¼öÁ¤");
+		btnUpdate= new JButton("ìˆ˜ì •");
 
 		btnUpdate.addActionListener(new ActionListener() {
 
@@ -235,29 +235,29 @@ public class ContactView extends JFrame {
 			String email = tfEmail.getText();
 			String birthday = tfBirthday.getText();
 				
-			//nameÀÇ µ¥ÀÌÅÍ°¡ ºñ¾îÀÖÀ¸¸é ¸Ş½ÃÁö ¹Ú½º Ãâ·ÂÇÏ°í ¸®ÅÏÇÏ±â
+			//nameì˜ ë°ì´í„°ê°€ ë¹„ì–´ìˆìœ¼ë©´ ë©”ì‹œì§€ ë°•ìŠ¤ ì¶œë ¥í•˜ê³  ë¦¬í„´í•˜ê¸°
 			if(name.trim().length() < 1) {
-				JOptionPane.showMessageDialog(null, "ÀÌ¸§Àº ÇÊ¼ö ÀÔ·ÂÀÔ´Ï´Ù." ,
-						"ÀÔ·Â¿À·ù", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "ì´ë¦„ì€ í•„ìˆ˜ ì…ë ¥ì…ë‹ˆë‹¤." ,
+						"ì…ë ¥ì˜¤ë¥˜", JOptionPane.ERROR_MESSAGE);
 				return;
 			}
-			//phoneÀÇ µ¥ÀÌÅÍ°¡ ºñ¾î ÀÖÀ¸¸é ¸Ş½ÃÁö ¹Ú½º¸¦ Ãâ·ÂÇÏ°í
-			//¸®ÅÏÇÏ°í Ãâ·ÂÇÏ±â
+			//phoneì˜ ë°ì´í„°ê°€ ë¹„ì–´ ìˆìœ¼ë©´ ë©”ì‹œì§€ ë°•ìŠ¤ë¥¼ ì¶œë ¥í•˜ê³ 
+			//ë¦¬í„´í•˜ê³  ì¶œë ¥í•˜ê¸°
 			if(phone.trim().length() <1) {
-				JOptionPane.showMessageDialog(null, "ÀüÈ­¹øÈ£´Â ÇÊ¼ö ÀÔ·ÂÀÔ´Ï´Ù.",
-						"ÀÔ·Â ¿À·ù", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "ì „í™”ë²ˆí˜¸ëŠ” í•„ìˆ˜ ì…ë ¥ì…ë‹ˆë‹¤.",
+						"ì…ë ¥ ì˜¤ë¥˜", JOptionPane.ERROR_MESSAGE);
 				return;
 			}
-			//³¯Â¥ µ¥ÀÌÅÍ°¡ ³âµµ 4ÀÚ¸®-¿ù2ÀÚ¸®-ÀÏ µÎÀÚ¸® Çü½ÄÀÎÁö Á¶»ç
+			//ë‚ ì§œ ë°ì´í„°ê°€ ë…„ë„ 4ìë¦¬-ì›”2ìë¦¬-ì¼ ë‘ìë¦¬ í˜•ì‹ì¸ì§€ ì¡°ì‚¬
 			int i = 0;
 			if(birthday.length() !=10) {
-				JOptionPane.showMessageDialog(null, "»ıÀÏÀº 10ÀÚ¸®·Î ¸¸µé¾îÁÖ¼¼¿ä",
-						"ÀÔ·Â¿À·ù", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "ìƒì¼ì€ 10ìë¦¬ë¡œ ë§Œë“¤ì–´ì£¼ì„¸ìš”",
+						"ì…ë ¥ì˜¤ë¥˜", JOptionPane.ERROR_MESSAGE);
 				return;
 			}
 			while(i<birthday.length()) {
 				char ch = birthday.charAt(i);
-				//Ã¹¹øÂ°ºÎÅÍ ³×¹øÂ°±îÁö ¼ıÀÚ°¡ ¾Æ´Ï¸é ¹İº¹¹® Á¾·á
+				//ì²«ë²ˆì§¸ë¶€í„° ë„¤ë²ˆì§¸ê¹Œì§€ ìˆ«ìê°€ ì•„ë‹ˆë©´ ë°˜ë³µë¬¸ ì¢…ë£Œ
 				
 				if(i>=0 && i<=3) {
 					if(ch < '0' || ch > '9') {
@@ -282,10 +282,10 @@ public class ContactView extends JFrame {
 				}
 				i = i + 1;
 			}
-			//À¯È¿¼º °Ë»ç¿¡ ½ÇÆĞÇÏ¸é ¸Ş½ÃÁö ¹Ú½º¸¦ Ãâ·ÂÇÏ°í ¸®ÅÏ
+			//ìœ íš¨ì„± ê²€ì‚¬ì— ì‹¤íŒ¨í•˜ë©´ ë©”ì‹œì§€ ë°•ìŠ¤ë¥¼ ì¶œë ¥í•˜ê³  ë¦¬í„´
 			if(i != birthday.length()) {
-				JOptionPane.showMessageDialog(null,  "»ıÀÏÀº YYYY-MM-DD Çü½Ä",
-						"ÀÔ·Â ¿À·ù", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null,  "ìƒì¼ì€ YYYY-MM-DD í˜•ì‹",
+						"ì…ë ¥ ì˜¤ë¥˜", JOptionPane.ERROR_MESSAGE);
 				return;
 			}
 			Contact contact = new Contact();
@@ -293,7 +293,7 @@ public class ContactView extends JFrame {
 			contact.setName(name);
 			contact.setEmail(email);
 			contact.setPhone(phone);
-			//yyyy-mm-dd Çü½ÄÀÇ ¹®ÀÚ¿­À» °¡Áö°í Date ¸¸µé±â
+			//yyyy-mm-dd í˜•ì‹ì˜ ë¬¸ìì—´ì„ ê°€ì§€ê³  Date ë§Œë“¤ê¸°
 			int year = Integer.parseInt(birthday.substring(0, 4));
 					int month = Integer.parseInt(birthday.substring(5,7));
 					int day = Integer.parseInt(birthday.substring(8));
@@ -301,30 +301,30 @@ public class ContactView extends JFrame {
 					cal.set(Calendar.YEAR, year);
 					cal.set(Calendar.MONTH, month-1);
 					cal.set(Calendar.DAY_OF_MONTH, day);
-					//Calendar °´Ã¼¸¦ ÀÌ¿ëÇØ¼­ Date °´Ã¼ ¸¸µé±â
+					//Calendar ê°ì²´ë¥¼ ì´ìš©í•´ì„œ Date ê°ì²´ ë§Œë“¤ê¸°
 					Date date = new Date(cal.getTimeInMillis());
 					contact.setBirthday(date);
 					
 					dao.updateContact(contact);
-					JOptionPane.showMessageDialog(null, "¼öÁ¤¼º°ø",
-							"µ¥ÀÌÅÍ ¼öÁ¤", JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(null, "ìˆ˜ì •ì„±ê³µ",
+							"ë°ì´í„° ìˆ˜ì •", JOptionPane.INFORMATION_MESSAGE);
 					list = dao.allContact();
 					printData();
 	
 			}
 		});
 		
-		btnDelete = new JButton("»èÁ¦");
+		btnDelete = new JButton("ì‚­ì œ");
 		btnDelete.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 			int r=	JOptionPane.showConfirmDialog(null,
-						"Á¤¸»·Î »èÁ¦?", "»èÁ¦",
+						"ì •ë§ë¡œ ì‚­ì œ?", "ì‚­ì œ",
 						JOptionPane.YES_NO_OPTION);
 				System.out.println(r);
 				if(r == 0) {
-					JOptionPane.showMessageDialog(null,  "»èÁ¦¼º°ø", "»èÁ¦",
+					JOptionPane.showMessageDialog(null,  "ì‚­ì œì„±ê³µ", "ì‚­ì œ",
 							JOptionPane.ERROR_MESSAGE);
 					dao.deleteContact(list.get(idx).getNum());
 					list = dao.allContact();
@@ -335,13 +335,13 @@ public class ContactView extends JFrame {
 			}
 		});
 		
-		btnSearch= new JButton("Á¶È¸");
+		btnSearch= new JButton("ì¡°íšŒ");
 		btnSearch.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				String name = JOptionPane.showInputDialog(
-						null, "Á¶È¸ÇÒ ÀÌ¸§ÀÇ ÀÏºÎºĞÀ» ÀÔ·ÂÇÏ¼¼¿ä!",
-						"ÀÌ¸§À¸·Î Á¶È¸", JOptionPane.QUESTION_MESSAGE);
+						null, "ì¡°íšŒí•  ì´ë¦„ì˜ ì¼ë¶€ë¶„ì„ ì…ë ¥í•˜ì„¸ìš”!",
+						"ì´ë¦„ìœ¼ë¡œ ì¡°íšŒ", JOptionPane.QUESTION_MESSAGE);
 				tfName.setText("");
 				tfPhone.setText("");
 				tfEmail.setText("");
@@ -357,30 +357,30 @@ public class ContactView extends JFrame {
 		
 		
 		
-		btnClear = new JButton("Áö¿ò");
+		btnClear = new JButton("ì§€ì›€");
 
 		btnClear.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				//ÅØ½ºÆ® ÇÊµåµéÀÇ ÅØ½ºÆ®¸¦ ÀüºÎ »èÁ¦
+				//í…ìŠ¤íŠ¸ í•„ë“œë“¤ì˜ í…ìŠ¤íŠ¸ë¥¼ ì „ë¶€ ì‚­ì œ
 				
-				//lblIndexÀÇ Å¸ÀÌÆ²À» »ğÀÔÀ¸·Î º¯°æ
+				//lblIndexì˜ íƒ€ì´í‹€ì„ ì‚½ì…ìœ¼ë¡œ ë³€ê²½
 				tfName.setText("");
 				tfEmail.setText("");
 				tfPhone.setText("");
 				tfBirthday.setText("");
-				//lblIndexÀÇ Å¸ÀÌÆ²À» »ğÀÔÀ¸·Î º¯°æ
-				lblIndex.setText("»ğÀÔ");
+				//lblIndexì˜ íƒ€ì´í‹€ì„ ì‚½ì…ìœ¼ë¡œ ë³€ê²½
+				lblIndex.setText("ì‚½ì…");
 				
 			}
 		});
 		
-		lblIndex = new JLabel("ÀÎµ¦½º", JLabel.CENTER);
+		lblIndex = new JLabel("ì¸ë±ìŠ¤", JLabel.CENTER);
 		
 		JPanel panel1 = new JPanel();
 		panel1.setLayout(new GridLayout(1,  5, 7, 7));
-		panel1.setBorder(new TitledBorder("Á¶È¸"));
+		panel1.setBorder(new TitledBorder("ì¡°íšŒ"));
 		panel1.add(btnFirst);
 		panel1.add(btnPrev);
 		panel1.add(lblIndex);
@@ -389,7 +389,7 @@ public class ContactView extends JFrame {
 		
 		JPanel panel2 = new JPanel();
 		panel2.setLayout(new GridLayout(1,  5, 7, 7));
-		panel2.setBorder(new TitledBorder("ÀÛ¾÷"));
+		panel2.setBorder(new TitledBorder("ì‘ì—…"));
 		panel2.add(btnInsert);
 		panel2.add(btnUpdate);
 		panel2.add(btnDelete);

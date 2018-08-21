@@ -9,19 +9,19 @@ public class TCPClientMain {
 
 	public static void main(String[] args) {
 		try {
-			//¼­¹ö¿¡ Á¢¼Ó
+			//ì„œë²„ì— ì ‘ì†
 			InetAddress addr =
 					InetAddress.getByName("192.168.0.240");
 			Socket socket = new Socket(addr, 9996);
-			//Àü¼ÛÇÒ ¸Ş½ÃÁö ÀÔ·Â¹Ş±â
+			//ì „ì†¡í•  ë©”ì‹œì§€ ì…ë ¥ë°›ê¸°
 			Scanner sc = new Scanner (System.in);
-			System.out.println("Àü¼ÛÇÒ ¸Ş½ÃÁö:");
+			System.out.println("ì „ì†¡í•  ë©”ì‹œì§€:");
 			String msg = sc.nextLine();
 			sc.close();
 			
-			//Àü¼ÛÇÒ ½ºÆ®¸² »ı¼º
+			//ì „ì†¡í•  ìŠ¤íŠ¸ë¦¼ ìƒì„±
 			PrintWriter pw = new PrintWriter(socket.getOutputStream());
-					//µ¥ÀÌÅÍ Àü¼Û
+					//ë°ì´í„° ì „ì†¡
 					pw.println(msg);
 					pw.flush();
 					

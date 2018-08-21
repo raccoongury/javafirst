@@ -8,23 +8,23 @@ public class OracleMain {
 	public static void main(String[] args) {
 		Connection con = null;
 			try {
-				//»ç¿ëÇÏ´Â µ¥ÀÌÅÍº£ÀÌ½º ¸¶´Ù ·ÎµåÇÏ´Â Å¬·¡½º ÀÌ¸§Àº °áÁ¤µÇ¾î ÀÖ½À´Ï´Ù.
+				//ì‚¬ìš©í•˜ëŠ” ë°ì´í„°ë² ì´ìŠ¤ ë§ˆë‹¤ ë¡œë“œí•˜ëŠ” í´ë˜ìŠ¤ ì´ë¦„ì€ ê²°ì •ë˜ì–´ ìˆìŠµë‹ˆë‹¤.
 				Class.forName("oracle.jdbc.driver.OracleDriver");
-				//È®ÀÎÇÏ±â À§ÇÑ ÄÚµå
-				//ÀÌ ÄÚµå°¡ Ãâ·ÂµÇÁö ¾ÊÀ¸¸é µå¶óÀÌ¹ö ÀÌ¸§À» È®ÀÎÇØº¸°í
-				//µå¶óÀÌ¹öÀÌ¸§ÀÌ Æ²¸®Áö ¾Ê¾Ò´Ù¸é ojdbc6.jar °¡
-				//Referenced Libraries¿¡ Æ÷ÇÔµÇ¾î ÀÖ´ÂÁö È®ÀÎ
-				System.out.println("¿À¶óÅ¬ µå¶óÀÌ¹ö ·Îµå ¼º°ø");
+				//í™•ì¸í•˜ê¸° ìœ„í•œ ì½”ë“œ
+				//ì´ ì½”ë“œê°€ ì¶œë ¥ë˜ì§€ ì•Šìœ¼ë©´ ë“œë¼ì´ë²„ ì´ë¦„ì„ í™•ì¸í•´ë³´ê³ 
+				//ë“œë¼ì´ë²„ì´ë¦„ì´ í‹€ë¦¬ì§€ ì•Šì•˜ë‹¤ë©´ ojdbc6.jar ê°€
+				//Referenced Librariesì— í¬í•¨ë˜ì–´ ìˆëŠ”ì§€ í™•ì¸
+				System.out.println("ì˜¤ë¼í´ ë“œë¼ì´ë²„ ë¡œë“œ ì„±ê³µ");
 				
-				//µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á
+				//ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²°
 				con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "scott", "tiger");
-				System.out.println("µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á ¼º°ø");
+				System.out.println("ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²° ì„±ê³µ");
 			}catch(Exception e) {
 				System.out.println(e.getMessage());
 				
 			}finally {
 				try {
-					//µ¥ÀÌÅÍº£ÀÌ½º°¡ ¿­·Á ÀÖÀ¸¸é µ¥ÀÌÅÍº£ÀÌ½º¸¦ ´İ±â
+					//ë°ì´í„°ë² ì´ìŠ¤ê°€ ì—´ë ¤ ìˆìœ¼ë©´ ë°ì´í„°ë² ì´ìŠ¤ë¥¼ ë‹«ê¸°
 					if(con != null) {
 						con.close();
 					}

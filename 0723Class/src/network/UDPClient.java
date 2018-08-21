@@ -11,7 +11,7 @@ public class UDPClient {
 			try {
 				DatagramSocket ds = new DatagramSocket();
 				Scanner sc = new Scanner(System.in);
-				System.out.println("Àü¼ÛÇÒ¸Þ½ÃÁö:");
+				System.out.println("ì „ì†¡í• ë©”ì‹œì§€:");
 				String msg = sc.nextLine();
 				
 				DatagramPacket dp = new DatagramPacket (msg.getBytes(),
