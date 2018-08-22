@@ -3,7 +3,7 @@ import java.util.stream.IntStream;
 
 public class ParellelMain {
 	
-	//1ÃÊ ´ë±âÇÏ´Â ¸Þ¼Òµå
+	//1ì´ˆ ëŒ€ê¸°í•˜ëŠ” ë©”ì†Œë“œ
 	public static void work(int a) {
 		try {
 			Thread.sleep(1000);
@@ -15,14 +15,14 @@ public class ParellelMain {
 	public static void main(String[] args) {
 		int [] ar = {20,30,20,30,20,20,20,20,10,20};
 		
-		//ÀÏ¹Ý ½ºÆ®¸²À¸·Î work ÀÛ¾÷À» ¼öÇà
+		//ì¼ë°˜ ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œ work ìž‘ì—…ì„ ìˆ˜í–‰
 		IntStream stream = Arrays.stream(ar); 
 		long start = System.currentTimeMillis(); 
 		stream.forEach(su -> work(su));
 		long end = System.currentTimeMillis();
 		System.out.println(end-start);
 		
-		//º´·Ä ½ºÆ®¸²À¸·Î work ÀÛ¾÷À» ¼öÇà
+		//ë³‘ë ¬ ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œ work ìž‘ì—…ì„ ìˆ˜í–‰
 		stream = Arrays.stream(ar); 
 		start = System.currentTimeMillis(); 
 		stream.parallel().forEach(su -> work(su));

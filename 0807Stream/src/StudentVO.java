@@ -1,6 +1,6 @@
 
 public class StudentVO {
-	//Å×ÀÌºíÀÇ °¢ ÄÃ·³ÀÇ °ªµéÀ» ÀúÀåÇÏ±â À§ÇØ¼­ »ı¼º
+	//í…Œì´ë¸”ì˜ ê° ì»¬ëŸ¼ì˜ ê°’ë“¤ì„ ì €ì¥í•˜ê¸° ìœ„í•´ì„œ ìƒì„±
 	private String num;
 	private String name;
 	private String subject;
@@ -8,8 +8,8 @@ public class StudentVO {
 	private int age;
 	private String gender;
 	
-	//ÀÎ½ºÅÏ½º »ı¼ºÀ» ÇÒ ¶§ µ¥ÀÌÅÍ¸¦ ¹Ù·Î ´ëÀÔÇØ¼­ »ı¼ºÇÏ¸é
-	//¸Ş¼Òµå È£ÃâÈ½¼ö¸¦ ÁÙÀÏ ¼ö ÀÖ±â ¶§¹®¿¡ »ı¼º
+	//ì¸ìŠ¤í„´ìŠ¤ ìƒì„±ì„ í•  ë•Œ ë°ì´í„°ë¥¼ ë°”ë¡œ ëŒ€ì…í•´ì„œ ìƒì„±í•˜ë©´
+	//ë©”ì†Œë“œ í˜¸ì¶œíšŸìˆ˜ë¥¼ ì¤„ì¼ ìˆ˜ ìˆê¸° ë•Œë¬¸ì— ìƒì„±
 	public StudentVO() {
 		super();
 	}
@@ -24,8 +24,8 @@ public class StudentVO {
 		this.gender = gender;
 	}
 
-	//ÀÎ½ºÅÏ½º º¯¼ö¸¦ privateÀ¸·Î »ı¼ºÇß±â ¶§¹®¿¡
-	//ÀÎ½ºÅÏ½º°¡ »ç¿ëÇÒ ¼ö ¾ø¾î¼­ ÀÎ½ºÅÏ½º º¯¼ö¸¦ »ç¿ëÇÏ±â À§ÇÑ ¸Ş¼Òµå
+	//ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ë¥¼ privateìœ¼ë¡œ ìƒì„±í–ˆê¸° ë•Œë¬¸ì—
+	//ì¸ìŠ¤í„´ìŠ¤ê°€ ì‚¬ìš©í•  ìˆ˜ ì—†ì–´ì„œ ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•œ ë©”ì†Œë“œ
 	public String getNum() {
 		return num;
 	}
@@ -74,7 +74,7 @@ public class StudentVO {
 		this.gender = gender;
 	}
 
-	//µ¥ÀÌÅÍ¸¦ ºü¸£°Ô È®ÀÎÇÏ±â À§ÇØ¼­ - µğ¹ö±ëÀ» À§ÇØ¼­
+	//ë°ì´í„°ë¥¼ ë¹ ë¥´ê²Œ í™•ì¸í•˜ê¸° ìœ„í•´ì„œ - ë””ë²„ê¹…ì„ ìœ„í•´ì„œ
 	@Override
 	public String toString() {
 		return "StudentVO [num=" + num + ", name=" + name + ", subject=" + subject + ", score=" + score + ", age=" + age

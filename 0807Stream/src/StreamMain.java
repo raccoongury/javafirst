@@ -13,26 +13,26 @@ public class StreamMain {
 		/*
 		System.out.println(list);
 		for(StudentVO vo : list) {
-			//Ãâ·ÂÇÏ´Â ¸Ş¼Òµå¿¡ ÀÎ½ºÅÏ½º ÀÌ¸§À» ´ëÀÔÇÏ¸é toStringÀÇ °á°ú
+			//ì¶œë ¥í•˜ëŠ” ë©”ì†Œë“œì— ì¸ìŠ¤í„´ìŠ¤ ì´ë¦„ì„ ëŒ€ì…í•˜ë©´ toStringì˜ ê²°ê³¼
 			System.out.println(vo);
 		}
 		*/
 		
-		//Stream »ı¼º
+		//Stream ìƒì„±
 		Stream<StudentVO> stream = list.stream();
-		//µ¥ÀÌÅÍ¸¦ ÀüºÎ Ãâ·Â
+		//ë°ì´í„°ë¥¼ ì „ë¶€ ì¶œë ¥
 		//stream.skip(2).limit(3).forEach(data -> System.out.println(date));
 		
-		//³²ÀÚÀÎ µ¥ÀÌÅÍ¸¸ Ãâ·Â
+		//ë‚¨ìì¸ ë°ì´í„°ë§Œ ì¶œë ¥
 		/*
-		stream.filter(data -> data.getGender().equals("³²ÀÚ"))
+		stream.filter(data -> data.getGender().equals("ë‚¨ì"))
 		.forEach(data -> System.out.println(data));
 		*/
 		
-		//µ¥ÀÌÅÍ Á¤·ÄÇÏ±â - score¼øÀ¸·Î
+		//ë°ì´í„° ì •ë ¬í•˜ê¸° - scoreìˆœìœ¼ë¡œ
 		/*
 		stream.sorted((d1,d2) -> d2.getScore() - d1.getScore())
-		//ÀÌ¸§°°Àº Çü½ÄÀº d2.getName.compareTo(d1.getName())
+		//ì´ë¦„ê°™ì€ í˜•ì‹ì€ d2.getName.compareTo(d1.getName())
 		.forEach(data -> System.out.println(data));
 		*/
 		
@@ -41,46 +41,46 @@ public class StreamMain {
 		System.out.println(cnt);
 		*/
 		
-		//Optiional·Î ¸®ÅÏµÇ´Â µ¥ÀÌÅÍ´Â ÇÑ ¹ø ´õ °¡°øÀ» ÇØ¾ß ÇÕ´Ï´Ù.
+		//Optiionalë¡œ ë¦¬í„´ë˜ëŠ” ë°ì´í„°ëŠ” í•œ ë²ˆ ë” ê°€ê³µì„ í•´ì•¼ í•©ë‹ˆë‹¤.
 		/*
 		Optional<StudentVO> vo =  stream.findFirst();
 		System.out.println(vo);
 		*/
-		//scoreÀÇ ÇÕ°è ±¸ÇÏ±â
-		//¼ıÀÚ µ¥ÀÌÅÍ°¡ ¾Æ´Ï¸é ¹Ù·Î ÇÕ°è¸¦ ±¸ÇÒ ¼ö ¾ø±â ¶§¹®¿¡
-		//map ¸Ş¼Òµå¸¦ ÀÌ¿ëÇØ¼­ ¼ıÀÚ µ¥ÀÌÅÍ·Î º¯°æÇÑ ÈÄ ÇÕ°è¸¦ ±¸ÇØ¾ß ÇÕ´Ï´Ù.
+		//scoreì˜ í•©ê³„ êµ¬í•˜ê¸°
+		//ìˆ«ì ë°ì´í„°ê°€ ì•„ë‹ˆë©´ ë°”ë¡œ í•©ê³„ë¥¼ êµ¬í•  ìˆ˜ ì—†ê¸° ë•Œë¬¸ì—
+		//map ë©”ì†Œë“œë¥¼ ì´ìš©í•´ì„œ ìˆ«ì ë°ì´í„°ë¡œ ë³€ê²½í•œ í›„ í•©ê³„ë¥¼ êµ¬í•´ì•¼ í•©ë‹ˆë‹¤.
 		//int sum = stream.mapToInt(StudentVO::getScore).sum();
-		//System.out.println("ÇÕ°è:" + sum);
+		//System.out.println("í•©ê³„:" + sum);
 		
-		//ageÀÇ Æò±Õ ±¸ÇÏ±â
+		//ageì˜ í‰ê·  êµ¬í•˜ê¸°
 		/*
 		double age = stream.mapToInt(StudentVO::getAge).average().getAsDouble();
-		System.out.println("³ªÀÌ Æò±Õ:"+ age);
+		System.out.println("ë‚˜ì´ í‰ê· :"+ age);
 		*/
 		
-		//¼ºº°ÀÌ ³²ÀÚÀÎ µ¥ÀÌÅÍÀÇ Æò±Õ Á¡¼ö¸¦ ±¸ÇÏ´Âµ¥ ¼Ò¼ö 1Â° ÀÚ¸®¿¡¼­ ¹İ¿Ã¸²ÇØ¼­
-		//Á¤¼ö ºÎºĞ¸¸ Ãâ·Â
+		//ì„±ë³„ì´ ë‚¨ìì¸ ë°ì´í„°ì˜ í‰ê·  ì ìˆ˜ë¥¼ êµ¬í•˜ëŠ”ë° ì†Œìˆ˜ 1ì§¸ ìë¦¬ì—ì„œ ë°˜ì˜¬ë¦¼í•´ì„œ
+		//ì •ìˆ˜ ë¶€ë¶„ë§Œ ì¶œë ¥
 		
 		/*
-		double avg = stream.filter(data -> data.getGender().equals("³²ÀÚ"))
+		double avg = stream.filter(data -> data.getGender().equals("ë‚¨ì"))
 				.mapToInt(StudentVO::getScore)
 				.average()
 				.getAsDouble();
 		int score = (int)(avg + 0.5);
-		System.out.println("³²ÀÚ Æò±Õ Á¡¼ö:" + score);
+		System.out.println("ë‚¨ì í‰ê·  ì ìˆ˜:" + score);
 		*/
 		
-		//¼ºº°ÀÌ ¿©ÀÚÀÎ µ¥ÀÌÅÍ¸¸ °¡Áö°í List¸¦ »ı¼º
+		//ì„±ë³„ì´ ì—¬ìì¸ ë°ì´í„°ë§Œ ê°€ì§€ê³  Listë¥¼ ìƒì„±
 		/*
 		List<StudentVO> list = stream.
-				filter(data -> data.getGender().equals("¿©ÀÚ")).collect(Collectors.toList());
+				filter(data -> data.getGender().equals("ì—¬ì")).collect(Collectors.toList());
 		for(StudentVO vo : result) { System.out.println(vo);}
 		*/
 		
-		//¼ºº°ÀÌ ³²ÀÚÀÌ°í score°¡ 90 ÀÌ»óÀÎ µ¥ÀÌÅÍÀÇ List¸¦ »ı¼ºÇØ¼­ Ãâ·Â
+		//ì„±ë³„ì´ ë‚¨ìì´ê³  scoreê°€ 90 ì´ìƒì¸ ë°ì´í„°ì˜ Listë¥¼ ìƒì„±í•´ì„œ ì¶œë ¥
 		/*		
 		List<StudentVO> result = stream
-					.filter(data -> data.getGender().equals("³²ÀÚ")
+					.filter(data -> data.getGender().equals("ë‚¨ì")
 							&& data.getScore() >= 90)
 					.collect(Collectors.toList());
 				for(StudentVO vo : result) {
@@ -88,8 +88,8 @@ public class StreamMain {
 				}
 				*/
 		
-		//groupingBy¿¡ ÀÛ¼ºÇÑ ÇÔ¼öÀÇ °á°ú¸¦ key·Î ÇÏ°í
-		//¿ø·¡ µ¥ÀÌÅÍÀÇ List¸¦ °ªÀ¸·Î ÇØ¼­ MapÀ¸·Î ¸®ÅÏÇÕ´Ï´Ù.
+		//groupingByì— ì‘ì„±í•œ í•¨ìˆ˜ì˜ ê²°ê³¼ë¥¼ keyë¡œ í•˜ê³ 
+		//ì›ë˜ ë°ì´í„°ì˜ Listë¥¼ ê°’ìœ¼ë¡œ í•´ì„œ Mapìœ¼ë¡œ ë¦¬í„´í•©ë‹ˆë‹¤.
 		/*
 		Map<String, List<StudentVO>> map =
 		stream.collect(Collectors.groupingBy(
@@ -106,13 +106,13 @@ public class StreamMain {
 					System.out.println(map);
 					*/
 		
-		//gender º°·Î scoreÀÇ ÇÕ°è¸¦ Á¤¼ö·Î Ãâ·Â
+		//gender ë³„ë¡œ scoreì˜ í•©ê³„ë¥¼ ì •ìˆ˜ë¡œ ì¶œë ¥
 		Map<String, Integer> map = stream.collect(Collectors.groupingBy(
 				StudentVO::getGender, Collectors.summingInt(StudentVO::getScore)));;
 				
 				//System.out.println(map);
 				
-				//MapÀÇ µ¥ÀÌÅÍ ÀüºÎ Ãâ·ÂÇÏ±â
+				//Mapì˜ ë°ì´í„° ì „ë¶€ ì¶œë ¥í•˜ê¸°
 				Set<String> keySet = map.keySet();
 				for(String key : keySet) {
 					System.out.println(key + ":" + map.get(key));

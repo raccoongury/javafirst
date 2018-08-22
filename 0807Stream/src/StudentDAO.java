@@ -7,14 +7,14 @@ import java.util.List;
 
 public class StudentDAO {
 
-	//StudentDAO Å¬·¡½º¿¡¼­ ¸ğµç µ¥ÀÌÅÍ¸¦ °¡Á®¿À´Â ¸Ş¼Òµå
+	//StudentDAO í´ë˜ìŠ¤ì—ì„œ ëª¨ë“  ë°ì´í„°ë¥¼ ê°€ì ¸ì˜¤ëŠ” ë©”ì†Œë“œ
 	public List<StudentVO> fetch(){
-		//¸®ÅÏÇÒ ¸®½ºÆ®¸¦ »ı¼º
-		//List¸¦ ¸®ÅÏÇØ¾ß ÇÏ´Â °æ¿ì¿¡´Â nullÀ» ¸®ÅÏÇÏÁö ¾Ê´Â°Ô
-		//ÁÁ½À´Ï´Ù.
-		//List´Â Æ¯º°ÇÑ °æ¿ì°¡ ¾Æ´Ï¸é ºü¸¥ ¿­°Å¸¦ ÀÌ¿ëÇØ¼­ Á¢±ÙÇÏ´Âµ¥
-		//null ÀÌ¸é NullPointerExceptionÀÌ ¹ß»ıÇÕ´Ï´Ù.
-		//nullÀ» ¾È¸¸µé±â À§ÇØ¼­ ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇØ¼­ ¸®ÅÏÇÕ´Ï´Ù.
+		//ë¦¬í„´í•  ë¦¬ìŠ¤íŠ¸ë¥¼ ìƒì„±
+		//Listë¥¼ ë¦¬í„´í•´ì•¼ í•˜ëŠ” ê²½ìš°ì—ëŠ” nullì„ ë¦¬í„´í•˜ì§€ ì•ŠëŠ”ê²Œ
+		//ì¢‹ìŠµë‹ˆë‹¤.
+		//ListëŠ” íŠ¹ë³„í•œ ê²½ìš°ê°€ ì•„ë‹ˆë©´ ë¹ ë¥¸ ì—´ê±°ë¥¼ ì´ìš©í•´ì„œ ì ‘ê·¼í•˜ëŠ”ë°
+		//null ì´ë©´ NullPointerExceptionì´ ë°œìƒí•©ë‹ˆë‹¤.
+		//nullì„ ì•ˆë§Œë“¤ê¸° ìœ„í•´ì„œ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•´ì„œ ë¦¬í„´í•©ë‹ˆë‹¤.
 		List<StudentVO> list = 
 			new ArrayList<StudentVO>();
 		
@@ -23,18 +23,18 @@ public class StudentDAO {
 		ResultSet rs = null;
 		
 		try {
-			//µå¶óÀÌ¹ö Å¬·¡½º ·Îµå
+			//ë“œë¼ì´ë²„ í´ë˜ìŠ¤ ë¡œë“œ
 			Class.forName(
 				"oracle.jdbc.driver.OracleDriver");
-			//µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á
+			//ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²°
 			con = DriverManager.getConnection(
 				"jdbc:oracle:thin:@localhost:1521:xe",
 				"scott", "tiger");
-			//sql ½ÇÇà °´Ã¼ »ı¼º
+			//sql ì‹¤í–‰ ê°ì²´ ìƒì„±
 			pstmt = con.prepareStatement(
 				"select num, name, subject, score, age, gender "
 				+ "from student");
-			//SQL ½ÇÇà
+			//SQL ì‹¤í–‰
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
@@ -46,10 +46,10 @@ public class StudentDAO {
 				list.add(vo);
 			}
 		}catch(Exception e) {
-			//¿¹¿Ü ³»¿ë È®ÀÎÀ» À§ÇØ¼­ ÀÛ¼º
+			//ì˜ˆì™¸ ë‚´ìš© í™•ì¸ì„ ìœ„í•´ì„œ ì‘ì„±
 			System.out.println(
-				"ÀĞ±â ¿À·ù:" + e.getMessage());
-			//¿¹¿ÜÀÇ À§Ä¡¸¦ ¾Ë±â À§ÇØ¼­ ÀÛ¼º
+				"ì½ê¸° ì˜¤ë¥˜:" + e.getMessage());
+			//ì˜ˆì™¸ì˜ ìœ„ì¹˜ë¥¼ ì•Œê¸° ìœ„í•´ì„œ ì‘ì„±
 			e.printStackTrace();
 		}finally {
 			try {
