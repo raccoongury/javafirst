@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
@@ -15,6 +16,7 @@ import service.FileUploadService;
 import service.FileUploadServiceImpl;
 import service.PdsService;
 import service.PdsServiceImpl;
+import vo.Pds;
 
 @WebServlet("*.file")
 public class FileController extends HttpServlet {
@@ -109,6 +111,18 @@ public class FileController extends HttpServlet {
 				response.sendRedirect("input.file");
 			}
 			break;
+			
+		case "list.file":
+			List<Pds> list = pdsService.listPds(request);
+			
+			request.setAttribute("list", list);
+			
+			dispatcher = 
+				request.getRequestDispatcher("views/list.jsp");
+			dispatcher.forward(request, response);
+			
+			break;
+
 			
 		}
 	}
