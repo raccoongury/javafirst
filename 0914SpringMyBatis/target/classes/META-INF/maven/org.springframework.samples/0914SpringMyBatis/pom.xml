@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<!-- Spring -->
+		<!-- Spring 1.스프링 버전수정-->
 		<spring-framework.version>4.1.0.RELEASE</spring-framework.version>
 
 		<!-- Hibernate / JPA -->
@@ -27,7 +27,7 @@
 		<junit.version>4.11</junit.version>
 
 	</properties>
-
+<!-- 2. 스프링Mybatis40페이지 -->
 	<repositories>
 		<repository>
 			<id>codelds</id>
@@ -37,6 +37,7 @@
 
 
 	<dependencies>
+		<!-- 2. 스프링Mybatis41~42페이지 -->
 		<!-- MyBatis 사용을 위한 라이브러리 -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -112,6 +113,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${spring-framework.version}</version>
+			<!-- 3.spring-test scope 제거 -->
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
