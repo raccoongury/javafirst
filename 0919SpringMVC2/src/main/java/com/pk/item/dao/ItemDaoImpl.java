@@ -20,4 +20,9 @@ public class ItemDaoImpl implements ItemDao {
 			"item.listitem");
 	}
 
+	@Override
+	public Item getItem(int itemid) {
+		return sqlSession.selectOne("item.getitem", itemid);
+	}
+
 }
