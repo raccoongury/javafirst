@@ -2,21 +2,22 @@ package com.pk.item.domain;
 
 public class Item {
 	private int itemid;
-	private String itmname;
+	private String itemname;
 	private int price;
 	private String description;
 	private String pictureurl;
+	
 	public int getItemid() {
 		return itemid;
 	}
 	public void setItemid(int itemid) {
 		this.itemid = itemid;
 	}
-	public String getItmname() {
-		return itmname;
+	public String getItemname() {
+		return itemname;
 	}
-	public void setItmname(String itmname) {
-		this.itmname = itmname;
+	public void setItemname(String itemname) {
+		this.itemname = itemname;
 	}
 	public int getPrice() {
 		return price;
@@ -36,10 +37,10 @@ public class Item {
 	public void setPictureurl(String pictureurl) {
 		this.pictureurl = pictureurl;
 	}
+	
 	@Override
 	public String toString() {
-		return "Item [itemid=" + itemid + ", itmname=" + itmname + ", price=" + price + ", description=" + description
+		return "Item [itemid=" + itemid + ", itemname=" + itemname + ", price=" + price + ", description=" + description
 				+ ", pictureurl=" + pictureurl + "]";
 	}
-
 }

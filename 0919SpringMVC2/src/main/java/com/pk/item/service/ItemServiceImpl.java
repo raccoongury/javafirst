@@ -14,10 +14,12 @@ public class ItemServiceImpl implements ItemService {
 	private ItemDao itemDao;
 	
 	@Override
-	//파라미터가 없는 경우는 Dao 메소드의 결과를 바로 리턴
+	//파라미터가 없는 경우는 Dao 메소드의 결과를 바로 리
 	public List<Item> listItem() {
-		
-		return null;
+		return itemDao.listItem();
 	}
 
 }
+
+
+

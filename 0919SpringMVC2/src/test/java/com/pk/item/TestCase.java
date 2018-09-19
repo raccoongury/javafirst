@@ -9,7 +9,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 //아래 경로에 있는 설정 파일을 실행시킨 후 테스트
-@ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/**/*.xml"})
+@ContextConfiguration(locations = {
+		"file:src/main/webapp/WEB-INF/spring/**/*.xml"
+})
+
 public class TestCase {
 	@Autowired
 	private SqlSession sqlSession;
