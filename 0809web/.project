@@ -3,6 +3,7 @@
 	<name>0809web</name>
 	<comment></comment>
 	<projects>
+		<project>spring-web-4.1.0.RELEASE</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
